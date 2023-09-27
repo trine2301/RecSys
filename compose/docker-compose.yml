@@ -1,0 +1,16 @@
+version: "3"
+
+services:
+  database:
+    build:
+      context: "database"
+    user: postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5234:5432"
+    command:
+      - "postgres"
+      - "-c"
+      - "log_statement=${POSTGRES_LOG_LEVEL-none}"
