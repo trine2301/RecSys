@@ -1,0 +1,44 @@
+plugins {
+    id("groovy")
+    id("com.github.johnrengelman.shadow") version "7.1.2"
+    id("io.micronaut.application") version "3.6.7"
+}
+
+repositories {
+    mavenCentral()
+}
+
+task wrapper(type: Wrapper){
+    gradleVersion = '7.2'
+}
+
+micronaut { m ->
+    m.runtime 'netty'
+    m.testRuntime 'spock2'
+    m.processing { p ->
+        p.incremental false
+    }
+
+}
+
+application {
+    mainClass.set 'library.App'
+}
+
+dependencies {
+    annotationProcessor 'io.micronaut.data:micronaut-data-processor'
+    annotationProcessor 'org.projectlombok:lombok:1.18.24'
+    implementation 'io.micronaut.data:micronaut-data-hibernate-jpa'
+    implementation 'io.micronaut.sql:micronaut-hibernate-jpa'
+    implementation 'io.micronaut.sql:micronaut-jdbc-hikari'
+    implementation 'io.micronaut:micronaut-runtime'
+    implementation 'io.micronaut:micronaut-http-client'
+    implementation 'org.postgresql:postgresql:42.3.1'
+    implementation 'org.codehaus.groovy:groovy'
+
+    compileOnly 'org.projectlombok:lombok:1.18.24'
+    runtimeOnly 'ch.qos.logback:logback-classic'
+
+    testImplementation 'io.micronaut.test:micronaut-test-spock'
+    testImplementation 'org.spockframework:spock-core'
+}
