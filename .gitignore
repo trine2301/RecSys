@@ -1,0 +1,16 @@
+Thumbs.db
+.DS_Store
+.gradle
+build/
+target/
+bin/
+out/
+node_modules/
+.cache/
+.idea
+*.iml
+*.ipr
+*.iws
+.gradle-cache/
+.openapi-generator/
+.env
