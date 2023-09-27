@@ -22,7 +22,7 @@ micronaut { m ->
 }
 
 application {
-    mainClass.set 'library.App'
+    mainClass.set 'recsys.App'
 }
 
 dependencies {
