@@ -28,7 +28,7 @@ application {
 
 dependencies {
     annotationProcessor 'io.micronaut.data:micronaut-data-processor'
-    annotationProcessor 'org.projectlombok:lombok:1.18.24'
+    //annotationProcessor 'org.projectlombok:lombok:1.18.24'
     implementation 'io.micronaut.data:micronaut-data-hibernate-jpa'
     implementation 'io.micronaut.sql:micronaut-hibernate-jpa'
     implementation 'io.micronaut.sql:micronaut-jdbc-hikari'
@@ -37,7 +37,7 @@ dependencies {
     implementation 'org.postgresql:postgresql:42.3.1'
     implementation 'org.codehaus.groovy:groovy'
 
-    compileOnly 'org.projectlombok:lombok:1.18.24'
+    //compileOnly 'org.projectlombok:lombok:1.18.24'
     runtimeOnly 'ch.qos.logback:logback-classic'
 
     testImplementation 'io.micronaut.test:micronaut-test-spock'

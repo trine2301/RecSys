@@ -1,3 +1,22 @@
+#micronaut:
+#  server:
+#    port: 8082
+
 micronaut:
   server:
-    port: 8082
+    cors:
+      enabled: true
+
+
+
+datasources:
+  default:
+    url: "jdbc:postgresql://localhost:5234/postgres"
+    username: "postgres"
+    password: "postgres"
+    driverClassName: "org.postgresql.Driver"
+
+jpa:
+  default:
+    entity-scan:
+      packages: 'recsys'
