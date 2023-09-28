@@ -46,7 +46,7 @@ Document any known bugs or issues that users should be aware of.
 
 ## Database
 
-PostgreSQL is launched via Docker, which is managed by Docker Compose. To start the database, go to the "run" menu at the top right and find "Deploy". This runs (configured in .run/Deploy.xm) the database for you. Under Services (bottom bar in IntelliJ), you should now be able to see Docker/Docker-compose: onboarding/database.
+PostgreSQL is launched via Docker, which is managed by Docker Compose. To start the database, go to the "run" menu at the top right and find "Deploy". This runs (configured in .run/Deploy.xm) the database for you. Under Services (bottom bar in IntelliJ), you should now be able to see Docker/Docker-compose: recsys/database.
 
 To connect to the database in IntelliJ, open the Database tab all the way to the right, and click the + icon to add a new data source:
 

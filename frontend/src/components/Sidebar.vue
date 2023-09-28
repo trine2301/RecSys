@@ -4,7 +4,7 @@
     <div class="border-b border-b-amber-100/20 shadow-lg"/>
     <div class="menu-entries ml-6 mt-12">
       <router-link class="menu-entry" to="/">Home</router-link>
-      <router-link class="menu-entry" to="/hello">Hello?</router-link>
+      <router-link class="menu-entry" to="/hello">Hello</router-link>
     </div>
   </div>
 </template>

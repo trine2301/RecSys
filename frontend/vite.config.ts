@@ -9,7 +9,7 @@ export default defineConfig({
         hmr: {
             port: 3000
         },
-        port: 5173,
+        port: 5172,
         strictPort: true,
         host: true
     },
