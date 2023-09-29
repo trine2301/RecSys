@@ -1,4 +1,4 @@
-package recsys.service.domain;
+package recsys.domain;
 
 public class AccountEntity {
 }

@@ -1,4 +1,4 @@
-package recsys.service;
+package recsys;
 import io.micronaut.runtime.Micronaut;
 
 public class App {

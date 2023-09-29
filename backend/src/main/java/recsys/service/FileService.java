@@ -1,4 +1,4 @@
-package recsys.service.businessLogic;
+package recsys.service;
 
 import groovy.lang.Singleton;
 

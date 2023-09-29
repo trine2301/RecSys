@@ -1,14 +1,14 @@
-package recsys.service;
+package recsys.controller;
 
 import io.micronaut.http.annotation.Controller;
 import io.micronaut.http.annotation.Get;
 
-@Controller("/hello")
-public class HelloController {
+@Controller("/account")
+public class AccountController {
 
     @Get
     public String index() {
-        return "Hello, world!";
+        return "See my accounts :D ";
     }
 }
 
