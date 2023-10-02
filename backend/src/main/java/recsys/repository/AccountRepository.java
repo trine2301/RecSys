@@ -2,7 +2,7 @@ package recsys.repository;
 
 import io.micronaut.data.annotation.Repository;
 import io.micronaut.data.repository.CrudRepository;
-import recsys.domain.AccountEntity;
+import recsys.model.AccountEntity;
 
 
 /**

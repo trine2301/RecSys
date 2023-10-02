@@ -1,4 +1,4 @@
-package recsys.domain.database;
+package recsys.model.database;
 
 /**
  * TODO

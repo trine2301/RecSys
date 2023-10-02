@@ -2,7 +2,7 @@ package recsys.controller;
 
 import io.micronaut.http.annotation.Controller;
 import io.micronaut.http.annotation.Get;
-import recsys.domain.AccountEntity;
+import recsys.model.AccountEntity;
 import recsys.repository.AccountRepository;
 
 import java.util.List;

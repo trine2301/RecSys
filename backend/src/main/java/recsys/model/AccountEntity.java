@@ -1,4 +1,4 @@
-package recsys.domain;
+package recsys.model;
 
 
 import javax.persistence.Entity;
