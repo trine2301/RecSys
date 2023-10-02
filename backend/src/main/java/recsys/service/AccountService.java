@@ -9,15 +9,15 @@ import java.util.List;
  * Should contain logic related to accounts.
  */
 @Singleton
-public class accountService {
+public class AccountService {
 
-    private final List<standardsAccounts> Accounts;
+    private final List<StandardsAccounts> Accounts;
 
     /**
      * Constructor
      * @param accounts
      */
-    public accountService(List<standardsAccounts> accounts) {
+    public AccountService(List<StandardsAccounts> accounts) {
         Accounts = accounts;
     }
 
@@ -25,7 +25,7 @@ public class accountService {
      * Gets all accounts from list of standarsAccounts
      * @return All accounts from standardAccounts
      */
-    public List<standardsAccounts> getAllAccounts() {
+    public List<StandardsAccounts> getAllAccounts() {
         return Accounts;
     }
 }

@@ -12,6 +12,12 @@ import recsys.model.database.TransactionDifference;
 public class TransactionService {
 
     /**
+     * Constructor
+     */
+    public TransactionService() {
+    }
+
+    /**
      * Compares two transactions.
      * @param transaction1 Accounting transaction to be compared
      * @param transaction2 Bank transaction to be compared

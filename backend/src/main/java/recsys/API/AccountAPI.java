@@ -1,9 +1,9 @@
-package recsys.model.database;
+package recsys.API;
 
 /**
  * TODO
  * Represents a connection to a table :)
  * Not sure if I need it.
  */
-public class accountAPI {
+public class AccountAPI {
 }
