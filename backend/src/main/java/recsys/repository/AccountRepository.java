@@ -6,14 +6,11 @@ import recsys.model.AccountEntity;
 
 
 /**
- * TODO
+ * This interface provides methos for performing CRUD operations on the AccountEntity.
+ *
  */
 @Repository
-public abstract class AccountRepository implements CrudRepository<AccountEntity, String> {
+public interface AccountRepository extends CrudRepository<AccountEntity, String> {
 
-    @Override
-    public Iterable<AccountEntity> findAll() {
-        return null;
-    }
-
+    //TODO implement methods if needed.
 }

@@ -3,7 +3,7 @@ package recsys.API;
 /**
  * TODO
  * Represents a connection to a table :)
- * Not sure if I need it.
+ * Should it be an interface?
  */
 public class TransactionAPI {
 }
