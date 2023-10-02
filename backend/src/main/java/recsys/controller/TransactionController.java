@@ -4,7 +4,7 @@ import io.micronaut.http.HttpResponse;
 import io.micronaut.http.annotation.Controller;
 import io.micronaut.http.annotation.Post;
 import recsys.model.Transaction;
-import recsys.model.database.TransactionDifference;
+import recsys.model.TransactionDifference;
 import recsys.service.TransactionService;
 
 /**

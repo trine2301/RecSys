@@ -2,7 +2,8 @@ package recsys.service;
 
 import groovy.lang.Singleton;
 import recsys.model.Transaction;
-import recsys.model.database.TransactionDifference;
+import recsys.model.TransactionDifference;
+
 
 /**
  * Represents a comparison model. Contains logic to compare two files etc.
@@ -28,6 +29,14 @@ public class TransactionService {
         return null;
     }
 
+
+/*    public TransactionDifference compare(Transaction transaction1, Transaction transaction2) {
+        TransactionDifference difference = new TransactionDifference();
+        difference.setAmountDifference(transaction1.getAmount() - transaction2.getAmount());
+        difference.setDateDifference(transaction1.getDate().compareTo(transaction2.getDate()));
+        difference.setAccountDifference(transaction1.getAccount().equals(transaction2.getAccount()) ? "Same" : "Different");
+        return difference;
+    }*/
 }
 
 
