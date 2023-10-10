@@ -1,33 +1,35 @@
 <template>
   <div class="sidebar">
-    <div class="title text-4xl text-center m-6 whitespace-nowrap">Trine bachelor</div>
+    <router-link class="title text-4xl text-center m-6 whitespace-nowrap text-blue-900" to="/home">
+      Trine bachelor</router-link>
     <div class="border-b border-b-amber-100/20 shadow-lg"/>
     <div class="menu-entries ml-6 mt-12">
-      <router-link class="menu-entry" to="/">Home</router-link>
-      <router-link class="menu-entry" to="/hello">Hello</router-link>
+      <router-link class="menu-entry" to="/accounts">See your accounts</router-link>
+      <router-link class="menu-entry" to="/accountMatcher">Account-matcher</router-link>
     </div>
   </div>
 </template>
 
-<script setup lang="ts">
 
-</script>
 
 <style lang="scss">
+
+
 .sidebar {
-  @apply bg-gradient-to-br from-neutral-700 to-neutral-800 shadow-xl;
+  @apply bg-gradient-to-br from-neutral-200 to-neutral-300 shadow-xl;
 }
 
 .menu-entry {
-  @apply block p-4 rounded-l-full text-xl text-amber-200/60;
+  @apply block p-4 rounded-l-full text-xl text-blue-800/60;
 
   &:hover:not(.router-link-active) {
-    @apply text-amber-200;
+    @apply text-blue-800;
   }
 
   &.router-link-active {
-    @apply bg-amber-200 text-neutral-900;
+    @apply bg-blue-200 text-blue-800;
   }
 }
+
 
 </style>

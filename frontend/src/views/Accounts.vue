@@ -1,4 +1,7 @@
 <template>
+  <div>
+    Accounts:
+  </div>
     <ul>
       <li v-for="account in accounts" :key="account.id">
         {{ account.name }}
