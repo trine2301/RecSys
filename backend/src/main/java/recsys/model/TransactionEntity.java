@@ -9,7 +9,7 @@ import java.util.Date;
  * TODO make it correspond to a table.
  */
 @Entity
-public class Transaction {
+public class TransactionEntity {
     @Id
     private int id;
     private Date date;

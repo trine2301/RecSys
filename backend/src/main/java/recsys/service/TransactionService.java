@@ -1,8 +1,8 @@
 package recsys.service;
 
 import groovy.lang.Singleton;
-import recsys.model.Transaction;
-import recsys.model.TransactionDifference;
+import recsys.model.TransactionEntity;
+import recsys.model.DifferenceEntity;
 
 
 /**
@@ -24,7 +24,7 @@ public class TransactionService {
      * @param transaction2 Bank transaction to be compared
      * @return The differences
      */
-    public TransactionDifference compare(Transaction transaction1, Transaction transaction2) {
+    public DifferenceEntity compare(TransactionEntity transaction1, TransactionEntity transaction2) {
         // Compare transaction1 and transaction2 and return the differences
         return null;
     }
