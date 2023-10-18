@@ -1,6 +1,6 @@
 package recsys.model;
 
-public enum transactionType {
+public enum TransactionType {
     BANKSTATEMENT,
     ACCOUNTING
 }
