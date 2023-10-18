@@ -1,6 +1,6 @@
 package recsys.model;
 
-public enum accountType {
+public enum AccountType {
     bankAccount,
     standardAccount
 }
