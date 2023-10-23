@@ -1,0 +1,2882 @@
+[
+  {
+    "date": "2023-06-05",
+    "amount": -20.74,
+    "description": "Bet Vegar Hernæs AS"
+  },
+  {
+    "date": "2023-06-02",
+    "amount": -1070.82,
+    "description": "Bet Lena Evanger AS"
+  },
+  {
+    "date": "2023-06-30",
+    "amount": -4.74,
+    "description": "innbet Hanna Svenning"
+  },
+  {
+    "date": "2023-06-29",
+    "amount": -32.33,
+    "description": "innbet Ørjan Lindseth"
+  },
+  {
+    "date": "2023-06-30",
+    "amount": -259.21,
+    "description": "Privat uttak"
+  },
+  {
+    "date": "2023-06-29",
+    "amount": 194.05,
+    "description": "innbet Asma Underhaug"
+  },
+  {
+    "date": "2023-06-30",
+    "amount": 121.35,
+    "description": "innbet Anne Skei"
+  },
+  {
+    "date": "2023-06-28",
+    "amount": 596.55,
+    "description": "innbet Liam Igland"
+  },
+  {
+    "date": "2023-06-28",
+    "amount": -105.85,
+    "description": "Straksbetaling lønn"
+  },
+  {
+    "date": "2023-06-28",
+    "amount": -22.24,
+    "description": "Privat uttak"
+  },
+  {
+    "date": "2023-06-22",
+    "amount": 19.03,
+    "description": "innbet Josephine Evertsen"
+  },
+  {
+    "date": "2023-06-20",
+    "amount": 103.96,
+    "description": "innbet Martyna Nawaz"
+  },
+  {
+    "date": "2023-06-26",
+    "amount": 244.9,
+    "description": "innbet Madelen Hannisdal"
+  },
+  {
+    "date": "2023-06-26",
+    "amount": 340.81,
+    "description": "innbet Dovydas Wulff"
+  },
+  {
+    "date": "2023-06-22",
+    "amount": -75.6,
+    "description": "innbet Joachim Lysø"
+  },
+  {
+    "date": "2023-06-20",
+    "amount": 146.76,
+    "description": "innbet Josephine Skjæret"
+  },
+  {
+    "date": "2023-06-28",
+    "amount": 401.87,
+    "description": "innbet Runa Haveland"
+  },
+  {
+    "date": "2023-06-26",
+    "amount": 684.92,
+    "description": "innbet Kajus Rishaug"
+  },
+  {
+    "date": "2023-06-27",
+    "amount": 26.47,
+    "description": "innbet Maia Sjøthun"
+  },
+  {
+    "date": "2023-06-27",
+    "amount": -130.94,
+    "description": "Privat uttak"
+  },
+  {
+    "date": "2023-06-27",
+    "amount": -3.23,
+    "description": "Bet Ravn Hognestad AS"
+  },
+  {
+    "date": "2023-06-28",
+    "amount": 44.46,
+    "description": "innbet Ine Midttun"
+  },
+  {
+    "date": "2023-06-23",
+    "amount": -45.87,
+    "description": "Straksbetaling lønn"
+  },
+  {
+    "date": "2023-06-22",
+    "amount": -97.79,
+    "description": "Privat uttak"
+  },
+  {
+    "date": "2023-06-20",
+    "amount": 61.66,
+    "description": "innbet Kenneth Eggum"
+  },
+  {
+    "date": "2023-06-21",
+    "amount": -35.96,
+    "description": "innbet Cassandra Monsen"
+  },
+  {
+    "date": "2023-06-20",
+    "amount": 49.98,
+    "description": "Straksbetaling lønn"
+  },
+  {
+    "date": "2023-06-20",
+    "amount": -96.56,
+    "description": "Straksbetaling lønn"
+  },
+  {
+    "date": "2023-06-20",
+    "amount": -70.6,
+    "description": "Straksbetaling lønn"
+  },
+  {
+    "date": "2023-06-20",
+    "amount": 19.9,
+    "description": "Overføring Ola Nordmann"
+  },
+  {
+    "date": "2023-06-15",
+    "amount": -58.28,
+    "description": "innbet Theo Svenkerud"
+  },
+  {
+    "date": "2023-06-13",
+    "amount": 331.25,
+    "description": "innbet Rayan Flaaten"
+  },
+  {
+    "date": "2023-06-16",
+    "amount": 442.92,
+    "description": "innbet Bushra Djupvik"
+  },
+  {
+    "date": "2023-06-13",
+    "amount": -58.64,
+    "description": "innbet Kathrine Drivenes"
+  },
+  {
+    "date": "2023-06-12",
+    "amount": 254.8,
+    "description": "innbet Luca Aanerud"
+  },
+  {
+    "date": "2023-06-16",
+    "amount": 44.22,
+    "description": "innbet Eirill Kvello"
+  },
+  {
+    "date": "2023-06-14",
+    "amount": 156.1,
+    "description": "innbet Sienna Lassen"
+  },
+  {
+    "date": "2023-06-12",
+    "amount": 6.45,
+    "description": "innbet Iver Westerheim"
+  },
+  {
+    "date": "2023-06-15",
+    "amount": 88.44,
+    "description": "Straksbetaling lønn"
+  },
+  {
+    "date": "2023-06-16",
+    "amount": -91.27,
+    "description": "Privat uttak"
+  },
+  {
+    "date": "2023-06-16",
+    "amount": 33.25,
+    "description": "Overføring"
+  },
+  {
+    "date": "2023-06-15",
+    "amount": -94.89,
+    "description": "Straksbetaling lønn"
+  },
+  {
+    "date": "2023-06-12",
+    "amount": 230.57,
+    "description": "innbet Mads Kronstad"
+  },
+  {
+    "date": "2023-06-20",
+    "amount": 16.7,
+    "description": "Privat uttak"
+  },
+  {
+    "date": "2023-06-12",
+    "amount": 71.51,
+    "description": "Straksbetaling lønn"
+  },
+  {
+    "date": "2023-06-20",
+    "amount": 1.54,
+    "description": "Straksbetaling lønn"
+  },
+  {
+    "date": "2023-06-14",
+    "amount": 43.32,
+    "description": "innbet Kamilla Sevaldsen"
+  },
+  {
+    "date": "2023-06-12",
+    "amount": 20.39,
+    "description": "Overføring"
+  },
+  {
+    "date": "2023-06-19",
+    "amount": 528.76,
+    "description": "innbet Arin Bergan"
+  },
+  {
+    "date": "2023-06-12",
+    "amount": -21.12,
+    "description": "innbet Einar Kvalø"
+  },
+  {
+    "date": "2023-06-08",
+    "amount": 764.2,
+    "description": "innbet Leander Eik"
+  },
+  {
+    "date": "2023-06-12",
+    "amount": -62.41,
+    "description": "innbet Elmer Noor"
+  },
+  {
+    "date": "2023-06-09",
+    "amount": 216.61,
+    "description": "innbet Leo Holmefjord"
+  },
+  {
+    "date": "2023-06-12",
+    "amount": -49.36,
+    "description": "innbet Thomas Magnus"
+  },
+  {
+    "date": "2023-06-09",
+    "amount": 63.38,
+    "description": "innbet Armin Fenne"
+  },
+  {
+    "date": "2023-06-05",
+    "amount": 67.32,
+    "description": "Bet Mohamed Ås AS"
+  },
+  {
+    "date": "2023-06-05",
+    "amount": 76.4,
+    "description": "Bet Thale Skaugen AS"
+  },
+  {
+    "date": "2023-06-05",
+    "amount": -27.66,
+    "description": "Bet Sana Borg AS"
+  },
+  {
+    "date": "2023-06-05",
+    "amount": -116.35,
+    "description": "Bet Alea Tokle AS"
+  },
+  {
+    "date": "2023-06-08",
+    "amount": 166.67,
+    "description": "innbet Hans Sjøli"
+  },
+  {
+    "date": "2023-06-05",
+    "amount": -52.91,
+    "description": "Bet Isa Aaen AS"
+  },
+  {
+    "date": "2023-06-09",
+    "amount": 25.36,
+    "description": "innbet Kayla Sandøy"
+  },
+  {
+    "date": "2023-06-08",
+    "amount": 158.64,
+    "description": "innbet Fredrikke Opgård"
+  },
+  {
+    "date": "2023-06-05",
+    "amount": -45.71,
+    "description": "Straksbetaling lønn"
+  },
+  {
+    "date": "2023-06-06",
+    "amount": -60.13,
+    "description": "Straksbetaling lønn"
+  },
+  {
+    "date": "2023-06-08",
+    "amount": -40.03,
+    "description": "innbet Selma Gjelstad"
+  },
+  {
+    "date": "2023-06-07",
+    "amount": 77.57,
+    "description": "innbet Leander Myrhaug"
+  },
+  {
+    "date": "2023-06-05",
+    "amount": 40.52,
+    "description": "Bet Shayan Formo AS"
+  },
+  {
+    "date": "2023-06-05",
+    "amount": -89.5,
+    "description": "Bet Ylva Østerbø AS"
+  },
+  {
+    "date": "2023-06-05",
+    "amount": -195.73,
+    "description": "Bet Ibrahim Seljeseth AS"
+  },
+  {
+    "date": "2023-06-05",
+    "amount": -27.54,
+    "description": "Bet Klara Mork AS"
+  },
+  {
+    "date": "2023-06-05",
+    "amount": 263.45,
+    "description": "innbet Tuva Wahlstrøm"
+  },
+  {
+    "date": "2023-06-05",
+    "amount": 18.89,
+    "description": "innbet Jimmy Aamodt"
+  },
+  {
+    "date": "2023-06-05",
+    "amount": -260.31,
+    "description": "Bet Petter Espe AS"
+  },
+  {
+    "date": "2023-06-02",
+    "amount": -84.84,
+    "description": "Bet Matas Høydal AS"
+  },
+  {
+    "date": "2023-06-05",
+    "amount": -101.42,
+    "description": "Bet Frida Volden AS"
+  },
+  {
+    "date": "2023-06-05",
+    "amount": -20.41,
+    "description": "innbet Edvin Stornes"
+  },
+  {
+    "date": "2023-06-05",
+    "amount": -26.2,
+    "description": "innbet Emma Stensen"
+  },
+  {
+    "date": "2023-06-05",
+    "amount": -91.62,
+    "description": "Bet Ivan Sander AS"
+  },
+  {
+    "date": "2023-06-05",
+    "amount": 5.92,
+    "description": "innbet Live Skjerven"
+  },
+  {
+    "date": "2023-06-05",
+    "amount": 23.41,
+    "description": "Bet Amelie Skogly AS"
+  },
+  {
+    "date": "2023-06-08",
+    "amount": -152.93,
+    "description": "Bet Cecilie Grov AS"
+  },
+  {
+    "date": "2023-06-05",
+    "amount": -23.49,
+    "description": "innbet Sana Borg"
+  },
+  {
+    "date": "2023-06-05",
+    "amount": 16.07,
+    "description": "innbet Ludvik Runde"
+  },
+  {
+    "date": "2023-06-05",
+    "amount": 74.81,
+    "description": "innbet Tilla Furseth"
+  },
+  {
+    "date": "2023-06-05",
+    "amount": 114.99,
+    "description": "innbet Jaran Skjerve"
+  },
+  {
+    "date": "2023-06-02",
+    "amount": -78.34,
+    "description": "Bet Alma Sveum AS"
+  },
+  {
+    "date": "2023-06-02",
+    "amount": -12.06,
+    "description": "Straksbetaling lønn"
+  },
+  {
+    "date": "2023-06-02",
+    "amount": -303.08,
+    "description": "Privat uttak"
+  },
+  {
+    "date": "2023-06-02",
+    "amount": 433.21,
+    "description": "innbet Matas Thoen"
+  },
+  {
+    "date": "2023-06-01",
+    "amount": 336.75,
+    "description": "innbet Ali Ueland"
+  },
+  {
+    "date": "2023-06-01",
+    "amount": 193.03,
+    "description": "innbet Sofia Vegsund"
+  },
+  {
+    "date": "2023-06-01",
+    "amount": 386.07,
+    "description": "innbet Ivo Lødemel"
+  },
+  {
+    "date": "2023-06-01",
+    "amount": 453.55,
+    "description": "innbet Eilev Samdal"
+  },
+  {
+    "date": "2023-06-01",
+    "amount": -40.6,
+    "description": "innbet Ine Låstad"
+  },
+  {
+    "date": "2023-06-01",
+    "amount": 90.77,
+    "description": "innbet Nelly Asbjørnsen"
+  },
+  {
+    "date": "2023-06-01",
+    "amount": 535.6,
+    "description": "innbet Khadija Velle"
+  },
+  {
+    "date": "2023-06-02",
+    "amount": 35.74,
+    "description": "innbet Zakariya Surdal"
+  },
+  {
+    "date": "2023-06-01",
+    "amount": 164.09,
+    "description": "innbet Samantha Jåsund"
+  },
+  {
+    "date": "2023-06-02",
+    "amount": 295.25,
+    "description": "innbet Ariana Møller"
+  },
+  {
+    "date": "2023-06-02",
+    "amount": 43.04,
+    "description": "innbet Nicholas Underhaug"
+  },
+  {
+    "date": "2023-06-01",
+    "amount": 352.2,
+    "description": "innbet Aslak Fornes"
+  },
+  {
+    "date": "2023-06-01",
+    "amount": 42,
+    "description": "innbet Betina Petterson"
+  },
+  {
+    "date": "2023-06-01",
+    "amount": 139.09,
+    "description": "innbet Josef Kleiv"
+  },
+  {
+    "date": "2023-06-01",
+    "amount": 137.37,
+    "description": "innbet Sverre Melby"
+  },
+  {
+    "date": "2023-06-01",
+    "amount": 43.27,
+    "description": "innbet Didrik Aanensen"
+  },
+  {
+    "date": "2023-06-01",
+    "amount": -3.47,
+    "description": "innbet Akram Blakstad"
+  },
+  {
+    "date": "2023-06-02",
+    "amount": -455.74,
+    "description": "Bet Liliana Gylland AS"
+  },
+  {
+    "date": "2023-06-01",
+    "amount": 63.28,
+    "description": "innbet Tine Olaussen"
+  },
+  {
+    "date": "2023-05-24",
+    "amount": -91.66,
+    "description": "Bet Magne Furunes AS"
+  },
+  {
+    "date": "2023-05-24",
+    "amount": 26.59,
+    "description": "innbet Thomas Borgersen"
+  },
+  {
+    "date": "2023-05-24",
+    "amount": 109.96,
+    "description": "innbet Lærke Kaur"
+  },
+  {
+    "date": "2023-05-23",
+    "amount": 78.09,
+    "description": "innbet Runa Haveland"
+  },
+  {
+    "date": "2023-05-24",
+    "amount": -34.91,
+    "description": "innbet Ellinor Sellæg"
+  },
+  {
+    "date": "2023-05-24",
+    "amount": -119.85,
+    "description": "Bet Maia Sjøthun AS"
+  },
+  {
+    "date": "2023-06-01",
+    "amount": -45.88,
+    "description": "innbet Janne Aasland"
+  },
+  {
+    "date": "2023-06-01",
+    "amount": 151.54,
+    "description": "innbet Jaran Skjerve"
+  },
+  {
+    "date": "2023-06-01",
+    "amount": 45.36,
+    "description": "innbet Kristupas Brænd"
+  },
+  {
+    "date": "2023-05-31",
+    "amount": -65.09,
+    "description": "Straksbetaling lønn"
+  },
+  {
+    "date": "2023-05-31",
+    "amount": 20.19,
+    "description": "innbet Adna Akbari"
+  },
+  {
+    "date": "2023-05-30",
+    "amount": 1.66,
+    "description": "Straksbetaling lønn"
+  },
+  {
+    "date": "2023-05-31",
+    "amount": 150.73,
+    "description": "innbet Weronika Asp"
+  },
+  {
+    "date": "2023-05-25",
+    "amount": -66.84,
+    "description": "Straksbetaling lønn"
+  },
+  {
+    "date": "2023-05-30",
+    "amount": 15.59,
+    "description": "Straksbetaling lønn"
+  },
+  {
+    "date": "2023-05-30",
+    "amount": 17.57,
+    "description": "Straksbetaling lønn"
+  },
+  {
+    "date": "2023-05-15",
+    "amount": -146.22,
+    "description": "Privat uttak"
+  },
+  {
+    "date": "2023-04-23",
+    "amount": 15.8,
+    "description": "Straksbetaling lønn"
+  },
+  {
+    "date": "2023-06-30",
+    "amount": 56.8,
+    "description": "Bankgebyr"
+  },
+  {
+    "date": "2023-05-15",
+    "amount": -61.09,
+    "description": "Bet Eldana Herfindal AS"
+  },
+  {
+    "date": "2023-05-15",
+    "amount": 18.55,
+    "description": "Bet Hanna Svenning AS"
+  },
+  {
+    "date": "2023-05-08",
+    "amount": 192.68,
+    "description": "Delbetaling"
+  },
+  {
+    "date": "2023-05-12",
+    "amount": 162.66,
+    "description": "innbet Rayan Odland"
+  },
+  {
+    "date": "2023-05-15",
+    "amount": 30.05,
+    "description": "innbet Iselin Finne"
+  },
+  {
+    "date": "2023-05-08",
+    "amount": 116.61,
+    "description": "innbet Ellen Nybråten"
+  },
+  {
+    "date": "2023-05-22",
+    "amount": 209.39,
+    "description": "innbet Ariane Thon"
+  },
+  {
+    "date": "2023-05-16",
+    "amount": 39.71,
+    "description": "innbet Cornelius Helgesen"
+  },
+  {
+    "date": "2023-05-12",
+    "amount": -48.24,
+    "description": "innbet Artur Tronstad"
+  },
+  {
+    "date": "2023-05-19",
+    "amount": 75.16,
+    "description": "Straksbetaling lønn"
+  },
+  {
+    "date": "2023-05-15",
+    "amount": -42.25,
+    "description": "Bet Arthur Mahamed AS"
+  },
+  {
+    "date": "2023-05-15",
+    "amount": -75.18,
+    "description": "Bet Hanna Svenning AS"
+  },
+  {
+    "date": "2023-05-19",
+    "amount": -90.49,
+    "description": "Privat uttak"
+  },
+  {
+    "date": "2023-05-15",
+    "amount": 24.33,
+    "description": "innbet Rachel Myran"
+  },
+  {
+    "date": "2023-05-08",
+    "amount": 4.65,
+    "description": "innbet Nawal Eknes"
+  },
+  {
+    "date": "2023-05-16",
+    "amount": -19.41,
+    "description": "Straksbetaling forskuddslønn"
+  },
+  {
+    "date": "2023-05-08",
+    "amount": -85.69,
+    "description": "Privat uttak"
+  },
+  {
+    "date": "2023-05-15",
+    "amount": -140.11,
+    "description": "Bet Yousef Finseth AS"
+  },
+  {
+    "date": "2023-05-10",
+    "amount": 30.53,
+    "description": "Overføring"
+  },
+  {
+    "date": "2023-05-05",
+    "amount": 389.78,
+    "description": "innbet Andre Brakstad"
+  },
+  {
+    "date": "2023-05-03",
+    "amount": 51.56,
+    "description": "innbet Oskar Bonsaksen"
+  },
+  {
+    "date": "2023-05-03",
+    "amount": 39.28,
+    "description": "innbet Lene Grov"
+  },
+  {
+    "date": "2023-05-02",
+    "amount": 52.71,
+    "description": "innbet Marco Fykse"
+  },
+  {
+    "date": "2023-05-02",
+    "amount": 140.21,
+    "description": "innbet Sonia Aspaas"
+  },
+  {
+    "date": "2023-05-02",
+    "amount": 194.74,
+    "description": "innbet Tia Daae"
+  },
+  {
+    "date": "2023-05-03",
+    "amount": -100.62,
+    "description": "Privat uttak"
+  },
+  {
+    "date": "2023-05-04",
+    "amount": 115.09,
+    "description": "innbet Bjørnar Urdal"
+  },
+  {
+    "date": "2023-05-05",
+    "amount": 168.3,
+    "description": "innbet Sven Thomassen"
+  },
+  {
+    "date": "2023-05-04",
+    "amount": 161.92,
+    "description": "innbet Nora Hopland"
+  },
+  {
+    "date": "2023-05-02",
+    "amount": 145.53,
+    "description": "innbet Audun Arneberg"
+  },
+  {
+    "date": "2023-05-02",
+    "amount": 88.36,
+    "description": "innbet Iselin Finne"
+  },
+  {
+    "date": "2023-05-02",
+    "amount": 73.41,
+    "description": "innbet Siri Bjerga"
+  },
+  {
+    "date": "2023-05-02",
+    "amount": 155.36,
+    "description": "innbet Tor Mentzoni"
+  },
+  {
+    "date": "2023-05-02",
+    "amount": 80.71,
+    "description": "innbet Bendik Ødegaard"
+  },
+  {
+    "date": "2023-05-02",
+    "amount": 57.72,
+    "description": "innbet Jonah Stiansen"
+  },
+  {
+    "date": "2023-05-02",
+    "amount": 76.98,
+    "description": "innbet Magne Storsve"
+  },
+  {
+    "date": "2023-05-02",
+    "amount": 134.12,
+    "description": "innbet Nickolai Lunde"
+  },
+  {
+    "date": "2023-05-02",
+    "amount": 24.88,
+    "description": "innbet Armin Rolandsen"
+  },
+  {
+    "date": "2023-05-02",
+    "amount": 170.43,
+    "description": "innbet Eilif Michalsen"
+  },
+  {
+    "date": "2023-05-03",
+    "amount": -465.25,
+    "description": "Privat uttak"
+  },
+  {
+    "date": "2023-05-02",
+    "amount": -16.39,
+    "description": "innbet Dorthea Albrigtsen"
+  },
+  {
+    "date": "2023-05-02",
+    "amount": 44.05,
+    "description": "innbet Olaf Leirvik"
+  },
+  {
+    "date": "2023-05-02",
+    "amount": -80.58,
+    "description": "innbet Joseph Eggum"
+  },
+  {
+    "date": "2023-04-26",
+    "amount": 15.26,
+    "description": "innbet Sonja Reiersen"
+  },
+  {
+    "date": "2023-05-02",
+    "amount": 19.37,
+    "description": "innbet Bendik Ødegaard"
+  },
+  {
+    "date": "2023-05-02",
+    "amount": 103.49,
+    "description": "innbet Ian Nygren"
+  },
+  {
+    "date": "2023-04-27",
+    "amount": 1.35,
+    "description": "Straksbetaling"
+  },
+  {
+    "date": "2023-04-27",
+    "amount": 67.36,
+    "description": "Stasjonsdrift, mangler kvittering"
+  },
+  {
+    "date": "2023-04-28",
+    "amount": -20.99,
+    "description": "innbet Arman Hernæs"
+  },
+  {
+    "date": "2023-05-02",
+    "amount": 114.55,
+    "description": "innbet Hannah Alver"
+  },
+  {
+    "date": "2023-04-27",
+    "amount": 55.32,
+    "description": "Oslo kommune"
+  },
+  {
+    "date": "2023-05-31",
+    "amount": -0.07,
+    "description": "Bankgebyr"
+  },
+  {
+    "date": "2023-04-26",
+    "amount": 71.69,
+    "description": "innbet Aurora Lindberg"
+  },
+  {
+    "date": "2023-04-28",
+    "amount": -1005.77,
+    "description": "Privat uttak"
+  },
+  {
+    "date": "2023-04-26",
+    "amount": -76.17,
+    "description": "Straksbetaling"
+  },
+  {
+    "date": "2023-04-24",
+    "amount": -61.76,
+    "description": "Jernia, mangler kvittering"
+  },
+  {
+    "date": "2023-04-26",
+    "amount": 40.4,
+    "description": "innbet Daniella Fagerli"
+  },
+  {
+    "date": "2023-04-28",
+    "amount": 27.12,
+    "description": "YX, mangler kvittering"
+  },
+  {
+    "date": "2023-04-24",
+    "amount": 24.37,
+    "description": "Straksbetaling"
+  },
+  {
+    "date": "2023-04-24",
+    "amount": -89.15,
+    "description": "Privat uttak"
+  },
+  {
+    "date": "2023-04-24",
+    "amount": -35.66,
+    "description": "innbet Christer Hasan"
+  },
+  {
+    "date": "2023-04-24",
+    "amount": 215.41,
+    "description": "innbet Fatma Stiansen"
+  },
+  {
+    "date": "2023-04-24",
+    "amount": 2.79,
+    "description": "innbet Ines Svenning"
+  },
+  {
+    "date": "2023-04-24",
+    "amount": -27.93,
+    "description": "innbet Tobias Sæland"
+  },
+  {
+    "date": "2023-04-21",
+    "amount": 16.56,
+    "description": "innbet Nathaniel Yilmaz"
+  },
+  {
+    "date": "2023-04-19",
+    "amount": 169.81,
+    "description": "innbet Rahaf Ramberg"
+  },
+  {
+    "date": "2023-04-13",
+    "amount": 60.44,
+    "description": "Vegfinans"
+  },
+  {
+    "date": "2023-04-21",
+    "amount": -85.09,
+    "description": "Privat uttak"
+  },
+  {
+    "date": "2023-04-17",
+    "amount": 74.55,
+    "description": "1-2-3 Tusenfryd, mangler kvittering"
+  },
+  {
+    "date": "2023-04-21",
+    "amount": -109.49,
+    "description": "Straksbetaling lønn"
+  },
+  {
+    "date": "2023-04-14",
+    "amount": 36.76,
+    "description": "Shell, mangler kvittering"
+  },
+  {
+    "date": "2023-04-17",
+    "amount": -63.89,
+    "description": "Shell, mangler kvittering"
+  },
+  {
+    "date": "2023-04-19",
+    "amount": -89.55,
+    "description": "Straksbetaling lønn"
+  },
+  {
+    "date": "2023-04-17",
+    "amount": -16.97,
+    "description": "Straksbetaling lønn"
+  },
+  {
+    "date": "2023-04-14",
+    "amount": 27.08,
+    "description": "innbet Ariana Møller"
+  },
+  {
+    "date": "2023-04-14",
+    "amount": -123.25,
+    "description": "Straksbetaling lønn"
+  },
+  {
+    "date": "2023-04-14",
+    "amount": 698.8,
+    "description": "innbet Ea Breivik"
+  },
+  {
+    "date": "2023-04-14",
+    "amount": 126.33,
+    "description": "innbet Aleksander Tonning"
+  },
+  {
+    "date": "2023-04-12",
+    "amount": -93.98,
+    "description": "Vegfinans"
+  },
+  {
+    "date": "2023-04-12",
+    "amount": -37.09,
+    "description": "Bet Askil Thorgersen AS"
+  },
+  {
+    "date": "2023-04-11",
+    "amount": 70.43,
+    "description": "Bet Alice Rønneberg AS"
+  },
+  {
+    "date": "2023-04-12",
+    "amount": -58.7,
+    "description": "Bet Kim Finsrud AS"
+  },
+  {
+    "date": "2023-04-11",
+    "amount": -78.79,
+    "description": "Bet Arin Bergan AS"
+  },
+  {
+    "date": "2023-04-12",
+    "amount": 28.57,
+    "description": "Bet Siri Bjerga AS"
+  },
+  {
+    "date": "2023-04-11",
+    "amount": 49.75,
+    "description": "Vegfinans"
+  },
+  {
+    "date": "2023-04-12",
+    "amount": -87.15,
+    "description": "Oslo kommune"
+  },
+  {
+    "date": "2023-04-11",
+    "amount": -0.87,
+    "description": "Bet Liliana Gylland AS"
+  },
+  {
+    "date": "2023-04-11",
+    "amount": 52.27,
+    "description": "Vegfinans"
+  },
+  {
+    "date": "2023-04-12",
+    "amount": -18.47,
+    "description": "Maxbo, mangler kvittering"
+  },
+  {
+    "date": "2023-04-12",
+    "amount": 46.55,
+    "description": "Privat uttak"
+  },
+  {
+    "date": "2023-04-12",
+    "amount": -65.35,
+    "description": "Jernia, mangler kvittering"
+  },
+  {
+    "date": "2023-04-11",
+    "amount": -65.99,
+    "description": "Shell, mangler kvittering"
+  },
+  {
+    "date": "2023-04-11",
+    "amount": 88.5,
+    "description": "Vegfinans"
+  },
+  {
+    "date": "2023-04-11",
+    "amount": 41.75,
+    "description": "Bet Matas Thoen AS"
+  },
+  {
+    "date": "2023-04-11",
+    "amount": 55.68,
+    "description": "Overføring"
+  },
+  {
+    "date": "2023-04-11",
+    "amount": -97.29,
+    "description": "Straksbetaling lønn"
+  },
+  {
+    "date": "2023-04-11",
+    "amount": 61.14,
+    "description": "innbet Lisa Kaldheim"
+  },
+  {
+    "date": "2023-04-05",
+    "amount": 44.16,
+    "description": "Straksbetaling lønn"
+  },
+  {
+    "date": "2023-04-04",
+    "amount": -286.27,
+    "description": "Privat uttak"
+  },
+  {
+    "date": "2023-04-03",
+    "amount": 25.11,
+    "description": "innbet Josephine Skjæret"
+  },
+  {
+    "date": "2023-04-03",
+    "amount": 47.59,
+    "description": "innbet Isabel Nissen"
+  },
+  {
+    "date": "2023-04-03",
+    "amount": 56.9,
+    "description": "Shell, mangler kvittering"
+  },
+  {
+    "date": "2023-04-03",
+    "amount": 6.33,
+    "description": "innbet Kajsa Fossdal"
+  },
+  {
+    "date": "2023-04-03",
+    "amount": 151.99,
+    "description": "innbet Margit Aanestad"
+  },
+  {
+    "date": "2023-04-03",
+    "amount": 34.75,
+    "description": "innbet Eldana Vårdal"
+  },
+  {
+    "date": "2023-04-03",
+    "amount": 52.11,
+    "description": "innbet Adine Neset"
+  },
+  {
+    "date": "2023-04-03",
+    "amount": 45.7,
+    "description": "innbet Wilma Dyrstad"
+  },
+  {
+    "date": "2023-04-03",
+    "amount": 59.94,
+    "description": "innbet Signe Brekka"
+  },
+  {
+    "date": "2023-04-03",
+    "amount": 152.53,
+    "description": "innbet Josephine Rystad"
+  },
+  {
+    "date": "2023-04-03",
+    "amount": 152.93,
+    "description": "innbet Amalia Leiknes"
+  },
+  {
+    "date": "2023-04-03",
+    "amount": 151.19,
+    "description": "innbet Sonia Aspaas"
+  },
+  {
+    "date": "2023-04-03",
+    "amount": -0.25,
+    "description": "innbet Harun Hasselberg"
+  },
+  {
+    "date": "2023-04-03",
+    "amount": 83.86,
+    "description": "innbet Wilmer Bugten"
+  },
+  {
+    "date": "2023-04-03",
+    "amount": -19.08,
+    "description": "innbet Melina Bakken"
+  },
+  {
+    "date": "2023-04-03",
+    "amount": 86.53,
+    "description": "Jernia, mangler kvittering"
+  },
+  {
+    "date": "2023-04-03",
+    "amount": 226.38,
+    "description": "innbet Rahaf Ramberg"
+  },
+  {
+    "date": "2023-03-24",
+    "amount": 21.71,
+    "description": "Bet Kristine Flo AS"
+  },
+  {
+    "date": "2023-03-24",
+    "amount": -34.46,
+    "description": "Bet Asma Våga AS"
+  },
+  {
+    "date": "2023-03-31",
+    "amount": -34.67,
+    "description": "innbet Arvid Soleng"
+  },
+  {
+    "date": "2023-03-27",
+    "amount": 22.15,
+    "description": "Straksbetaling lønn"
+  },
+  {
+    "date": "2023-03-31",
+    "amount": 45.45,
+    "description": "Privat uttak"
+  },
+  {
+    "date": "2023-03-24",
+    "amount": 44.73,
+    "description": "Jernia, mangler kvittering"
+  },
+  {
+    "date": "2023-03-31",
+    "amount": 60,
+    "description": "innbet Nikolas Åsland"
+  },
+  {
+    "date": "2023-03-31",
+    "amount": 37.89,
+    "description": "Shell, mangler kvittering"
+  },
+  {
+    "date": "2023-03-28",
+    "amount": 80.44,
+    "description": "1-2-3 Bærumsvei, mangler kvittering"
+  },
+  {
+    "date": "2023-03-31",
+    "amount": 52.6,
+    "description": "Vestrøy post, mangler kvittering"
+  },
+  {
+    "date": "2023-03-26",
+    "amount": -108.67,
+    "description": "Privat uttak"
+  },
+  {
+    "date": "2023-03-27",
+    "amount": 17.41,
+    "description": "Straksbetaling lønn"
+  },
+  {
+    "date": "2023-03-27",
+    "amount": 71.32,
+    "description": "Straksbetaling lønn"
+  },
+  {
+    "date": "2023-03-23",
+    "amount": 11.97,
+    "description": "Bet Muhammad Sæter AS"
+  },
+  {
+    "date": "2023-03-23",
+    "amount": 175.61,
+    "description": "innbet Sam Holmedal"
+  },
+  {
+    "date": "2023-03-03",
+    "amount": 61.71,
+    "description": "Gebyr/renter Skatteetaten"
+  },
+  {
+    "date": "2023-03-23",
+    "amount": -31.74,
+    "description": "innbet Idun Midttun"
+  },
+  {
+    "date": "2023-03-24",
+    "amount": 80.3,
+    "description": "Straksbetaling lønn"
+  },
+  {
+    "date": "2023-03-24",
+    "amount": -108.22,
+    "description": "Jula, mangler kvittering"
+  },
+  {
+    "date": "2023-03-26",
+    "amount": 53.72,
+    "description": "Overføring"
+  },
+  {
+    "date": "2023-03-22",
+    "amount": -180.75,
+    "description": "Bet Sanna Bjørkmo AS"
+  },
+  {
+    "date": "2023-03-22",
+    "amount": -66.83,
+    "description": "innbet Albin Bodin"
+  },
+  {
+    "date": "2023-03-15",
+    "amount": 0.25,
+    "description": "innbet Jørgen Elvik"
+  },
+  {
+    "date": "2023-03-16",
+    "amount": 60.95,
+    "description": "Shell, mangler kvittering"
+  },
+  {
+    "date": "2023-03-17",
+    "amount": -15.2,
+    "description": "Shell, mangler kvittering"
+  },
+  {
+    "date": "2023-03-20",
+    "amount": 70.72,
+    "description": "Jernia, mangler kvittering"
+  },
+  {
+    "date": "2023-03-21",
+    "amount": -67.19,
+    "description": "Straksbetaling lønn"
+  },
+  {
+    "date": "2023-03-20",
+    "amount": 111.8,
+    "description": "innbet Matthias Flem"
+  },
+  {
+    "date": "2023-03-13",
+    "amount": 6.08,
+    "description": "YX, mangler kvittering"
+  },
+  {
+    "date": "2023-03-20",
+    "amount": -86.65,
+    "description": "Oslo kommune"
+  },
+  {
+    "date": "2023-03-13",
+    "amount": 53.16,
+    "description": "Straksbetaling lønn"
+  },
+  {
+    "date": "2023-03-16",
+    "amount": 79.55,
+    "description": "Kiwi, mangler kvittering"
+  },
+  {
+    "date": "2023-03-20",
+    "amount": 49.74,
+    "description": "Jernia, mangler kvittering"
+  },
+  {
+    "date": "2023-03-15",
+    "amount": -19.72,
+    "description": "innbet Matteus Begum"
+  },
+  {
+    "date": "2023-03-21",
+    "amount": 322.08,
+    "description": "innbet Lærke Kaur"
+  },
+  {
+    "date": "2023-03-13",
+    "amount": 78.64,
+    "description": "YX, mangler kvittering"
+  },
+  {
+    "date": "2023-03-14",
+    "amount": 40.53,
+    "description": "Biltema, mangler kvittering"
+  },
+  {
+    "date": "2023-03-13",
+    "amount": 27.58,
+    "description": "Lekestua, mangler kvittering"
+  },
+  {
+    "date": "2023-03-14",
+    "amount": -27.19,
+    "description": "1-2-3 Bærumsvei, mangler kvittering"
+  },
+  {
+    "date": "2023-03-14",
+    "amount": -73.9,
+    "description": "1-2-3 Bærumsvei, mangler kvittering"
+  },
+  {
+    "date": "2023-03-13",
+    "amount": -175.34,
+    "description": "Iveco Norge, mangler kvittering"
+  },
+  {
+    "date": "2023-03-02",
+    "amount": -75.5,
+    "description": "Privat uttak"
+  },
+  {
+    "date": "2023-03-13",
+    "amount": -11.69,
+    "description": "innbet Lilje Sundseth"
+  },
+  {
+    "date": "2023-03-13",
+    "amount": 43.2,
+    "description": "innbet Rahaf Ramberg"
+  },
+  {
+    "date": "2023-03-03",
+    "amount": -32.21,
+    "description": "Bet Benedikte Haglund AS"
+  },
+  {
+    "date": "2023-03-03",
+    "amount": -73,
+    "description": "Bet Rayan Odland AS"
+  },
+  {
+    "date": "2023-03-03",
+    "amount": 41.01,
+    "description": "Bet Ingmar Mostad AS"
+  },
+  {
+    "date": "2023-03-02",
+    "amount": 121.17,
+    "description": "innbet Cecilie Grov"
+  },
+  {
+    "date": "2023-03-13",
+    "amount": 16.49,
+    "description": "innbet Marianne Sommerseth"
+  },
+  {
+    "date": "2023-03-09",
+    "amount": 651.22,
+    "description": "innbet Anders Sørlie"
+  },
+  {
+    "date": "2023-03-06",
+    "amount": 39.28,
+    "description": "innbet Eileen Solbakk"
+  },
+  {
+    "date": "2023-03-10",
+    "amount": 31.44,
+    "description": "Overføring"
+  },
+  {
+    "date": "2023-03-13",
+    "amount": -155.36,
+    "description": "Privat uttak"
+  },
+  {
+    "date": "2023-03-10",
+    "amount": 99.36,
+    "description": "innbetMogens Thorsensgate 13"
+  },
+  {
+    "date": "2023-03-01",
+    "amount": 43.57,
+    "description": "innbet Andre Brakstad"
+  },
+  {
+    "date": "2023-03-07",
+    "amount": 26.54,
+    "description": "Jernia, mangler kvittering"
+  },
+  {
+    "date": "2023-03-02",
+    "amount": 34.69,
+    "description": "innbet Aslak Stalsberg"
+  },
+  {
+    "date": "2023-03-02",
+    "amount": -7.06,
+    "description": "innbet Hugo Herland"
+  },
+  {
+    "date": "2023-03-03",
+    "amount": -13.76,
+    "description": "Privat uttak"
+  },
+  {
+    "date": "2023-05-08",
+    "amount": 13,
+    "description": "Bet Cathrine Viste AS"
+  },
+  {
+    "date": "2023-05-08",
+    "amount": -18.45,
+    "description": "Bet Emeli Haavik AS"
+  },
+  {
+    "date": "2023-03-01",
+    "amount": 165,
+    "description": "innbet Tobias Sjøblom"
+  },
+  {
+    "date": "2023-03-01",
+    "amount": 36.98,
+    "description": "innbet Kajsa Fossdal"
+  },
+  {
+    "date": "2023-03-01",
+    "amount": -0.63,
+    "description": "innbet Tymon Bjørnevik"
+  },
+  {
+    "date": "2023-03-01",
+    "amount": -30.65,
+    "description": "innbet Nikolai Sunde"
+  },
+  {
+    "date": "2023-04-30",
+    "amount": -32.03,
+    "description": "Bankgebyr"
+  },
+  {
+    "date": "2023-03-01",
+    "amount": 134.95,
+    "description": "innbet Kenneth Eggum"
+  },
+  {
+    "date": "2023-03-01",
+    "amount": 100.48,
+    "description": "innbet Alma Lien"
+  },
+  {
+    "date": "2023-03-01",
+    "amount": 144.65,
+    "description": "innbet Marte Alvheim"
+  },
+  {
+    "date": "2023-03-31",
+    "amount": -9.84,
+    "description": "Bankgebyr"
+  },
+  {
+    "date": "2023-03-01",
+    "amount": 9.7,
+    "description": "innbet Samantha Molteberg"
+  },
+  {
+    "date": "2023-03-01",
+    "amount": 112.75,
+    "description": "innbet Anders Husby"
+  },
+  {
+    "date": "2023-03-01",
+    "amount": 86.35,
+    "description": "innbet Benedicte Johannessen"
+  },
+  {
+    "date": "2023-03-01",
+    "amount": 260.75,
+    "description": "innbet Maxim Smedsrud"
+  },
+  {
+    "date": "2023-05-02",
+    "amount": -335.8,
+    "description": "Bet Josef Sumstad AS"
+  },
+  {
+    "date": "2023-05-02",
+    "amount": -154.54,
+    "description": "Bet Alexandra Engenes AS"
+  },
+  {
+    "date": "2023-05-02",
+    "amount": -123.62,
+    "description": "Bet Marco Zielinski AS"
+  },
+  {
+    "date": "2023-03-20",
+    "amount": -319.56,
+    "description": "Overføring"
+  },
+  {
+    "date": "2023-06-01",
+    "amount": -255.3,
+    "description": "Bet Nickolai Lunde AS"
+  },
+  {
+    "date": "2023-06-01",
+    "amount": -208.16,
+    "description": "Bet Vegar Hernæs AS"
+  },
+  {
+    "date": "2023-06-01",
+    "amount": -102.56,
+    "description": "Bet Kayla Sandøy AS"
+  },
+  {
+    "date": "2023-06-01",
+    "amount": -223.9,
+    "description": "Bet Gina Phan AS"
+  },
+  {
+    "date": "2023-06-05",
+    "amount": -15.81,
+    "description": "Nordea innskuddspensjon"
+  },
+  {
+    "date": "2023-05-15",
+    "amount": -82.2,
+    "description": "Nordea innskuddspensjon"
+  },
+  {
+    "date": "2023-04-12",
+    "amount": -88.63,
+    "description": "Bet Åsne Tetlie AS"
+  },
+  {
+    "date": "2023-04-12",
+    "amount": -34.63,
+    "description": "Bet Thomas Lilleengen AS"
+  },
+  {
+    "date": "2023-04-12",
+    "amount": -19.2,
+    "description": "Bet Asma Våga AS"
+  },
+  {
+    "date": "2023-04-12",
+    "amount": 64.33,
+    "description": "Bet Marta Utgård AS"
+  },
+  {
+    "date": "2023-04-12",
+    "amount": 66.1,
+    "description": "Bet Laiba Langerud AS"
+  },
+  {
+    "date": "2023-03-03",
+    "amount": -72.22,
+    "description": "Nordea innskuddspensjon"
+  },
+  {
+    "date": "2023-04-12",
+    "amount": -60.61,
+    "description": "Bet Alicja Mehus AS"
+  },
+  {
+    "date": "2023-05-08",
+    "amount": -99.3,
+    "description": "Nordea innskuddspensjon"
+  },
+  {
+    "date": "2023-04-12",
+    "amount": 1.32,
+    "description": "Bet Ine Midttun AS"
+  },
+  {
+    "date": "2023-03-03",
+    "amount": -99.43,
+    "description": "Trafikkforsikringsforening"
+  },
+  {
+    "date": "2023-03-03",
+    "amount": 54.87,
+    "description": "Trafikkforsikringsforening"
+  },
+  {
+    "date": "2023-03-03",
+    "amount": -3.91,
+    "description": "Trafikkforsikringsforening"
+  },
+  {
+    "date": "2023-03-03",
+    "amount": 15.82,
+    "description": "Nordea innskuddspensjon"
+  },
+  {
+    "date": "2023-03-22",
+    "amount": -96.34,
+    "description": "Bet Åsmund Robberstad AS"
+  },
+  {
+    "date": "2023-05-03",
+    "amount": 8.31,
+    "description": "Bet Arvid Soleng AS"
+  },
+  {
+    "date": "2023-03-01",
+    "amount": -370.83,
+    "description": "Bet Lennox Kildal AS"
+  },
+  {
+    "date": "2023-03-01",
+    "amount": -117.85,
+    "description": "Bet Marcel Gjengstø AS"
+  },
+  {
+    "date": "2023-03-01",
+    "amount": -84.34,
+    "description": "Bet Rose Bakstad AS"
+  },
+  {
+    "date": "2023-05-15",
+    "amount": -158.63,
+    "description": "Bet Katarina Kolås AS"
+  },
+  {
+    "date": "2023-04-03",
+    "amount": -193.56,
+    "description": "Bet Ariana Møller AS"
+  },
+  {
+    "date": "2023-04-03",
+    "amount": -79.64,
+    "description": "Bet Jamie Milde AS"
+  },
+  {
+    "date": "2023-04-03",
+    "amount": -144.92,
+    "description": "Bet Angelina Roberg AS"
+  },
+  {
+    "date": "2023-03-06",
+    "amount": -315.38,
+    "description": "Bet Sivert Norderhaug AS"
+  },
+  {
+    "date": "2023-05-30",
+    "amount": -29.85,
+    "description": "Biltema"
+  },
+  {
+    "date": "2023-05-31",
+    "amount": -105.28,
+    "description": "Sigvartsen Steinindustri"
+  },
+  {
+    "date": "2023-02-20",
+    "amount": -619.07,
+    "description": "Bet Sivert Iversen AS"
+  },
+  {
+    "date": "2023-02-20",
+    "amount": 514.45,
+    "description": "korrigering av 278"
+  },
+  {
+    "date": "2023-02-20",
+    "amount": -563.88,
+    "description": "Bet Elvin Wathne AS"
+  },
+  {
+    "date": "2023-05-10",
+    "amount": 6.67,
+    "description": "Thaugland, hanske"
+  },
+  {
+    "date": "2023-05-29",
+    "amount": -92.42,
+    "description": "Joker, frimerker"
+  },
+  {
+    "date": "2023-05-22",
+    "amount": -84.72,
+    "description": "Sigvartsen Steinindustri"
+  },
+  {
+    "date": "2023-05-16",
+    "amount": -43.23,
+    "description": "Biltema"
+  },
+  {
+    "date": "2023-05-16",
+    "amount": 16.95,
+    "description": "Biltema"
+  },
+  {
+    "date": "2023-05-25",
+    "amount": -23.58,
+    "description": "7-eleven"
+  },
+  {
+    "date": "2023-05-23",
+    "amount": -120.84,
+    "description": "Sigvartsen Steinindustri"
+  },
+  {
+    "date": "2023-03-03",
+    "amount": 6.43,
+    "description": "Bet Alea Tokle AS"
+  },
+  {
+    "date": "2023-05-10",
+    "amount": 82.45,
+    "description": "Thaugland"
+  },
+  {
+    "date": "2023-05-10",
+    "amount": 92.66,
+    "description": "Maxbo"
+  },
+  {
+    "date": "2023-05-16",
+    "amount": 71.44,
+    "description": "7-eleven"
+  },
+  {
+    "date": "2023-05-11",
+    "amount": -74.26,
+    "description": "Jernia, hengelås"
+  },
+  {
+    "date": "2023-05-11",
+    "amount": -44.87,
+    "description": "Automat 1"
+  },
+  {
+    "date": "2023-05-12",
+    "amount": -65.57,
+    "description": "Tools, bukse"
+  },
+  {
+    "date": "2023-05-03",
+    "amount": -50.43,
+    "description": "Shell"
+  },
+  {
+    "date": "2023-05-11",
+    "amount": -20.87,
+    "description": "Bunnpris, hengelås"
+  },
+  {
+    "date": "2023-05-22",
+    "amount": 85.4,
+    "description": "Haraldrud gjenbruksstasjon"
+  },
+  {
+    "date": "2023-05-05",
+    "amount": 63.96,
+    "description": "Automat 1"
+  },
+  {
+    "date": "2023-05-05",
+    "amount": -104.43,
+    "description": "Bauhaus"
+  },
+  {
+    "date": "2023-05-04",
+    "amount": 74.85,
+    "description": "Sigvartsen Steinindustri"
+  },
+  {
+    "date": "2023-05-02",
+    "amount": 76.37,
+    "description": "Thaugland"
+  },
+  {
+    "date": "2023-05-05",
+    "amount": -13.48,
+    "description": "Grønmo hageavfallsmottak"
+  },
+  {
+    "date": "2023-05-05",
+    "amount": 19.83,
+    "description": "Grønmo gjenbruksstasjon"
+  },
+  {
+    "date": "2023-05-02",
+    "amount": -47.25,
+    "description": "Felleskjøpet"
+  },
+  {
+    "date": "2023-05-02",
+    "amount": -78.27,
+    "description": "Felleskjøpet, Levegg"
+  },
+  {
+    "date": "2023-05-09",
+    "amount": -73.37,
+    "description": "Haraldrud gjenbruksstasjon"
+  },
+  {
+    "date": "2023-05-11",
+    "amount": -20.66,
+    "description": "Jernia, slange"
+  },
+  {
+    "date": "2023-05-30",
+    "amount": -25.18,
+    "description": "Jula, punkteringsspray"
+  },
+  {
+    "date": "2023-05-30",
+    "amount": 6.63,
+    "description": "Sigvartsen Steinindustri"
+  },
+  {
+    "date": "2023-05-09",
+    "amount": 14.74,
+    "description": "Gartnerservice"
+  },
+  {
+    "date": "2023-05-22",
+    "amount": -69.82,
+    "description": "Smestad gjenbruksstasjon"
+  },
+  {
+    "date": "2023-05-24",
+    "amount": -53.28,
+    "description": "Shell"
+  },
+  {
+    "date": "2023-05-24",
+    "amount": 37.18,
+    "description": "Shell"
+  },
+  {
+    "date": "2023-05-24",
+    "amount": 96.16,
+    "description": "Matkroken, saks"
+  },
+  {
+    "date": "2023-04-21",
+    "amount": -63.88,
+    "description": "Hvaler bensin, bilrekv."
+  },
+  {
+    "date": "2023-05-10",
+    "amount": 22.36,
+    "description": "Maxbo"
+  },
+  {
+    "date": "2023-04-12",
+    "amount": -65.45,
+    "description": "Shell"
+  },
+  {
+    "date": "2023-03-19",
+    "amount": -64.3,
+    "description": "Uno-X"
+  },
+  {
+    "date": "2023-04-21",
+    "amount": -78.19,
+    "description": "Frevar"
+  },
+  {
+    "date": "2023-04-12",
+    "amount": -88.44,
+    "description": "Biltema, vannkanne"
+  },
+  {
+    "date": "2023-04-18",
+    "amount": 7.65,
+    "description": "Jernia, diamantkappeskive"
+  },
+  {
+    "date": "2023-03-07",
+    "amount": 51.79,
+    "description": "Byggern"
+  },
+  {
+    "date": "2023-04-13",
+    "amount": 43.81,
+    "description": "Maxbo"
+  },
+  {
+    "date": "2023-04-12",
+    "amount": 49.62,
+    "description": "Haraldrud gjenbruksstasjon"
+  },
+  {
+    "date": "2023-05-04",
+    "amount": 42.15,
+    "description": "Østfold Gress"
+  },
+  {
+    "date": "2023-05-09",
+    "amount": -39.7,
+    "description": "Østfold Gress"
+  },
+  {
+    "date": "2023-05-08",
+    "amount": -81.54,
+    "description": "Byggern"
+  },
+  {
+    "date": "2023-02-13",
+    "amount": -148.24,
+    "description": "bet Sergel"
+  },
+  {
+    "date": "2023-02-09",
+    "amount": -683.86,
+    "description": "Bet Angelika Lærum AS"
+  },
+  {
+    "date": "2023-02-28",
+    "amount": -34.85,
+    "description": "Straksbetaling lønn"
+  },
+  {
+    "date": "2023-02-20",
+    "amount": 48.4,
+    "description": "Straksbetaling lønn"
+  },
+  {
+    "date": "2023-02-27",
+    "amount": -48.17,
+    "description": "Straksbetaling lønn"
+  },
+  {
+    "date": "2023-02-28",
+    "amount": 2.07,
+    "description": "innbet Jimmy Aamodt"
+  },
+  {
+    "date": "2023-02-20",
+    "amount": 24.22,
+    "description": "Straksbetaling lønn"
+  },
+  {
+    "date": "2023-02-28",
+    "amount": 37.79,
+    "description": "innbet Runa Haveland"
+  },
+  {
+    "date": "2023-02-27",
+    "amount": 208.41,
+    "description": "innbet Luna Smistad"
+  },
+  {
+    "date": "2023-02-23",
+    "amount": -92.75,
+    "description": "Privat uttak"
+  },
+  {
+    "date": "2023-02-24",
+    "amount": 38.43,
+    "description": "Oslo kommune mangler kvittering"
+  },
+  {
+    "date": "2023-02-22",
+    "amount": 72.43,
+    "description": "Straksbetaling lønn"
+  },
+  {
+    "date": "2023-02-16",
+    "amount": -55.48,
+    "description": "Straksbetaling lønn"
+  },
+  {
+    "date": "2023-02-22",
+    "amount": 10.95,
+    "description": "Straksbetaling forskuddslønn"
+  },
+  {
+    "date": "2023-02-17",
+    "amount": 92.87,
+    "description": "innbet Timian Oppegaard"
+  },
+  {
+    "date": "2023-02-20",
+    "amount": -65.06,
+    "description": "Privat uttak"
+  },
+  {
+    "date": "2023-02-14",
+    "amount": -72.53,
+    "description": "Jernia, mangler kvittering"
+  },
+  {
+    "date": "2023-02-15",
+    "amount": 80.64,
+    "description": "Straksbetaling forskuddslønn"
+  },
+  {
+    "date": "2023-02-13",
+    "amount": -65.9,
+    "description": "Oslo kommune, mangler kvittering"
+  },
+  {
+    "date": "2023-02-15",
+    "amount": 51.69,
+    "description": "Jernia, mangler kvittering"
+  },
+  {
+    "date": "2023-02-13",
+    "amount": 55.37,
+    "description": "Bet Yasir Shala AS"
+  },
+  {
+    "date": "2023-02-13",
+    "amount": 16.28,
+    "description": "Oslo kommune mangler kvittering"
+  },
+  {
+    "date": "2023-02-13",
+    "amount": 53.34,
+    "description": "Bet Joar Arntsen AS"
+  },
+  {
+    "date": "2023-02-13",
+    "amount": 12.07,
+    "description": "Bet Nikolai Sunde AS"
+  },
+  {
+    "date": "2023-02-13",
+    "amount": 70.41,
+    "description": "Bet Josephine Skjæret AS"
+  },
+  {
+    "date": "2023-02-13",
+    "amount": -19.62,
+    "description": "Bet Vega Fimreite AS"
+  },
+  {
+    "date": "2023-02-13",
+    "amount": -123.21,
+    "description": "Privat uttak"
+  },
+  {
+    "date": "2023-02-13",
+    "amount": 64.44,
+    "description": "Bet Ellen Nybråten AS"
+  },
+  {
+    "date": "2023-02-13",
+    "amount": -89.33,
+    "description": "Bet Danial Formo AS"
+  },
+  {
+    "date": "2023-02-13",
+    "amount": 41.43,
+    "description": "Shell mangler kvittering"
+  },
+  {
+    "date": "2023-02-09",
+    "amount": 127.63,
+    "description": "innbet Alvilde Ellefsen"
+  },
+  {
+    "date": "2023-02-13",
+    "amount": -119.08,
+    "description": "Bet Asbjørn Tjore AS"
+  },
+  {
+    "date": "2023-02-10",
+    "amount": 58.27,
+    "description": "Bet Bjørnar Urdal AS"
+  },
+  {
+    "date": "2023-02-09",
+    "amount": -64.48,
+    "description": "Haraldrud Gjenb, mangler kvittering"
+  },
+  {
+    "date": "2023-02-13",
+    "amount": 3.11,
+    "description": "Bet Benas Marvik AS"
+  },
+  {
+    "date": "2023-02-10",
+    "amount": -89.35,
+    "description": "Internoverføring"
+  },
+  {
+    "date": "2023-02-13",
+    "amount": 151.27,
+    "description": "innbet Selma Gjelstad"
+  },
+  {
+    "date": "2023-02-08",
+    "amount": 49.38,
+    "description": "Wurth, mangler kvittering"
+  },
+  {
+    "date": "2023-02-10",
+    "amount": -83.43,
+    "description": "Biltema, mangler kvittering"
+  },
+  {
+    "date": "2023-02-10",
+    "amount": 341.15,
+    "description": "innbet Shayan Formo"
+  },
+  {
+    "date": "2023-02-09",
+    "amount": -45.36,
+    "description": "Mekonomen, mangler kvittering"
+  },
+  {
+    "date": "2023-02-08",
+    "amount": -85.24,
+    "description": "Oslo kommune, mangler kvittering"
+  },
+  {
+    "date": "2023-02-08",
+    "amount": 78.78,
+    "description": "YX 7-11 mangler kvittering"
+  },
+  {
+    "date": "2023-02-02",
+    "amount": 40.73,
+    "description": "innbet Stella Rønne"
+  },
+  {
+    "date": "2023-02-06",
+    "amount": 4.44,
+    "description": "Bet Jonathan Falch AS"
+  },
+  {
+    "date": "2023-02-06",
+    "amount": 281.5,
+    "description": "innbet Mileah Ellefsen"
+  },
+  {
+    "date": "2023-02-06",
+    "amount": 73.31,
+    "description": "Bet Evelina Tandstad AS"
+  },
+  {
+    "date": "2023-02-06",
+    "amount": 30.89,
+    "description": "Shell mangler kvittering"
+  },
+  {
+    "date": "2023-02-01",
+    "amount": 3.49,
+    "description": "Bet Samantha Jåsund AS"
+  },
+  {
+    "date": "2023-02-06",
+    "amount": 78.17,
+    "description": "Bet Arman Heggset AS"
+  },
+  {
+    "date": "2023-02-06",
+    "amount": -45.38,
+    "description": "Privat uttak"
+  },
+  {
+    "date": "2023-02-08",
+    "amount": -27.22,
+    "description": "Oslo kommune, mangler kvittering"
+  },
+  {
+    "date": "2023-02-06",
+    "amount": -29.57,
+    "description": "Bet Oskar Lillebø AS"
+  },
+  {
+    "date": "2023-02-02",
+    "amount": -64.71,
+    "description": "Dnb Finans"
+  },
+  {
+    "date": "2023-02-01",
+    "amount": 210.01,
+    "description": "innbet Åsa Hallberg"
+  },
+  {
+    "date": "2023-02-07",
+    "amount": 66.66,
+    "description": "Straksbetaling forskuddslønn"
+  },
+  {
+    "date": "2023-02-03",
+    "amount": -49.18,
+    "description": "innbet Asma Bruland"
+  },
+  {
+    "date": "2023-02-02",
+    "amount": -119.14,
+    "description": "Dnb Finans"
+  },
+  {
+    "date": "2023-02-01",
+    "amount": -159.66,
+    "description": "Privat uttak"
+  },
+  {
+    "date": "2023-02-02",
+    "amount": -39.43,
+    "description": "innbet Arn Bjerk"
+  },
+  {
+    "date": "2023-02-01",
+    "amount": -139.61,
+    "description": "Bet Håkon Nagy AS"
+  },
+  {
+    "date": "2023-02-01",
+    "amount": 98.32,
+    "description": "innbet Abdulrahman Wahlstrøm"
+  },
+  {
+    "date": "2023-02-01",
+    "amount": 61.88,
+    "description": "innbet Abel Ramsdal"
+  },
+  {
+    "date": "2023-02-01",
+    "amount": 38.71,
+    "description": "innbet Adelina Skuland"
+  },
+  {
+    "date": "2023-02-01",
+    "amount": 24.38,
+    "description": "innbet Kent Valle"
+  },
+  {
+    "date": "2023-02-01",
+    "amount": 137.95,
+    "description": "innbet Åsmund Helgestad"
+  },
+  {
+    "date": "2023-02-01",
+    "amount": 198.47,
+    "description": "innbet Erica Skaar"
+  },
+  {
+    "date": "2023-02-01",
+    "amount": 129.81,
+    "description": "innbet Rawan Lofthus"
+  },
+  {
+    "date": "2023-02-01",
+    "amount": 150.22,
+    "description": "innbet Signe Brekka"
+  },
+  {
+    "date": "2023-02-01",
+    "amount": 26.44,
+    "description": "innbet Jaran Skjerve"
+  },
+  {
+    "date": "2023-02-01",
+    "amount": 144.75,
+    "description": "innbet Laiba Nyborg"
+  },
+  {
+    "date": "2023-02-01",
+    "amount": 159.2,
+    "description": "innbet Hugo Herland"
+  },
+  {
+    "date": "2023-01-31",
+    "amount": 23.67,
+    "description": "innbet Hannah Alver"
+  },
+  {
+    "date": "2023-01-30",
+    "amount": -51.26,
+    "description": "Oslo kommune, mangler kvittering"
+  },
+  {
+    "date": "2023-01-30",
+    "amount": -101.25,
+    "description": "Straksbetaling lønn"
+  },
+  {
+    "date": "2023-02-01",
+    "amount": 20.43,
+    "description": "innbet Torstein Høydahl"
+  },
+  {
+    "date": "2023-01-31",
+    "amount": 128.12,
+    "description": "innbet Arin Bergan"
+  },
+  {
+    "date": "2023-02-01",
+    "amount": 133.65,
+    "description": "innbet Pelle Åkre"
+  },
+  {
+    "date": "2023-01-31",
+    "amount": 23.07,
+    "description": "innbet Liva Hofseth"
+  },
+  {
+    "date": "2023-01-31",
+    "amount": 331.94,
+    "description": "innbet Cathrine Viste"
+  },
+  {
+    "date": "2023-01-31",
+    "amount": 57.29,
+    "description": "innbet Ludvik Heien"
+  },
+  {
+    "date": "2023-01-30",
+    "amount": -95.51,
+    "description": "Shell, mangler kvittering"
+  },
+  {
+    "date": "2023-01-30",
+    "amount": -78.83,
+    "description": "korrigering av 92"
+  },
+  {
+    "date": "2023-01-26",
+    "amount": -120.04,
+    "description": "Bet Mathilde Grotle AS"
+  },
+  {
+    "date": "2023-01-23",
+    "amount": -5.81,
+    "description": "Bet Cornelia Eikrem AS"
+  },
+  {
+    "date": "2023-01-26",
+    "amount": -102.74,
+    "description": "1-2-3 mangler kvittering"
+  },
+  {
+    "date": "2023-01-23",
+    "amount": -2.06,
+    "description": "Bet Halvor Karim AS"
+  },
+  {
+    "date": "2023-01-24",
+    "amount": -35.25,
+    "description": "Bet Erika Silva AS"
+  },
+  {
+    "date": "2023-01-31",
+    "amount": 4.59,
+    "description": "Bet Jasmine Solbakk AS"
+  },
+  {
+    "date": "2023-01-19",
+    "amount": -129.8,
+    "description": "Privat uttak"
+  },
+  {
+    "date": "2023-01-31",
+    "amount": -64.48,
+    "description": "Bet Leila Flø AS"
+  },
+  {
+    "date": "2023-01-16",
+    "amount": 74.88,
+    "description": "1-2-3 mangler kvittering"
+  },
+  {
+    "date": "2023-01-16",
+    "amount": -5.31,
+    "description": "korrigering av 75"
+  },
+  {
+    "date": "2023-01-24",
+    "amount": 35.01,
+    "description": "Bet Malene Østlie AS"
+  },
+  {
+    "date": "2023-01-19",
+    "amount": 89.15,
+    "description": "Shell mangler kvittering"
+  },
+  {
+    "date": "2023-01-19",
+    "amount": 21.94,
+    "description": "korrigering av 77"
+  },
+  {
+    "date": "2023-01-25",
+    "amount": 375.73,
+    "description": "innbet Sanna Bjørkmo"
+  },
+  {
+    "date": "2023-01-24",
+    "amount": -109.03,
+    "description": "Forskudd Ola"
+  },
+  {
+    "date": "2023-01-23",
+    "amount": -97.34,
+    "description": "Privat uttak"
+  },
+  {
+    "date": "2023-01-12",
+    "amount": 31.43,
+    "description": "Oslo kommune, mangler kvittering"
+  },
+  {
+    "date": "2023-01-19",
+    "amount": -28.16,
+    "description": "Jernia mangler kvittering"
+  },
+  {
+    "date": "2023-01-19",
+    "amount": -55.69,
+    "description": "korrigering av 78"
+  },
+  {
+    "date": "2023-01-20",
+    "amount": -79.36,
+    "description": "Forskudd Kari Nordmann"
+  },
+  {
+    "date": "2023-01-24",
+    "amount": -111.63,
+    "description": "Bet Maxim Storesund AS"
+  },
+  {
+    "date": "2023-01-13",
+    "amount": 59.19,
+    "description": "innbet Olav Sørnes"
+  },
+  {
+    "date": "2023-01-06",
+    "amount": 83.86,
+    "description": "innbet Noor Forberg"
+  },
+  {
+    "date": "2023-01-06",
+    "amount": 125.1,
+    "description": "innbet Hugo Herland"
+  },
+  {
+    "date": "2023-01-06",
+    "amount": 3.93,
+    "description": "innbet Damian Skoglund"
+  },
+  {
+    "date": "2023-01-06",
+    "amount": 142.7,
+    "description": "innbet Richard Slyngstad"
+  },
+  {
+    "date": "2023-01-10",
+    "amount": -56.38,
+    "description": "Internoverføring"
+  },
+  {
+    "date": "2023-01-09",
+    "amount": -57,
+    "description": "1-2-3 mangler kvittering"
+  },
+  {
+    "date": "2023-01-09",
+    "amount": -59.72,
+    "description": "korrigering av 68"
+  },
+  {
+    "date": "2023-01-06",
+    "amount": -48.78,
+    "description": "Straksbetaling lønn"
+  },
+  {
+    "date": "2023-01-06",
+    "amount": 68.67,
+    "description": "Jernia, mangler kvittering"
+  },
+  {
+    "date": "2023-01-09",
+    "amount": 43.47,
+    "description": "Straksbetaling lønn"
+  },
+  {
+    "date": "2023-01-09",
+    "amount": -17.64,
+    "description": "Shell, mangler kvittering"
+  },
+  {
+    "date": "2023-01-09",
+    "amount": 33.04,
+    "description": "korrigering av 71"
+  },
+  {
+    "date": "2023-01-09",
+    "amount": -83.95,
+    "description": "1-2-3 mangler kvittering"
+  },
+  {
+    "date": "2023-01-09",
+    "amount": 50.26,
+    "description": "korrigering av 70"
+  },
+  {
+    "date": "2023-01-09",
+    "amount": 1.01,
+    "description": "Forskudd Ola"
+  },
+  {
+    "date": "2023-01-09",
+    "amount": 85.23,
+    "description": "Shell, mangler kvittering"
+  },
+  {
+    "date": "2023-01-09",
+    "amount": -28.39,
+    "description": "korrigering av 69"
+  },
+  {
+    "date": "2023-01-09",
+    "amount": 78.91,
+    "description": "Straksbetaling lønn"
+  },
+  {
+    "date": "2023-01-09",
+    "amount": -79.6,
+    "description": "Privat uttak"
+  },
+  {
+    "date": "2023-01-09",
+    "amount": -111.5,
+    "description": "Privat uttak"
+  },
+  {
+    "date": "2023-01-06",
+    "amount": 81.63,
+    "description": "innbet Mathea Torgersen"
+  },
+  {
+    "date": "2023-01-06",
+    "amount": 60.21,
+    "description": "innbet Oliver Rosseland"
+  },
+  {
+    "date": "2023-01-06",
+    "amount": -18.57,
+    "description": "Straksbetaling lønn"
+  },
+  {
+    "date": "2023-01-06",
+    "amount": -69.72,
+    "description": "Forskudd Ola Nordmann"
+  },
+  {
+    "date": "2023-02-03",
+    "amount": -103.21,
+    "description": "Bet Nadia Solem AS"
+  },
+  {
+    "date": "2023-01-24",
+    "amount": -40.74,
+    "description": "Bet Ferdinand Hirsi AS"
+  },
+  {
+    "date": "2023-02-28",
+    "amount": -73.18,
+    "description": "Bankgebyr"
+  },
+  {
+    "date": "2023-01-05",
+    "amount": -102.38,
+    "description": "Jernia, mangler kvittering"
+  },
+  {
+    "date": "2023-01-05",
+    "amount": 61.97,
+    "description": "korrigering av 52"
+  },
+  {
+    "date": "2023-02-13",
+    "amount": 13.33,
+    "description": "Bet Tellef Valseth AS"
+  },
+  {
+    "date": "2023-01-31",
+    "amount": 79.96,
+    "description": "Bankgebyr"
+  },
+  {
+    "date": "2023-02-03",
+    "amount": -25.4,
+    "description": "Bet Fatima Hatlestad AS"
+  },
+  {
+    "date": "2023-01-05",
+    "amount": -34.56,
+    "description": "Straksbetaling lønn"
+  },
+  {
+    "date": "2023-01-04",
+    "amount": -15.5,
+    "description": "Shell, mangler kvittering"
+  },
+  {
+    "date": "2023-01-04",
+    "amount": 62.62,
+    "description": "korrigering av 50"
+  },
+  {
+    "date": "2023-02-08",
+    "amount": 59.51,
+    "description": "Bet Maja Kjølberg AS"
+  },
+  {
+    "date": "2023-01-03",
+    "amount": 623.68,
+    "description": "innbet Nila Nordvik"
+  },
+  {
+    "date": "2023-01-03",
+    "amount": 180.06,
+    "description": "innbet Evelina Tandstad"
+  },
+  {
+    "date": "2023-01-03",
+    "amount": -21.69,
+    "description": "Privat uttak"
+  },
+  {
+    "date": "2023-01-02",
+    "amount": -104.35,
+    "description": "Straksbetaling lønn"
+  },
+  {
+    "date": "2023-02-03",
+    "amount": -70.89,
+    "description": "Bet Sigmund Wist AS"
+  },
+  {
+    "date": "2023-01-02",
+    "amount": -191.51,
+    "description": "Utbetalt lønn"
+  },
+  {
+    "date": "2023-01-02",
+    "amount": -11.75,
+    "description": "Utbetalt lønn"
+  },
+  {
+    "date": "2023-02-01",
+    "amount": -330.72,
+    "description": "Utbetalt lønn"
+  },
+  {
+    "date": "2023-02-01",
+    "amount": 51.21,
+    "description": "Utbetalt lønn"
+  },
+  {
+    "date": "2023-01-06",
+    "amount": 216.33,
+    "description": "innbet Marco Zielinski"
+  },
+  {
+    "date": "2023-02-08",
+    "amount": -1.06,
+    "description": "Wurth"
+  },
+  {
+    "date": "2023-02-14",
+    "amount": -49.34,
+    "description": "Bilsenteret"
+  },
+  {
+    "date": "2023-02-13",
+    "amount": -68.19,
+    "description": "Bilsenteret"
+  },
+  {
+    "date": "2023-01-07",
+    "amount": -25.61,
+    "description": "Circle K"
+  },
+  {
+    "date": "2023-02-16",
+    "amount": -30.11,
+    "description": "Shell dekk tett"
+  },
+  {
+    "date": "2023-02-13",
+    "amount": 85.43,
+    "description": "Maxbo"
+  },
+  {
+    "date": "2023-02-13",
+    "amount": -17.33,
+    "description": "Maxbo"
+  },
+  {
+    "date": "2023-01-15",
+    "amount": 27.1,
+    "description": "Circle K"
+  },
+  {
+    "date": "2023-03-14",
+    "amount": 82.24,
+    "description": "Jernia, batteri"
+  },
+  {
+    "date": "2023-02-27",
+    "amount": -90.42,
+    "description": "Circle K"
+  },
+  {
+    "date": "2023-01-07",
+    "amount": 79.69,
+    "description": "Circle K"
+  },
+  {
+    "date": "2023-01-09",
+    "amount": -33.58,
+    "description": "Shell, billampe"
+  },
+  {
+    "date": "2023-01-09",
+    "amount": -44.7,
+    "description": "Shell spylervæske"
+  },
+  {
+    "date": "2023-01-04",
+    "amount": -12.79,
+    "description": "Shell"
+  },
+  {
+    "date": "2023-01-19",
+    "amount": 50.03,
+    "description": "Shell"
+  },
+  {
+    "date": "2023-02-15",
+    "amount": 55.12,
+    "description": "Biltema"
+  },
+  {
+    "date": "2023-01-18",
+    "amount": -48.53,
+    "description": "Jernia brodder"
+  },
+  {
+    "date": "2023-02-14",
+    "amount": 66.46,
+    "description": "Shell"
+  },
+  {
+    "date": "2023-01-05",
+    "amount": 32.55,
+    "description": "Jernia, universalkost"
+  },
+  {
+    "date": "2023-02-22",
+    "amount": 24.43,
+    "description": "Automat1"
+  },
+  {
+    "date": "2023-02-23",
+    "amount": 40.06,
+    "description": "Shell"
+  },
+  {
+    "date": "2023-01-30",
+    "amount": 25.88,
+    "description": "Shell"
+  }
+]

@@ -2,7 +2,6 @@ package recsys.repository;
 
 import io.micronaut.data.annotation.Repository;
 import io.micronaut.data.repository.CrudRepository;
-import recsys.model.AccountEntity;
 
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
