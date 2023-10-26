@@ -5,7 +5,11 @@ package recsys.model;
  */
 public enum ComparisonState {
 
-    COMPARED,
+    MATCH,
 
-    NOTCOMPARED,
+    PARTIAL_MATCH,
+
+    MISSING_BANK_TRANS,
+
+    MISSING_ACC_TRANS
 }
