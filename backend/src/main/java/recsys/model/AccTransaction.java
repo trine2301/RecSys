@@ -23,8 +23,9 @@ public class AccTransaction {
     @NotNull
     private Date date;
 
-    @NotNull
+/*    @NotNull
     private double accSum;
+    */
 
 
     private String description;
