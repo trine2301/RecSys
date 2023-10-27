@@ -1,5 +1,17 @@
 /** @type {import('tailwindcss').Config} */
-/*
+
+module.exports = {
+    content: [
+        "./index.html",
+        "./src/**/*.{vue,ts}",
+        "./node_modules/vue-tailwind-datepicker/**/*.ts"
+    ],
+    theme: {
+        extend: {}
+    },
+}
+
+/* Original config:
 module.exports = {
     content: [
         './index.html',
@@ -10,13 +22,13 @@ module.exports = {
     }
 }
 */
-
+/* Config directly from
 const colors = require("tailwindcss/colors")
 module.exports = {
     content: [
         "./index.html",
-        "./src/**/*.{vue,js,ts,jsx,tsx}",
-        "./node_modules/vue-tailwind-datepicker/**/*.js"
+        "./src/!**!/!*.{vue,js,ts,jsx,tsx}",
+        "./node_modules/vue-tailwind-datepicker/!**!/!*.js"
     ],
     theme: {
         extend: {
@@ -29,5 +41,5 @@ module.exports = {
     plugins: [
         require('@tailwindcss/forms'),
     ]
-}
+}*/
 
