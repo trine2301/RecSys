@@ -1,7 +1,9 @@
 <template>
-    <div>
+  <div>
+    <div class="m-10">
       <PeriodPicker/>
     </div>
+  </div>
 </template>
 
 <script setup lang="ts">
