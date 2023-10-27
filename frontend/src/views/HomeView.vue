@@ -4,12 +4,10 @@
 </div>
 </template>
 
-<script>
-export default {
-  name: "HomeView"
-}
+<script setup lang="ts">
+
 </script>
 
-<style scoped>
+<style lang="scss">
 
 </style>
