@@ -15,12 +15,12 @@ import {onMounted, ref} from 'vue'
 import Datepicker from '@vuepic/vue-datepicker'
 import '@vuepic/vue-datepicker/dist/main.css'
 
-const date = ref(new Date());
+const date = ref(new Date())
 
 onMounted(() => {
-  const startDate = new Date();
-  const endDate = new Date(new Date().setDate(startDate.getDate() + 7));
-  date.value = [startDate, endDate];
+  const startDate = new Date()
+  const endDate = new Date(new Date().setDate(startDate.getDate() + 7))
+  date.value = [startDate, endDate]
 })
 
 

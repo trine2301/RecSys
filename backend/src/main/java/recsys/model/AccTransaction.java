@@ -13,7 +13,7 @@ import java.util.Date;
  *
  */
 @Entity
-@Table(name = "accTransaction")
+@Table(name = "AccTransaction")
 public class AccTransaction {
 
     @Id
@@ -23,9 +23,8 @@ public class AccTransaction {
     @NotNull
     private Date date;
 
-/*    @NotNull
-    private double accSum;
-    */
+    @NotNull
+    private double amount;
 
 
     private String description;

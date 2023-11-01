@@ -10,7 +10,7 @@ import javax.validation.constraints.NotNull;
 public class TransComparison {
 
     @NotNull
-    private BankTransaction bankTransaction;
+    private BankTransactionEntity bankTransactionEntity;
 
     @NotNull
     private AccTransaction accTransaction;
