@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="m-10">
+    <div class=" m-10">
       <PeriodPicker/>
     </div>
   </div>

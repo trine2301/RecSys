@@ -1,5 +1,5 @@
 <template>
-  <div class="page-layout h-screen w-screen flex">
+  <div class="flex">
     <sidebar/>
     <router-view class="content grow"></router-view>
   </div>
