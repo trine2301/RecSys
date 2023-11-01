@@ -4,7 +4,7 @@
       Trine bachelor</router-link>
     <div class="border-b border-b-amber-100/20 shadow-lg"/>
     <div class="menu-entries ml-6 mt-12">
-      <router-link class="menu-entry" to="/accounts">See your accounts</router-link>
+      <router-link class="menu-entry" to="/transactions">See your accounts</router-link>
       <router-link class="menu-entry" to="/accountMatcher">Account-matcher</router-link>
     </div>
   </div>

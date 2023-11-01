@@ -13,8 +13,8 @@ import java.util.Date;
  *
  */
 @Entity
-@Table(name = "bankTransaction")
-public class BankTransaction {
+@Table(name = "BankTransaction")
+public class BankTransactionEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -24,7 +24,7 @@ public class BankTransaction {
     private Date date;
 
     @NotNull
-    private double bankSum;
+    private double amount;
 
 
     private String description;

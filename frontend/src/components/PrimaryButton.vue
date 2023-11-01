@@ -1,5 +1,5 @@
 <template>
-  <button class="bg-amber-500 hover:bg-amber-400 text-neutral-700 py-2 px-3 rounded" @click="emit('click')">
+  <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" @click="emit('click')">
     <slot/>
   </button>
 </template>
