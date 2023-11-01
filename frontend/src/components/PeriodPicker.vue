@@ -1,15 +1,13 @@
 <template>
-  <div class="bg-red-500 p-10 max-w-screen">
-    <div>
-      Pick the period:
-    </div>
-    <div>
+    <div class="bg-blue-200 p-10 rounded w-96 ">
       <Datepicker
           v-model="date"
+          default="Pick a dateaa"
+          placeholder="Pick a date"
+          format="dd/MM/yyyy"
           range multi-calendars
       />
     </div>
-  </div>
 </template>
 
 <script setup lang="ts">
@@ -18,14 +16,6 @@ import Datepicker from '@vuepic/vue-datepicker'
 import '@vuepic/vue-datepicker/dist/main.css'
 
 const date = ref(new Date());
-
-const format = (date: any) => {
-  const day = date.getDate()
-  const month = date.getMonth() + 1
-  const year = date.getFullYear()
-
-  return `${day}/${month}/${year}`
-}
 
 onMounted(() => {
   const startDate = new Date();

@@ -1,5 +1,5 @@
 <template>
-  <div class="sidebar">
+  <div class="sidebar h-screen w-200 ">
     <router-link class="title text-4xl text-center m-6 whitespace-nowrap text-blue-900" to="/home">
       Trine bachelor</router-link>
     <div class="border-b border-b-amber-100/20 shadow-lg"/>
