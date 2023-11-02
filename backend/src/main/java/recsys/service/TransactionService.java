@@ -29,14 +29,13 @@ public class TransactionService {
         return null;
     }
 
+    public void testing() {
+        System.out.println("hello");
+    }
 
-/*    public TransactionDifference compare(Transaction transaction1, Transaction transaction2) {
-        TransactionDifference difference = new TransactionDifference();
-        difference.setAmountDifference(transaction1.getAmount() - transaction2.getAmount());
-        difference.setDateDifference(transaction1.getDate().compareTo(transaction2.getDate()));
-        difference.setAccountDifference(transaction1.getAccount().equals(transaction2.getAccount()) ? "Same" : "Different");
-        return difference;
-    }*/
+    public static void main(String[] args) {
+        System.out.println("Hello");
+    }
 }
 
 

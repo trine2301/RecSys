@@ -1,14 +1,11 @@
 <template>
   <div class="flex col">
-    <div class="m-10">
-      <PeriodPicker>
+    <div class="mx-5">
+      <PeriodPicker class="my-5">
       </PeriodPicker>
 
-      <primary-button class="my-5" @click="toggleDiffEngine()">
-        Match transactions
-      </primary-button>
 
-      <DiffEngine v-if="isVisible">
+      <DiffEngine >
       </DiffEngine>
     </div>
   </div>
@@ -19,15 +16,11 @@
 <script setup lang="ts">
 
 import PeriodPicker from "@/components/PeriodPicker.vue"
-import PrimaryButton from "@/components/PrimaryButton.vue";
-import DiffEngine from "@/components/DiffEngine.vue";
-import { ref } from "vue";
+import PrimaryButton from "@/components/MatchTransactionButton.vue"
+import DiffEngine from "@/components/DiffEngine.vue"
+import { ref } from "vue"
 
-const isVisible = ref(false)
 
-const toggleDiffEngine = () => {
-  isVisible.value = !isVisible.value
-}
 
 </script>
 

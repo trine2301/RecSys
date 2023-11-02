@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-blue-200 p-10 rounded w-96 ">
+    <div class="bg-blue-200 p-5 rounded w-350">
       <Datepicker
           v-model="date"
           default="Pick a dateaa"
@@ -25,10 +25,6 @@ onMounted(() => {
 
 
 </script>
-
-
-
-
 
 
 <style lang="scss">
