@@ -1,5 +1,6 @@
 package recsys.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -17,8 +18,8 @@ import java.util.Date;
 public class AccTransaction {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long transactionID;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private long accTransactionId;
 
     @NotNull
     private Date date;

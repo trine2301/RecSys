@@ -13,15 +13,15 @@ import java.util.Date;
  *
  */
 @Entity
-@Table(name = "BankTransaction")
+@Table(name = "bank_transaction")
 public class BankTransactionEntity {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long transactionID;
+    private Long id;
 
     @NotNull
     private Date date;
+
 
     @NotNull
     private double amount;
@@ -29,4 +29,38 @@ public class BankTransactionEntity {
 
     private String description;
 
+    public BankTransactionEntity() {
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Date getDate() {
+        return date;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
+    }
+
+    public double getAmount() {
+        return amount;
+    }
+
+    public void setAmount(double amount) {
+        this.amount = amount;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
 }
