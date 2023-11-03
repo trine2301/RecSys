@@ -11,7 +11,7 @@
 </template>
 
 <script setup lang="ts">
-import {onMounted, ref} from 'vue'
+import { onMounted, ref, getCurrentInstance, watch } from 'vue'
 import Datepicker from '@vuepic/vue-datepicker'
 import '@vuepic/vue-datepicker/dist/main.css'
 
@@ -21,6 +21,11 @@ onMounted(() => {
   const startDate = new Date()
   const endDate = new Date(new Date().setDate(startDate.getDate() + 7))
   date.value = [startDate, endDate]
+})
+
+watch(date, (newDate) => {
+  const instance = getCurrentInstance()
+  instance?.emit('update:date', newDate)
 })
 
 
