@@ -1,9 +1,9 @@
 <template>
 <div class="h-200 scroll-auto">
-  <div>
-    <PeriodPicker class="my-5">
-    </PeriodPicker>
-  </div>
+<!--  <div>-->
+<!--    <PeriodPicker class="my-5">-->
+<!--    </PeriodPicker>-->
+<!--  </div>-->
   <div>
     <ListOfTransactions/>
   </div>
