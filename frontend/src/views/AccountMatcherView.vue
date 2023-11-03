@@ -3,8 +3,6 @@
     <div class="mx-5">
       <PeriodPicker class="my-5">
       </PeriodPicker>
-
-
       <DiffEngine >
       </DiffEngine>
     </div>

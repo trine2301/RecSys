@@ -9,13 +9,13 @@
         <div class="text-xl p-2">
           Accounting transactions
         </div>
-        <ListOfTransactions v-if="isVisible"/>
+        <ListOfTransactions />
       </div>
       <div class="bg-blue-100 rounded h-auto mx-1 w-80">
         <div class="text-xl p-2">
           Bank transactions
         </div >
-        <ListOfTransactions v-if="isVisible"/>
+        <ListOfTransactions />
       </div>
     </div>
 
@@ -31,6 +31,7 @@ import MatchTransactionButton from "@/components/MatchTransactionButton.vue";
 
 const isVisible = ref(false)
 
+//  v-if="isVisible"
 const toggleDiffEngine = () => {
   isVisible.value = !isVisible.value
 }
