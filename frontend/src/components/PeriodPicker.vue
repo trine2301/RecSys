@@ -23,12 +23,6 @@ onMounted(() => {
   date.value = [startDate, endDate]
 })
 
-watch(date, (newDate) => {
-  const instance = getCurrentInstance()
-  instance?.emit('update:date', newDate)
-})
-
-
 </script>
 
 

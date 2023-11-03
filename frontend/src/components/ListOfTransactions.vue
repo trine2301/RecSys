@@ -1,11 +1,20 @@
 <template>
+  <div class="bg-blue-200 p-5 rounded w-350">
+    <Datepicker
+        v-model="date"
+        default="Pick a dateaa"
+        placeholder="Pick a date"
+        format="dd/MM/yyyy"
+        range multi-calendars
+    />
+  </div>
   <div>
     <ul class="mt-2 border">
-      <li class="p-2 bg-neutral even:bg-neutral-200" v-for="transactions in bankTransactions">
-        {{ transactions.id }}:
-        {{ formattedDate(transactions.date) }}
-        {{ transactions.amount }}:
-        {{ transactions.description }}
+      <li class="p-2 bg-neutral even:bg-neutral-200" v-for="transaction in filteredBankTransactions">
+        {{ transaction.id }}:
+        {{ formattedDate(transaction.date) }}
+        {{ transaction.amount }}:
+        {{ transaction.description }}
       </li>
     </ul>
   </div>
@@ -14,11 +23,15 @@
 <script setup lang="ts">
 import { ref, provide, inject, onMounted, computed } from "vue"
 import { BankTransaction, formattedDate } from "@/services/BankTransaction"
+import Datepicker from '@vuepic/vue-datepicker'
+import '@vuepic/vue-datepicker/dist/main.css'
 
+const date = ref(new Date())
 const get = inject('get') as Function
 const bankTransactions = ref<Array<BankTransaction>>([])
 //const filteredBankTransactions = ref<Array<BankTransaction>>([])
-
+const startDate = ref(null)
+const endDate = ref(null)
 
 
 const fetchBankTransactions = async () => {
@@ -27,11 +40,26 @@ const fetchBankTransactions = async () => {
   console.log(formattedDate(bankTransactions.value[0].date))
 }
 
+const filteredBankTransactions = computed(() => {
+  if (!startDate.value || !endDate.value) {
+    return bankTransactions.value
+  }
+  return bankTransactions.value.filter(transaction => {
+    const transactionDate = new Date(transaction.date)
+    return transactionDate >= startDate.value! && transactionDate <= endDate.value!
+  })
+})
+
 
 
 provide('fetchBankTransactions', fetchBankTransactions)
 
 onMounted(fetchBankTransactions)
+onMounted(() => {
+  const startDate = new Date()
+  const endDate = new Date(new Date().setDate(startDate.getDate() + 7))
+  date.value = [startDate, endDate]
+})
 
 
 </script>
