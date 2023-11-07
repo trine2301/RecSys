@@ -10,7 +10,7 @@ import java.util.List;
 /**
  * Controller to handle the HTTP requests.
  */
-@Controller("/banktransactions")
+@Controller("/bank_transactions")
 public class BankTransactionController {
 
     private final BankTransactionRepository bankTransactionRepository;

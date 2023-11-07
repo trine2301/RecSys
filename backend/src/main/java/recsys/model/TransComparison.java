@@ -13,7 +13,7 @@ public class TransComparison {
     private BankTransactionEntity bankTransactionEntity;
 
     @NotNull
-    private AccTransaction accTransaction;
+    private AccountingTransactionEntity accountingTransactionEntity;
 
 
     private Double discrepancyAmount;
