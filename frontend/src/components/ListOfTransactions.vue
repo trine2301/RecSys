@@ -35,7 +35,7 @@ const endDate = ref(null)
 
 
 const fetchBankTransactions = async () => {
-  const response = await get('/banktransactions')
+  const response = await get('/bank_transactions')
   bankTransactions.value = response.data
   console.log(formattedDate(bankTransactions.value[0].date))
 }

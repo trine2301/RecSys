@@ -16,8 +16,8 @@ public class PeriodComparison {
 
     private BankTransactionEntity BankSum;
 
-    private AccTransaction AccSum;
+    private AccountingTransactionEntity AccSum;
 
-    private List<AccTransaction> accTransactionList;
+    private List<AccountingTransactionEntity> accountingTransactionEntityList;
     private List<BankTransactionEntity> bankTransactionEntityList;
 }

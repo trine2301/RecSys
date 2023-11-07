@@ -6,21 +6,22 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
-import java.util.Date;
+import java.time.LocalDate;
 
 /**
- * Represents a bank transaction.
+ * Represents an accounting transaction.
  *
  */
 @Entity
-@Table(name = "bank_transactions")
-public class BankTransactionEntity {
+@Table(name = "accounting_transactions")
+public class AccountingTransactionEntity {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @NotNull
-    private Date date; //LocalDate?
+    private LocalDate date; //LocalDate?
 
 
     @NotNull
@@ -29,7 +30,7 @@ public class BankTransactionEntity {
 
     private String description;
 
-    public BankTransactionEntity() {
+    public AccountingTransactionEntity() {
     }
 
     public Long getId() {
@@ -40,11 +41,11 @@ public class BankTransactionEntity {
         this.id = id;
     }
 
-    public Date getDate() {
+    public LocalDate getDate() {
         return date;
     }
 
-    public void setDate(Date date) {
+    public void setDate(LocalDate date) {
         this.date = date;
     }
 
@@ -63,4 +64,5 @@ public class BankTransactionEntity {
     public void setDescription(String description) {
         this.description = description;
     }
+
 }
