@@ -6,6 +6,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
+import java.time.LocalDate;
 import java.util.Date;
 
 /**
@@ -20,7 +21,7 @@ public class BankTransactionEntity {
     private Long id;
 
     @NotNull
-    private Date date; //LocalDate?
+    private LocalDate date; //LocalDate?
 
 
     @NotNull
@@ -40,11 +41,11 @@ public class BankTransactionEntity {
         this.id = id;
     }
 
-    public Date getDate() {
+    public LocalDate getDate() {
         return date;
     }
 
-    public void setDate(Date date) {
+    public void setDate(LocalDate date) {
         this.date = date;
     }
 
