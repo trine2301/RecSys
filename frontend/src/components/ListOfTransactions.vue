@@ -1,13 +1,5 @@
 <template>
-  <div class="bg-blue-200 p-5 rounded w-350">
-    <Datepicker
-        v-model="date"
-        default="Pick a dateaa"
-        placeholder="Pick a date"
-        format="dd/MM/yyyy"
-        range multi-calendars
-    />
-  </div>
+
   <div class="flex">
     <div class="mt-2 border">
       <div class="text-xl">
@@ -57,6 +49,8 @@ const fetchBankTransactions = async () => {
   //console.log(formattedDate(bankTransactions.value[0].date))
 }
 
+// TODO sort transactions after date.
+
 const fetchAccountingTransactions = async () => {
   const response = await get('/accounting_transactions')
   accountingTransactions.value = response.data
@@ -82,11 +76,6 @@ onMounted(fetchAccountingTransactions)
 
 
 
-onMounted(() => {
-  const startDate = new Date()
-  const endDate = new Date(new Date().setDate(startDate.getDate() + 7))
-  date.value = [startDate, endDate]
-})
 
 
 </script>
