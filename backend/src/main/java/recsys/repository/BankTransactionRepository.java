@@ -17,8 +17,9 @@ public abstract class BankTransactionRepository implements CrudRepository<BankTr
     @ReadOnly
     @NonNull
     @Transactional
-    public abstract List<BankTransactionEntity> findAll();
+    public List<BankTransactionEntity> findAll() {
+        return null;
+    }
 
-    @NonNull
     public abstract Optional<BankTransactionEntity> findById(@NotNull @NonNull Long id);
 }
