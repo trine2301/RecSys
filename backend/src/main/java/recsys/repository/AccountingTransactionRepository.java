@@ -21,4 +21,5 @@ public abstract class AccountingTransactionRepository implements CrudRepository<
 
     @NonNull
     public abstract Optional<AccountingTransactionEntity> findById(@NotNull @NonNull Long id);
+
 }

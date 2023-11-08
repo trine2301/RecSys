@@ -27,6 +27,7 @@ application {
 }
 
 dependencies {
+    implementation 'org.projectlombok:lombok:1.18.22'
     annotationProcessor 'io.micronaut.data:micronaut-data-processor'
     //annotationProcessor 'org.projectlombok:lombok:1.18.24'
     implementation 'io.micronaut.data:micronaut-data-hibernate-jpa'

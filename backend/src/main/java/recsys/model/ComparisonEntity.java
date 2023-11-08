@@ -1,13 +1,14 @@
 package recsys.model;
 
+import javax.persistence.Entity;
 import javax.validation.constraints.NotNull;
 
 /**
- * Entity of the results from transactionService.
+ * Entity of the results from transactionService. Runtime entity.
  */
 
-
-public class TransComparison {
+//@Entity what should ID be? Composite key of
+public class ComparisonEntity {
 
     @NotNull
     private BankTransactionEntity bankTransactionEntity;
@@ -16,9 +17,8 @@ public class TransComparison {
     private AccountingTransactionEntity accountingTransactionEntity;
 
 
-    private Double discrepancyAmount;
+    private ComparisonState comparisonState;
 
-
-
+    // Results?
 
 }
