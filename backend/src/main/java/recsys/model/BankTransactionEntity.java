@@ -21,7 +21,7 @@ public class BankTransactionEntity {
     private Long id;
 
     @NotNull
-    private LocalDate date; //LocalDate?
+    private LocalDate date;
 
 
     @NotNull

@@ -4,6 +4,7 @@ import io.micronaut.core.annotation.NonNull;
 import io.micronaut.data.annotation.Repository;
 import io.micronaut.data.repository.CrudRepository;
 import io.micronaut.transaction.annotation.ReadOnly;
+import lombok.RequiredArgsConstructor;
 import recsys.model.BankTransactionEntity;
 
 import javax.transaction.Transactional;
@@ -17,9 +18,7 @@ public abstract class BankTransactionRepository implements CrudRepository<BankTr
     @ReadOnly
     @NonNull
     @Transactional
-    public List<BankTransactionEntity> findAll() {
-        return null;
-    }
+    public abstract List<BankTransactionEntity> findAll();
 
     public abstract Optional<BankTransactionEntity> findById(@NotNull @NonNull Long id);
 }

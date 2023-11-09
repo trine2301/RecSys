@@ -20,7 +20,6 @@ class BankTransactionControllerTest extends Specification {
     AccountingTransactionController accountingTransactionController = new AccountingTransactionController(accountingTransactionRepository)
 
 
-
     def "get bank transactions from repository"() {
         when:
             bankTransactionController.getBankTransactions()

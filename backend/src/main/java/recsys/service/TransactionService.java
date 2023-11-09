@@ -1,13 +1,10 @@
 package recsys.service;
 
-import groovy.lang.Singleton;
-import lombok.RequiredArgsConstructor;
-import recsys.model.AccountingTransactionEntity;
 import recsys.model.BankTransactionEntity;
 import recsys.repository.AccountingTransactionRepository;
 import recsys.repository.BankTransactionRepository;
 
-import jakarta.inject.Inject;
+import jakarta.inject.Singleton;
 import java.util.List;
 
 
@@ -18,52 +15,41 @@ import java.util.List;
 @Singleton
 public class TransactionService {
 
-
-    private AccountingTransactionRepository accountingTransactionRepository;
-
-    private BankTransactionRepository bankTransactionRepository;
-
+    private final AccountingTransactionRepository accountingTransactionRepository;
+    private final BankTransactionRepository bankTransactionRepository;
     private double bankTotal;
     private double accountingTotal;
 
-    @Inject
     public TransactionService(AccountingTransactionRepository accountingTransactionRepository, BankTransactionRepository bankTransactionRepository) {
         this.accountingTransactionRepository = accountingTransactionRepository;
         this.bankTransactionRepository = bankTransactionRepository;
-    }
-
-    public TransactionService() {
-
     }
 
 
     /**
      * Sets the total amount for bank and for accounting transactions, based on the amounts in each transaction in BankTransactionEntity and AccountingTransactionEntity.
      */
-    public void setBankAndAccountingTotalAmount() {
-        /*List<BankTransactionEntity> bankTransactions = bankTransactionRepository.findAll();
-        List<AccountingTransactionEntity> accountingTransactions = accountingTransactionRepository.findAll();
 
-        //implement logic here:
+    public void setBankAndAccountingTotalAmount() {
+        List<BankTransactionEntity> bankTransactions = bankTransactionRepository.findAll();
+        //List<AccountingTransactionEntity> accountingTransactions = accountingTransactionRepository.findAll();
+
         bankTotal = 0;
         accountingTotal = 0;
 
         for (BankTransactionEntity bankTransaction : bankTransactions) {
             bankTotal += bankTransaction.getAmount();
-        }*/
-
-        bankTotal = 2;
-        accountingTotal = 0;
+        }
+        //System.out.println(bankTotal);
 
     }
-
 
 
     /**
      * Compares total amount
      * @return returns total discrepancy.
      */
-    public double compareTotalAmount() {
+    public double getDiscrepancyAmount() {
 
         double discrepancyAmount = 0;
 
@@ -77,10 +63,10 @@ public class TransactionService {
         return discrepancyAmount;
     }
 
+
     /**
      * Checks if there is any discrepancy on the total amount between bankTransactions and AccountingTransactions.
-     *
-     * @return Returns True if there is a discrepancy between total amount on the transactions.
+     * @return Returns True if there is a discrepancy.
      */
     public boolean checkIfDiscrepancyExists() {
 
@@ -93,21 +79,9 @@ public class TransactionService {
         }
         return isDiscrepancy;
     }
-
-
-    public static void main(String[] args) {
-        TransactionService transactionService = new TransactionService();
-        transactionService.checkIfDiscrepancyExists();
-
-        boolean checking = transactionService.checkIfDiscrepancyExists();
-        double compareTotal = transactionService.compareTotalAmount();
-        transactionService.setBankAndAccountingTotalAmount();
-
-
-        System.out.println("Checking if there is dicrepancies, and it is: " + checking);
-        System.out.println("The difference is: " + compareTotal);
-    }
 }
+
+
 
 
 
