@@ -5,5 +5,4 @@ package recsys.service;
  */
 public class ComparisonService {
 
-
 }

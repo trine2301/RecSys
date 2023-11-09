@@ -1,14 +1,16 @@
 package recsys.model;
 
 import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.validation.constraints.NotNull;
 
 /**
  * Entity of the results from transactionService. Runtime entity.
  */
 
-//@Entity what should ID be? Composite key of
+@Entity
 public class ComparisonEntity {
+
 
     @NotNull
     private BankTransactionEntity bankTransactionEntity;
@@ -19,6 +21,6 @@ public class ComparisonEntity {
 
     private ComparisonState comparisonState;
 
-    // Results?
+
 
 }
