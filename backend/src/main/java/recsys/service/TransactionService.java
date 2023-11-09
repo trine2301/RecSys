@@ -1,6 +1,8 @@
 package recsys.service;
 
+import recsys.model.AccountingTransactionEntity;
 import recsys.model.BankTransactionEntity;
+import recsys.model.ComparisonEntity;
 import recsys.repository.AccountingTransactionRepository;
 import recsys.repository.BankTransactionRepository;
 
@@ -32,7 +34,7 @@ public class TransactionService {
 
     public void setBankAndAccountingTotalAmount() {
         List<BankTransactionEntity> bankTransactions = bankTransactionRepository.findAll();
-        //List<AccountingTransactionEntity> accountingTransactions = accountingTransactionRepository.findAll();
+        List<AccountingTransactionEntity> accountingTransactions = accountingTransactionRepository.findAll();
 
         bankTotal = 0;
         accountingTotal = 0;
@@ -40,8 +42,9 @@ public class TransactionService {
         for (BankTransactionEntity bankTransaction : bankTransactions) {
             bankTotal += bankTransaction.getAmount();
         }
-        //System.out.println(bankTotal);
-
+        for (AccountingTransactionEntity accountingTransaction : accountingTransactions) {
+            bankTotal += accountingTransaction.getAmount();
+        }
     }
 
 
@@ -79,6 +82,7 @@ public class TransactionService {
         }
         return isDiscrepancy;
     }
+
 }
 
 
