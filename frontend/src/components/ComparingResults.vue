@@ -24,7 +24,7 @@ const get = inject('get') as Function
 const comparisons = ref<Array<Comparisons>>([])
 
 const fetchResults = async () => {
-  const response = await get('/comparison_results')
+  const response = await get('/period_comparison')
   comparisons.value = response.data
   console.log(comparisons.value.length)
 }

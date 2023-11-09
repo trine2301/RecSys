@@ -15,18 +15,8 @@
         <div class="bg-blue-100" v-else>
           <div class="flex">
             <div>
-              <div class="rounded mx-1">
-                <div class="text-xl p-2">
-                  Accounting transactions
-                </div>
-                Listing accounting transactions with comp.results here
-              </div>
-              <div class="rounded h-auto mx-1">
-                <div class="text-xl p-2">
-                  Bank transactions
-                </div>
-                Listing accounting transactions with comp.results here
-              </div>
+              hi
+              <comparing-results/>
             </div>
           </div>
         </div>
@@ -45,6 +35,7 @@ import MatchTransactionButton from "@/components/MatchTransactionButton.vue"
 
 import '@vuepic/vue-datepicker/dist/main.css'
 import PeriodPicker from "@/components/PeriodPicker.vue";
+import ComparingResults from "@/components/ComparingResults.vue";
 
 
 const isMatchTransactionsButtonPressed = ref(false)
