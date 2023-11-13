@@ -1,6 +1,6 @@
 
 export type Comparisons = {
-  id: string,
+  id?: string,
   //banktransacTionEntity: BankTransactionEntity
   //baccountingTransactionEntity: AccountingTransactionEntity
   //comparisonState: ComparisonState??

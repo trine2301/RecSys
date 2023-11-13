@@ -2,7 +2,7 @@ package recsys.service;
 
 import recsys.model.AccountingTransactionEntity;
 import recsys.model.BankTransactionEntity;
-import recsys.model.ComparisonEntity;
+//import recsys.model.ComparisonEntity;
 import recsys.repository.AccountingTransactionRepository;
 import recsys.repository.BankTransactionRepository;
 
