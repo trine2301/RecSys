@@ -1,35 +1,34 @@
 <template>
+  <div v-if="result != 0">
+    <PopupComponent>
+      You have discrepancies :/
+    </PopupComponent>
+  </div>
   <div class="flex">
-    <div class="mt-2 border">
-      <div class="text-xl">
-        Results:
+    <div class="mt-2 border m-5">
+      You have a total discrepancy of:
+      <div class="text-3xl">
+        {{ result }}
       </div>
-      {{ result }}
     </div>
   </div>
+
 
 </template>
 
 <script setup lang="ts">
 
 
-import { ref, inject, onMounted } from "vue";
-import { Comparisons } from "@/services/Comparisons";
-import { fetchPeriodComparison } from "@/services/FrontendController";
+import { onMounted } from "vue";
+import PopupComponent from "@/components/PopupComponent.vue";
+import { result, fetchComparisonResults } from "@/services/FrontendService";
 
 
-const get = inject('get') as Function
-const comparisons = ref<Array<Comparisons>>([])
-const result = ref()
 
-const fetchComparisonResults = async () => {
-  const response = await fetchPeriodComparison()
-  result.value = response.data
-}
+ onMounted(async () => {
+   await fetchComparisonResults()
+ })
 
-onMounted(async () => {
-  await fetchComparisonResults()
-})
 
 </script>
 
