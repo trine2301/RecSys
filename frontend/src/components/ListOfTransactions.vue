@@ -14,7 +14,7 @@
     </div>
     <ul class="mt-2 border">
       <div class="text-xl">
-        Banking Transactions:
+        Banking Transactions:e
       </div>
       <li class="p-2 bg-neutral even:bg-neutral-200" v-for="transaction in filteredBankTransactions">
         {{ transaction.id }}:
@@ -49,7 +49,7 @@ const fetchBankTransactions = async () => {
   //console.log(formattedDate(bankTransactions.value[0].date))
 }
 
-// TODO sort transactions after date.
+// TODO sort transactions after date
 
 const fetchAccountingTransactions = async () => {
   const response = await get('/accounting_transactions')

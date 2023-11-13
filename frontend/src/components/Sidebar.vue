@@ -1,7 +1,7 @@
 <template>
-  <div class="sidebar h-screen w-200 ">
+  <div class="sidebar h-screen w-200">
     <router-link class="title text-4xl text-center m-6 whitespace-nowrap text-blue-900" to="/home">
-      Trine bachelor</router-link>
+      Home </router-link>
     <div class="border-b border-b-amber-100/20 shadow-lg"/>
     <div class="menu-entries ml-6 mt-12">
       <router-link class="menu-entry" to="/transactions">See transactions</router-link>
