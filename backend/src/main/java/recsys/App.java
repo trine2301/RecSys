@@ -1,7 +1,7 @@
 package recsys;
 import io.micronaut.runtime.Micronaut;
 import recsys.model.BankTransactionEntity;
-import recsys.model.ComparisonEntity;
+//import recsys.model.ComparisonEntity;
 import recsys.repository.BankTransactionRepository;
 import recsys.service.TransactionService;
 

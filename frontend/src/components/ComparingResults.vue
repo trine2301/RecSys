@@ -4,10 +4,7 @@
       <div class="text-xl">
         Results:
       </div>
-      <div class="p-2 bg-neutral even:bg-neutral-200" v-for="comparison in comparisons">
-        {{ comparison.id }}
-      </div>
-      {{ }}
+      {{ result }}
     </div>
   </div>
 
@@ -16,18 +13,23 @@
 <script setup lang="ts">
 
 
-import { ref, inject } from "vue";
+import { ref, inject, onMounted } from "vue";
 import { Comparisons } from "@/services/Comparisons";
+import { fetchPeriodComparison } from "@/services/FrontendController";
 
 
 const get = inject('get') as Function
 const comparisons = ref<Array<Comparisons>>([])
+const result = ref()
 
-const fetchResults = async () => {
-  const response = await get('/period_comparison')
-  comparisons.value = response.data
-  console.log(comparisons.value.length)
+const fetchComparisonResults = async () => {
+  const response = await fetchPeriodComparison()
+  result.value = response.data
 }
+
+onMounted(async () => {
+  await fetchComparisonResults()
+})
 
 </script>
 

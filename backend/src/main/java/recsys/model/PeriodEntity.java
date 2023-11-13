@@ -23,8 +23,12 @@ import java.util.List;
 @Data
 public class PeriodEntity {
 
-    @EmbeddedId
-    private PeriodId periodId;
+//    @EmbeddedId
+//    private PeriodId periodId;
+
+    @Id
+    private Long id;
+
     private int year;
 
     private int month;
@@ -34,8 +38,8 @@ public class PeriodEntity {
 
     @OneToMany
     private List<BankTransactionEntity> bankTransactions;
-    @OneToMany
-    private List<ComparisonEntity> comparisons;
+    //@OneToMany
+    //private List<ComparisonEntity> comparisons;
 
     private Result status;
 
