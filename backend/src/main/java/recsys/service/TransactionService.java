@@ -3,6 +3,7 @@ package recsys.service;
 import recsys.model.AccountingTransactionEntity;
 import recsys.model.BankTransactionEntity;
 //import recsys.model.ComparisonEntity;
+import recsys.model.Status;
 import recsys.repository.AccountingTransactionRepository;
 import recsys.repository.BankTransactionRepository;
 
@@ -58,7 +59,7 @@ public class TransactionService {
 
         setBankAndAccountingTotalAmount();
 
-        if(checkIfDiscrepancyExists() == true) {
+        if(checkIfDiscrepancyOnTotalAmountExists() == true) {
             discrepancyAmount = bankTotal - accountingTotal;
         } if(discrepancyAmount < 0) {
             discrepancyAmount = accountingTotal - bankTotal;
@@ -71,7 +72,7 @@ public class TransactionService {
      * Checks if there is any discrepancy on the total amount between bankTransactions and AccountingTransactions.
      * @return Returns True if there is a discrepancy.
      */
-    public boolean checkIfDiscrepancyExists() {
+    public boolean checkIfDiscrepancyOnTotalAmountExists() {
 
         boolean isDiscrepancy = false;
 
@@ -83,6 +84,31 @@ public class TransactionService {
         return isDiscrepancy;
     }
 
+    /**
+     * Check if an accounting transaction can find a matching bank transaction. Status = MATCh, add to List<ComparisonEntity>
+     */
+    public boolean checkIfAccTransHaveAMatchingBankTran() {
+        //for each AccountingTransactionEntity --> iterate through BankTransactionEntity and match date AND amount.
+        return true;
+    }
+
+    /**
+     * For each accounting transaction that can find a matching bank transaction: Status = MATCh, add to List<ComparisonEntity>
+     *
+     * For each transaction that did not have a match: iterate and give one of the results;
+     * PARTIAL_MATCH, MISSING_BANK_TRANS OR MISSING_ACC_TRANS, (and put it in a list of comparisonEntities?)
+     */
+    public Status result() {
+        Status status = Status.MATCH_NO_COMPLETE;
+        //for each transaction where match == false, iterate and find matching date OR amount = PARTIAL_MATCH, add to List<ComparisonsEntity>
+        //for each transaction where match == false, acctrans iterate and find no matches on DATE AND amount = MISSING_BANK_TRANS, add to List<ComparisonsEntity>
+        //for each transaction where match == false, bankTrans iterate and find no matches on DATE AND amount = MISSING_ACC_TRANS, add to List<ComparisonsEntity>
+
+        //if match complete -->
+        return Status.MATCH_COMPLETE;
+
+        //else: throw CouldNotMatchException
+    }
 }
 
 
