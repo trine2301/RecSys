@@ -43,6 +43,8 @@ public class ComparisonEntity {
 
     private Result result;
 
+    private Status status;
+
 
     public ComparisonEntity() {
 
@@ -64,6 +66,10 @@ public class ComparisonEntity {
         this.result = result;
     }
 
+    public void setStatus(Status status) {
+        this.status = status;
+    }
+
 
 
     public BankTransactionEntity getBankTransactionEntity() {
@@ -76,5 +82,9 @@ public class ComparisonEntity {
 
     public Result getResult() {
         return result;
+    }
+
+    public Status getStatus() {
+        return status;
     }
 }

@@ -23,8 +23,8 @@ public class App {
 
         boolean checking = transactionService.checkIfDiscrepancyOnTotalAmountExists();
         double compareTotal = transactionService.getDiscrepancyAmount();
-        transactionService.setBankAndAccountingTotalAmount();
-        List<ComparisonEntity> trans = transactionService.checkIfAccTransHaveAMatchingBankTrans();
+        //transactionService.setBankAndAccountingTotalAmount();
+        //List<ComparisonEntity> trans = transactionService.findMatches();
 
 
         //System.out.println("Checking if there is discrepancies, and it is: " + checking);

@@ -12,10 +12,11 @@
           <th>ACCOUNTING TRANSACTIONS</th>
           <th>BANK TRANSACTIONS</th>
           <th>RESULT</th>
+          <th>STATUS</th>
         </tr>
         </thead>
-        <tbody>
-        <tr class="p-2 bg-neutral even:bg-neutral-200" v-for="transactionLine in transactionInfo">
+        <tbody class="">
+        <tr class="p-2 bg-neutral even:bg-neutral-200 " v-for="transactionLine in transactionInfo">
           <td>
             {{ transactionLine.accountingTransactionEntity.date }},
             {{ transactionLine.accountingTransactionEntity.amount }},
@@ -27,12 +28,13 @@
             {{ transactionLine.bankTransactionEntity.description }}
           </td>
           <td>{{ transactionLine.result }}</td>
+          <td>{{ transactionLine.status }}</td>
         </tr>
         </tbody>
       </table>
     </div>
   </div>
-  <div v-if="result > 10000">
+  <div v-if="resultTotalAmount > 10000">
     <PopupComponent>
       You have discrepancies :/
     </PopupComponent>
