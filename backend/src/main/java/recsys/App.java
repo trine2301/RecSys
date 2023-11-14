@@ -17,6 +17,7 @@ public class App {
 
         TransactionService transactionService = app.getBean(TransactionService.class);
         transactionService.checkIfDiscrepancyExists();
+
         //transactionService.getComparisonEntity();
 
         boolean checking = transactionService.checkIfDiscrepancyExists();
