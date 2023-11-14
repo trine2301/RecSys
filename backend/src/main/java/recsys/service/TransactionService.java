@@ -3,6 +3,7 @@ package recsys.service;
 import recsys.model.AccountingTransactionEntity;
 import recsys.model.BankTransactionEntity;
 //import recsys.model.ComparisonEntity;
+import recsys.model.Result;
 import recsys.model.Status;
 import recsys.repository.AccountingTransactionRepository;
 import recsys.repository.BankTransactionRepository;
@@ -32,7 +33,6 @@ public class TransactionService {
     /**
      * Sets the total amount for bank and for accounting transactions, based on the amounts in each transaction in BankTransactionEntity and AccountingTransactionEntity.
      */
-
     public void setBankAndAccountingTotalAmount() {
         List<BankTransactionEntity> bankTransactions = bankTransactionRepository.findAll();
         List<AccountingTransactionEntity> accountingTransactions = accountingTransactionRepository.findAll();
@@ -85,12 +85,47 @@ public class TransactionService {
     }
 
     /**
-     * Check if an accounting transaction can find a matching bank transaction. Status = MATCh, add to List<ComparisonEntity>
+     * Check if an accounting transaction can find a matching bank transaction. Status = MATCH, add to List<ComparisonEntity>
      */
-    public boolean checkIfAccTransHaveAMatchingBankTran() {
-        //for each AccountingTransactionEntity --> iterate through BankTransactionEntity and match date AND amount.
-        return true;
+//    public boolean checkIfAccTransHaveAMatchingBankTrans() {
+//        boolean status = false;
+//
+//        //for each AccountingTransactionEntity --> iterate through BankTransactionEntity and match date AND amount.
+//        List<AccountingTransactionEntity> accTransList = accountingTransactionRepository.findAll();
+//        List<BankTransactionEntity> bankTransList = bankTransactionRepository.findAll();
+//
+//        for (AccountingTransactionEntity accTrans : accTransList) {
+//            for (BankTransactionEntity bankTrans : bankTransList) {
+//                if (accTrans.getDate().equals(bankTrans.getDate()) && accTrans.getAmount() == bankTrans.getAmount()) {
+//                    status = true;
+//                }
+//            }
+//        }
+//        return status;
+//    }
+
+    public boolean checkIfAccTransHaveAMatchingBankTrans() {
+        List<AccountingTransactionEntity> accTransList = accountingTransactionRepository.findAll();
+        List<BankTransactionEntity> bankTransList = bankTransactionRepository.findAll();
+
+        int accTransIndex = 0;
+        int bankTransIndex = 0;
+        boolean status = false;
+
+        while (accTransIndex < accTransList.size()) {
+            while (bankTransIndex < bankTransList.size()) {
+                if (accTransList.get(accTransIndex).getDate().equals(bankTransList.get(bankTransIndex).getDate()) && accTransList.get(accTransIndex).getAmount() == bankTransList.get(bankTransIndex).getAmount()) {
+                    status = true;
+                    break;
+                }
+                bankTransIndex++;
+            }
+            accTransIndex++;
+        }
+
+        return status;
     }
+
 
     /**
      * For each accounting transaction that can find a matching bank transaction: Status = MATCh, add to List<ComparisonEntity>

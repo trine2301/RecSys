@@ -1,8 +1,6 @@
 package recsys;
 import io.micronaut.runtime.Micronaut;
-import recsys.model.BankTransactionEntity;
 //import recsys.model.ComparisonEntity;
-import recsys.repository.BankTransactionRepository;
 import recsys.service.TransactionService;
 
 /**
@@ -16,17 +14,19 @@ public class App {
                 .start();
 
         TransactionService transactionService = app.getBean(TransactionService.class);
-        transactionService.checkIfDiscrepancyExists();
+        transactionService.checkIfDiscrepancyOnTotalAmountExists();
 
-        //transactionService.getComparisonEntity();
 
-        boolean checking = transactionService.checkIfDiscrepancyExists();
+
+        boolean checking = transactionService.checkIfDiscrepancyOnTotalAmountExists();
         double compareTotal = transactionService.getDiscrepancyAmount();
         transactionService.setBankAndAccountingTotalAmount();
+        boolean trans = transactionService.checkIfAccTransHaveAMatchingBankTrans();
 
 
-        System.out.println("Checking if there is discrepancies, and it is: " + checking);
-        System.out.println("The difference is: " + compareTotal);
-        System.out.println("difference: " + transactionService.getDiscrepancyAmount());
+        //System.out.println("Checking if there is discrepancies, and it is: " + checking);
+        //System.out.println("The difference is: " + compareTotal);
+        System.out.println("DAMN: " + trans);
+
     }
 }
