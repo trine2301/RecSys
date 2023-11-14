@@ -7,14 +7,17 @@ import axios
 
 
 const result = ref()
+const resultTotalAmount = ref()
 
 
 const fetchPeriodComparison = async () => {
-  return await axios.get('http://localhost:8080' + '/period_comparison')
+  const response = await axios.get('http://localhost:8080' + '/period_comparison')
+  resultTotalAmount.value = response.data
 }
 
+
 const fetchComparisonResults = async () => {
-  const response = await fetchPeriodComparison()
+  const response = await axios.get('http://localhost:8080' + '/period_comparison' + '/results')
   result.value = response.data
 }
 
@@ -22,5 +25,6 @@ const fetchComparisonResults = async () => {
 export {
   fetchPeriodComparison,
   fetchComparisonResults,
-  result
+  result,
+  resultTotalAmount
 }

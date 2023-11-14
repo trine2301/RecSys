@@ -13,8 +13,10 @@ import java.io.Serializable;
 @AllArgsConstructor
 @Data
 public class ComparisonId implements Serializable {
-    private PeriodEntity periodComparison;
+    private Result result;
     private BankTransactionEntity bankTransactionEntity;
     private AccountingTransactionEntity accountingTransactionEntity;
+
+    //No need for EqualsAndHashCode, since I use @Data. Would otherwise need if composite key would work.
 
 }

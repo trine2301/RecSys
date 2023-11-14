@@ -4,6 +4,7 @@ import io.micronaut.http.annotation.Controller;
 import io.micronaut.http.annotation.Get;
 import lombok.AllArgsConstructor;
 import recsys.model.AccountingTransactionEntity;
+import recsys.model.ComparisonEntity;
 import recsys.repository.AccountingTransactionRepository;
 import recsys.service.TransactionService;
 
@@ -17,6 +18,7 @@ public class TransactionController {
 
     private final TransactionService service;
 
+
     public TransactionController(TransactionService service) {
         this.service = service;
     }
@@ -24,6 +26,11 @@ public class TransactionController {
     @Get
     public double getDiscrepancy() {
         return service.getDiscrepancyAmount();
+    }
+
+    @Get("/results")
+    public List<ComparisonEntity> checkIfAccTransHaveAMatchingBankTrans() {
+        return service.checkIfAccTransHaveAMatchingBankTrans();
     }
 }
 

@@ -3,12 +3,14 @@ package recsys.service;
 import recsys.model.AccountingTransactionEntity;
 import recsys.model.BankTransactionEntity;
 //import recsys.model.ComparisonEntity;
+import recsys.model.ComparisonEntity;
 import recsys.model.Result;
 import recsys.model.Status;
 import recsys.repository.AccountingTransactionRepository;
 import recsys.repository.BankTransactionRepository;
 
 import jakarta.inject.Singleton;
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -104,9 +106,10 @@ public class TransactionService {
 //        return status;
 //    }
 
-    public boolean checkIfAccTransHaveAMatchingBankTrans() {
+    public List<ComparisonEntity> checkIfAccTransHaveAMatchingBankTrans() {
         List<AccountingTransactionEntity> accTransList = accountingTransactionRepository.findAll();
         List<BankTransactionEntity> bankTransList = bankTransactionRepository.findAll();
+        List<ComparisonEntity> comparisonEntities = new ArrayList<>();
 
         int accTransIndex = 0;
         int bankTransIndex = 0;
@@ -114,16 +117,22 @@ public class TransactionService {
 
         while (accTransIndex < accTransList.size()) {
             while (bankTransIndex < bankTransList.size()) {
-                if (accTransList.get(accTransIndex).getDate().equals(bankTransList.get(bankTransIndex).getDate()) && accTransList.get(accTransIndex).getAmount() == bankTransList.get(bankTransIndex).getAmount()) {
-                    status = true;
+                if (accTransList.get(accTransIndex).getDate().equals(bankTransList.get(bankTransIndex).getDate()) && accTransList.get(accTransIndex).getAmount() == bankTransList.get(bankTransIndex)
+                    .getAmount()) {
+                    ComparisonEntity comparisonEntity = new ComparisonEntity();
+                    comparisonEntity.setBankTransactionEntity(bankTransList.get(bankTransIndex));
+                    comparisonEntity.setAccountingTransactionEntity(accTransList.get(accTransIndex));
+                    comparisonEntity.setResult(Result.MATCH);
+                    comparisonEntities.add(comparisonEntity);
                     break;
                 }
                 bankTransIndex++;
             }
             accTransIndex++;
+            //return status;
         }
-
-        return status;
+        System.out.println("Here are the comparison-entities: " + comparisonEntities);
+        return comparisonEntities;
     }
 
 
@@ -133,17 +142,18 @@ public class TransactionService {
      * For each transaction that did not have a match: iterate and give one of the results;
      * PARTIAL_MATCH, MISSING_BANK_TRANS OR MISSING_ACC_TRANS, (and put it in a list of comparisonEntities?)
      */
-    public Status result() {
-        Status status = Status.MATCH_NO_COMPLETE;
+    //public Status result() {
+        //Status status = Status.MATCH_NO_COMPLETE;
         //for each transaction where match == false, iterate and find matching date OR amount = PARTIAL_MATCH, add to List<ComparisonsEntity>
         //for each transaction where match == false, acctrans iterate and find no matches on DATE AND amount = MISSING_BANK_TRANS, add to List<ComparisonsEntity>
         //for each transaction where match == false, bankTrans iterate and find no matches on DATE AND amount = MISSING_ACC_TRANS, add to List<ComparisonsEntity>
 
         //if match complete -->
-        return Status.MATCH_COMPLETE;
+        //return Status.MATCH_COMPLETE;
 
         //else: throw CouldNotMatchException
-    }
+    //}
+
 }
 
 
