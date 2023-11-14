@@ -6,27 +6,53 @@
         {{ resultTotalAmount }}
 
       </div>
-      <div>
-        {{ result }}
-      </div>
+      <table class="bg-white">
+        <thead>
+        <tr class="text-left border-b border-gray-300">
+          <th>ACCOUNTING TRANSACTIONS</th>
+          <th>BANK TRANSACTIONS</th>
+          <th>RESULT</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr class="p-2 bg-neutral even:bg-neutral-200" v-for="transactionLine in transactionInfo">
+          <td>
+            {{ transactionLine.accountingTransactionEntity.date }},
+            {{ transactionLine.accountingTransactionEntity.amount }},
+            {{ transactionLine.accountingTransactionEntity.description }}
+          </td>
+          <td>
+            {{ transactionLine.bankTransactionEntity.date }},
+            {{ transactionLine.bankTransactionEntity.amount }},
+            {{ transactionLine.bankTransactionEntity.description }}
+          </td>
+          <td>{{ transactionLine.result }}</td>
+        </tr>
+        </tbody>
+      </table>
     </div>
   </div>
-  <div v-if="result != 0">
+  <div v-if="result > 10000">
     <PopupComponent>
       You have discrepancies :/
     </PopupComponent>
   </div>
-
-
 </template>
 
 <script setup lang="ts">
 
 
-import { onMounted, ref } from "vue";
+import { onMounted, ref, computed, reactive } from "vue";
 import PopupComponent from "@/components/PopupComponent.vue";
 import { result, resultTotalAmount, fetchComparisonResults, fetchPeriodComparison } from "@/services/FrontendService";
 
+const transactionInfo: Transaction[] = reactive([]);
+
+fetch('http://localhost:8080' + '/period_comparison' + '/results')
+    .then(response => response.json())
+    .then(data => {
+      transactionInfo.push(...data);
+    });
 
 
  onMounted(async () => {
