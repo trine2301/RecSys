@@ -15,6 +15,10 @@ public class AccountingTransactionController {
 
     private final AccountingTransactionRepository accountingTransactionRepository;
 
+    /**
+     * Constructor for repo.
+     * @param repository
+     */
     public AccountingTransactionController(AccountingTransactionRepository repository) {
         accountingTransactionRepository = repository;
     }
