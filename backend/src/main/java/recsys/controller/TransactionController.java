@@ -2,10 +2,7 @@ package recsys.controller;
 
 import io.micronaut.http.annotation.Controller;
 import io.micronaut.http.annotation.Get;
-import lombok.AllArgsConstructor;
-import recsys.model.AccountingTransactionEntity;
 import recsys.model.ComparisonEntity;
-import recsys.repository.AccountingTransactionRepository;
 import recsys.service.TransactionService;
 
 import java.util.List;
@@ -30,7 +27,7 @@ public class TransactionController {
 
     @Get("/results")
     public List<ComparisonEntity> checkIfAccTransHaveAMatchingBankTrans() {
-        return service.checkIfAccTransHaveAMatchingBankTrans();
+        return service.setComparingResults();
     }
 }
 

@@ -95,9 +95,9 @@ class TransactionServiceTest extends Specification {
             accountingTransactionRepository.save(accountingTransactionEntity)
             bankTransactionRepository.save(bankTransactionEntity)
         when:
-            service.checkIfAccTransHaveAMatchingBankTrans()
+            service.findMatches()
         then:
-            assert service.checkIfAccTransHaveAMatchingBankTrans() == true
+            assert service.findMatches() == true
     }
 
     /**
@@ -110,9 +110,9 @@ class TransactionServiceTest extends Specification {
             accountingTransactionRepository.save(accountingTransactionEntity)
             bankTransactionRepository.save(bankTransactionEntity)
         when:
-            service.checkIfAccTransHaveAMatchingBankTrans()
+            service.findMatches()
         then:
-            assert service.checkIfAccTransHaveAMatchingBankTrans() == false
+            assert service.findMatches() == false
     }
 
     /**
@@ -125,8 +125,8 @@ class TransactionServiceTest extends Specification {
             accountingTransactionRepository.save(accountingTransactionEntity)
             bankTransactionRepository.save(bankTransactionEntity)
         when:
-            service.checkIfAccTransHaveAMatchingBankTrans()
+            service.findMatches()
         then:
-            assert service.checkIfAccTransHaveAMatchingBankTrans() == false
+            assert service.findMatches() == false
     }
 }

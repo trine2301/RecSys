@@ -18,6 +18,7 @@ export type ComparisonResults = {
     description: string;
   };
   result: string;
+  status: string;
 }
 
 

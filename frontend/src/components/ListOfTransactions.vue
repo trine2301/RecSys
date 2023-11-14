@@ -49,8 +49,6 @@ const fetchBankTransactions = async () => {
   //console.log(formattedDate(bankTransactions.value[0].date))
 }
 
-// TODO sort transactions after date
-
 const fetchAccountingTransactions = async () => {
   const response = await get('/accounting_transactions')
   accountingTransactions.value = response.data
