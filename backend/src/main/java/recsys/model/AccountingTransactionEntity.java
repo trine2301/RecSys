@@ -1,5 +1,7 @@
 package recsys.model;
 
+import lombok.AllArgsConstructor;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -13,6 +15,7 @@ import java.time.LocalDate;
  *
  */
 @Entity
+@AllArgsConstructor
 @Table(name = "accounting_transactions")
 public class AccountingTransactionEntity {
 
