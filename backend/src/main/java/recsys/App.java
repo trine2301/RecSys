@@ -27,6 +27,7 @@ public class App {
         //List<ComparisonEntity> trans = transactionService.findMatches();
 
 
+
         //System.out.println("Checking if there is discrepancies, and it is: " + checking);
         //System.out.println("The difference is: " + compareTotal);
         //System.out.println("DAMN: " + trans);

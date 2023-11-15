@@ -26,7 +26,7 @@ public class TransactionController {
     }
 
     @Get("/results")
-    public List<ComparisonEntity> checkIfAccTransHaveAMatchingBankTrans() {
+    public List<ComparisonEntity> settingResults() {
         return service.setComparingResults();
     }
 }
