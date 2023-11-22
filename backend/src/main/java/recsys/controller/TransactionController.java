@@ -2,6 +2,7 @@ package recsys.controller;
 
 import io.micronaut.http.annotation.Controller;
 import io.micronaut.http.annotation.Get;
+import recsys.exceptions.CouldNotCompareTransactionsException;
 import recsys.model.ComparisonEntity;
 import recsys.service.TransactionService;
 
@@ -26,7 +27,7 @@ public class TransactionController {
     }
 
     @Get("/results")
-    public List<ComparisonEntity> settingResults() {
+    public List<ComparisonEntity> settingResults() throws CouldNotCompareTransactionsException {
         return service.setComparingResults();
     }
 }

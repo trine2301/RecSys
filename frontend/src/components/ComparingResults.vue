@@ -15,17 +15,20 @@
           <th>STATUS</th>
         </tr>
         </thead>
-        <tbody class="">
+        <tbody class="" v-if="transactionInfo">
         <tr class="p-2 bg-neutral even:bg-neutral-200 " v-for="transactionLine in transactionInfo">
-          <td>
+          <td v-if="transactionLine.accountingTransactionEntity">
             {{ transactionLine.accountingTransactionEntity.date }},
             {{ transactionLine.accountingTransactionEntity.amount }},
             {{ transactionLine.accountingTransactionEntity.description }}
           </td>
-          <td>
+          <td v-if="transactionLine.bankTransactionEntity">
             {{ transactionLine.bankTransactionEntity.date }},
             {{ transactionLine.bankTransactionEntity.amount }},
             {{ transactionLine.bankTransactionEntity.description }}
+          </td>
+          <td v-else>
+
           </td>
           <td>{{ transactionLine.result }}</td>
           <td>{{ transactionLine.status }}</td>
