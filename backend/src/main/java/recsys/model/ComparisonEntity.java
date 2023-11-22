@@ -34,11 +34,9 @@ public class ComparisonEntity {
 
 
     @OneToOne
-    @NonNull
     private BankTransactionEntity bankTransactionEntity;
 
     @OneToOne
-    @NonNull
     private AccountingTransactionEntity accountingTransactionEntity;
 
     private Result result;
