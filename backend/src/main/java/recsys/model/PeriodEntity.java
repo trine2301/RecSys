@@ -9,6 +9,7 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import java.time.LocalDate;
 import java.util.List;
 
 
@@ -23,31 +24,21 @@ import java.util.List;
 @Data
 public class PeriodEntity {
 
-//    @EmbeddedId
-//    private PeriodId periodId;
-
     @Id
     private Long id;
 
-    private int year;
+    private LocalDate startDate;
 
-    private int month;
+    private LocalDate endDate;
 
     @OneToMany
     private List<AccountingTransactionEntity> accountingTransactions;
 
     @OneToMany
     private List<BankTransactionEntity> bankTransactions;
-    //@OneToMany
-    //private List<ComparisonEntity> comparisons;
 
     private Result status;
 
-
-    private int BankSum;
-
-
-    private int AccSum;
 
 
 }

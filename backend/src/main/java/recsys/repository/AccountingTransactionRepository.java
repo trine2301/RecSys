@@ -8,6 +8,7 @@ import recsys.model.AccountingTransactionEntity;
 
 import javax.transaction.Transactional;
 import javax.validation.constraints.NotNull;
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
 
@@ -19,7 +20,9 @@ public abstract class AccountingTransactionRepository implements CrudRepository<
     @Transactional
     public abstract List<AccountingTransactionEntity> findAll();
 
-    @NonNull
-    public abstract Optional<AccountingTransactionEntity> findById(@NotNull @NonNull Long id);
+//    @NonNull
+//    public abstract Optional<AccountingTransactionEntity> findById(@NotNull @NonNull Long id);
+
+    public abstract List<AccountingTransactionEntity> findByDateBetween(LocalDate startDate, LocalDate endDate);
 
 }

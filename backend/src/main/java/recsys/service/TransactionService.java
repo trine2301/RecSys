@@ -11,6 +11,7 @@ import recsys.repository.AccountingTransactionRepository;
 import recsys.repository.BankTransactionRepository;
 
 import jakarta.inject.Singleton;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -90,9 +91,13 @@ public class TransactionService {
     /**
      * Compares bank transactions with accounting transactions, and assigns a result.
      */
-    public void compareTransactions() {
-        List<AccountingTransactionEntity> accTransList = accountingTransactionRepository.findAll();
-        List<BankTransactionEntity> bankTransList = bankTransactionRepository.findAll();
+    public void compareTransactions(LocalDate startDate, LocalDate endDate) {
+        //List<AccountingTransactionEntity> accTransList = accountingTransactionRepository.findAll();
+        //List<BankTransactionEntity> bankTransList = bankTransactionRepository.findAll();
+
+        List<AccountingTransactionEntity> accTransList = accountingTransactionRepository.findByDateBetween(startDate, endDate);
+        List<BankTransactionEntity> bankTransList = bankTransactionRepository.findByDateBetween(startDate, endDate);
+
 
         List<ComparisonEntity> comparedEntities = new ArrayList<>();
 
@@ -225,7 +230,7 @@ public class TransactionService {
      */
     public List<ComparisonEntity> setComparingResults() throws CouldNotCompareTransactionsException {
 
-        compareTransactions();
+        //compareTransactions();
         //compareResults();
         //Set<String> s = new LinkedHashSet<>(Collections.singleton(comparisonEntities.toString()));
 
