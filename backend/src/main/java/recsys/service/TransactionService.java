@@ -91,7 +91,7 @@ public class TransactionService {
     /**
      * Compares bank transactions with accounting transactions, and assigns a result.
      */
-    public void compareTransactions(LocalDate startDate, LocalDate endDate) {
+    public List<ComparisonEntity> compareTransactions(LocalDate startDate, LocalDate endDate) {
         //List<AccountingTransactionEntity> accTransList = accountingTransactionRepository.findAll();
         //List<BankTransactionEntity> bankTransList = bankTransactionRepository.findAll();
 
@@ -143,6 +143,7 @@ public class TransactionService {
 
         //Add all comparedEntities into comparisonEntities, after removing duplicates that are not Result.Match.
         comparisonEntities.addAll(removeDuplicatesNotMatches(comparedEntities));
+        return comparisonEntities;
 
     }
 
@@ -231,7 +232,7 @@ public class TransactionService {
     public List<ComparisonEntity> setComparingResults() throws CouldNotCompareTransactionsException {
 
         //compareTransactions();
-        //compareResults();
+        compareResults();
         //Set<String> s = new LinkedHashSet<>(Collections.singleton(comparisonEntities.toString()));
 
         return comparisonEntities;

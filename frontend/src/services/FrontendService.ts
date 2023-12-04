@@ -1,5 +1,6 @@
 import {
-  ref
+  ref,
+  inject
 } from "vue";
 import axios
   from "axios";
@@ -12,7 +13,7 @@ import format
 
 const result = ref()
 const resultTotalAmount = ref()
-
+//const get = inject('get') as Function
 
 const fetchPeriodComparison = async () => {
   const response = await axios.get('http://localhost:8080' + '/period_comparison')
@@ -20,20 +21,21 @@ const fetchPeriodComparison = async () => {
 }
 
 
-const fetchComparisonResults = async () => {
-  const response = await axios.get('http://localhost:8080' + '/period_comparison' + '/results')
+/*const fetchComparisonResults = async (fromDate: string, toDate: string) => {
+
+  const response = await get('/period_comparison' + '/results')
   result.value = response.data
-}
+}*/
 
 const formattedDate = (dateStr: string) => {
-  return format(new Date(dateStr), 'dd.MM.yyyy')
+  return format(new Date(dateStr), 'yyyy-MM-dd')
 }
 
 
 
 export {
   fetchPeriodComparison,
-  fetchComparisonResults,
+  //fetchComparisonResults,
   formattedDate,
   result,
   resultTotalAmount

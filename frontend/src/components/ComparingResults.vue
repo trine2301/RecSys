@@ -15,8 +15,8 @@
           <th>STATUS</th>
         </tr>
         </thead>
-        <tbody class="" v-if="transactionInfo">
-        <tr class="p-2 bg-neutral even:bg-neutral-200 " v-for="transactionLine in transactionInfo">
+        <tbody class="" v-if="resultFromComparison">
+        <tr class="p-2 bg-neutral even:bg-neutral-200 " v-for="transactionLine in resultFromComparison">
           <td v-if="transactionLine.accountingTransactionEntity">
             {{ transactionLine.accountingTransactionEntity.date }},
             {{ transactionLine.accountingTransactionEntity.amount }},
@@ -47,23 +47,18 @@
 <script setup lang="ts">
 
 
-import { onMounted, ref, computed, reactive } from "vue";
+import { onMounted, ref, computed, reactive , inject} from "vue";
 import PopupComponent from "@/components/PopupComponent.vue";
-import { result, resultTotalAmount, fetchComparisonResults, fetchPeriodComparison } from "@/services/FrontendService";
+import { result, resultTotalAmount } from "@/services/FrontendService";
 
-const transactionInfo: Transaction[] = reactive([]);
-
-fetch('http://localhost:8080' + '/period_comparison' + '/results')
-    .then(response => response.json())
-    .then(data => {
-      transactionInfo.push(...data);
-    });
+defineProps(['resultFromComparison'])
 
 
+/*
  onMounted(async () => {
-   await fetchComparisonResults()
-   await fetchPeriodComparison()
- })
+   await fetchComparisonResults("2023-01-01", "2023-12-31")
+   //await fetchPeriodComparison()
+ })*/
 
 
 </script>
