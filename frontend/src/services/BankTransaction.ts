@@ -11,7 +11,7 @@ export type BankTransaction = {
 
 
 const formattedDate = (dateStr: string) => {
-  return format(new Date(dateStr), 'dd.MM.yyyy')
+  return format(new Date(dateStr), 'yyyy-MM-dd')
 }
 
 

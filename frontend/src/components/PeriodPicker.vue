@@ -4,23 +4,32 @@
           v-model="date"
           default="Pick a dateaa"
           placeholder="Pick a date"
-          format="dd/MM/yyyy"
+          format="yyyy-MM-dd"
           range multi-calendars
       />
     </div>
 </template>
 
 <script setup lang="ts">
-import { onMounted, ref, getCurrentInstance, watch } from 'vue'
+import { onMounted, computed } from 'vue'
 import Datepicker from '@vuepic/vue-datepicker'
 import '@vuepic/vue-datepicker/dist/main.css'
 
-const date = ref(new Date())
+const date = computed({
+  get: () => props.modelValue,
+  set: val => {
+    emit('update:modelValue', val)
+  }
+})
+
+//const date = ref(new Date())
+const emit = defineEmits(['update:modelValue'])
+const props = defineProps(['modelValue'])
+
+
 
 onMounted(() => {
-  const startDate = new Date()
-  const endDate = new Date(new Date().setDate(startDate.getDate() + 7))
-  date.value = [startDate, endDate]
+
 })
 
 </script>
