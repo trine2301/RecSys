@@ -3,7 +3,7 @@
     <period-picker
         v-model="date"
     />
-    {{ date }}
+
     <MatchTransactionButton class="my-5" @click="toggleDiffEngineResults()">
       See results
     </MatchTransactionButton>
@@ -61,7 +61,7 @@ const fetchComparisonResults = async (startDate: string, endDate: string) => {
 
 //  v-if="isVisible"
 const toggleDiffEngineResults = () => {
-  //fetchComparisonResults(formattedDate(date.value[0]), formattedDate(date.value[1]))
+  fetchComparisonResults(formattedDate(date.value[0]), formattedDate(date.value[1]))
   isMatchTransactionsButtonPressed.value = !isMatchTransactionsButtonPressed.value
 }
 

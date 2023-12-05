@@ -2,7 +2,6 @@
     <div class="bg-blue-200 p-5 rounded w-350">
       <Datepicker
           v-model="date"
-          default="Pick a dateaa"
           placeholder="Pick a date"
           format="yyyy-MM-dd"
           range multi-calendars

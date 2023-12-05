@@ -37,7 +37,7 @@
       </table>
     </div>
   </div>
-  <div v-if="resultTotalAmount > 10000">
+  <div v-if="resultTotalAmount > 0">
     <PopupComponent>
       You have discrepancies :/
     </PopupComponent>
