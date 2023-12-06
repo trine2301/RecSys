@@ -9,7 +9,7 @@ import spock.lang.Specification
 import spock.lang.Subject
 
 @MicronautTest
-class BankTransactionControllerTest extends Specification {
+class BankComparisonControllerTest extends Specification {
 
     BankTransactionRepository bankTransactionRepository = Mock()
     AccountingTransactionRepository accountingTransactionRepository = Mock()

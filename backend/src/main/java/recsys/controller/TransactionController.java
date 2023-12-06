@@ -1,44 +1,35 @@
 package recsys.controller;
 
-import io.micronaut.core.convert.format.Format;
-import io.micronaut.http.HttpResponse;
 import io.micronaut.http.annotation.Controller;
 import io.micronaut.http.annotation.Get;
-import io.micronaut.http.annotation.QueryValue;
-import recsys.exceptions.CouldNotCompareTransactionsException;
-import recsys.model.ComparisonEntity;
-import recsys.service.TransactionService;
+import recsys.model.AccountingTransactionEntity;
+import recsys.model.BankTransactionEntity;
+import recsys.repository.AccountingTransactionRepository;
+import recsys.repository.BankTransactionRepository;
 
-import java.time.LocalDate;
 import java.util.List;
 
-/**
- * Controller to handle the HTTP requests.
- */
-@Controller("/period_comparison")
+@Controller("/transactions")
 public class TransactionController {
 
-    private final TransactionService service;
+    private final AccountingTransactionRepository accountingTransactionRepository;
+    private final BankTransactionRepository bankTransactionRepository;
 
-
-    public TransactionController(TransactionService service) {
-        this.service = service;
+    public TransactionController(AccountingTransactionRepository accountingRepository, BankTransactionRepository bankRepository) {
+        this.accountingTransactionRepository = accountingRepository;
+        this.bankTransactionRepository = bankRepository;
     }
 
-    @Get
-    public double getDiscrepancy() {
-        return service.getDiscrepancyAmount();
+    @Get("/accounting")
+    public List<AccountingTransactionEntity> getAccountingTransactions() {
+        return accountingTransactionRepository.findAll();
     }
 
-//    @Get("/results")
-//    public List<ComparisonEntity> settingResults() throws CouldNotCompareTransactionsException {
-//        return service.setComparingResults();
-//    }
-
-    @Get("/results")
-    public List<ComparisonEntity> setComparingResults(@Format("yyyy-MM-dd") @QueryValue LocalDate startDate, @Format("yyyy-MM-dd") @QueryValue LocalDate endDate) {
-
-        return service.compareTransactions(startDate, endDate);
+    @Get("/bank")
+    public List<BankTransactionEntity> getBankTransactions() {
+        return bankTransactionRepository.findAll();
     }
-
 }
+
+
+
