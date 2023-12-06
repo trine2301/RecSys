@@ -3,6 +3,7 @@
     <period-picker
         v-model="date"
     />
+    {{ resultDiscrepancy }}
 
     <MatchTransactionButton class="my-5" @click="toggleDiffEngineResults()">
       See results
@@ -39,18 +40,17 @@ import PeriodPicker from "@/components/PeriodPicker.vue";
 import ComparingResults from "@/components/ComparingResults.vue";
 import MyModal from './MyModal.vue';
 import PopupComponent from "@/components/PopupComponent.vue";
-import { result, formattedDate } from "@/services/FrontendService";
+import { result, formattedDate, resultTotalAmount } from "@/services/FrontendService";
+import axios from "axios/index";
 //import { fetchComparisonResults } from "@/services/FrontendService";
 
 
 const isMatchTransactionsButtonPressed = ref(false)
 const date = ref(new Date())
-const startDate = ref(null)
-const endDate = ref(null)
-const transactionInfo: Transaction[] = reactive([]);
 const get = inject('get') as Function
 
 const resultPeriod = ref()
+const resultDiscrepancy = ref()
 
 
 const fetchComparisonResults = async (startDate: string, endDate: string) => {
@@ -59,15 +59,20 @@ const fetchComparisonResults = async (startDate: string, endDate: string) => {
   resultPeriod.value = response.data
 }
 
-//  v-if="isVisible"
+const fetchTotalDiscrepancyForPeriod = async (startDate: string, endDate: string) => {
+  const response = await get(`/period_comparison/total_discrepancy?startDate=${startDate}&endDate=${endDate}`)
+  resultDiscrepancy.value = response.data
+}
+
+
 const toggleDiffEngineResults = () => {
   fetchComparisonResults(formattedDate(date.value[0]), formattedDate(date.value[1]))
+  fetchTotalDiscrepancyForPeriod(formattedDate(date.value[0]), formattedDate(date.value[1]))
   isMatchTransactionsButtonPressed.value = !isMatchTransactionsButtonPressed.value
 }
 
-/*const fetchResults = async ()  => {
-  await fetchComparisonResults("2023-01-01", "2023-12-31")
-}*/
+
+
 
 onMounted(() => {
   const startDate = new Date()

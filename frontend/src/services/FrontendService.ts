@@ -15,10 +15,10 @@ const result = ref()
 const resultTotalAmount = ref()
 //const get = inject('get') as Function
 
-const fetchPeriodComparison = async () => {
-  const response = await axios.get('http://localhost:8080' + '/period_comparison')
+/*const fetchPeriodComparison = async (startDate: string, endDate: string) => {
+  const response = await axios.get(`/period_comparison/total_discrepancy?startDate=${startDate}&endDate=${endDate}`)
   resultTotalAmount.value = response.data
-}
+}*/
 
 
 /*const fetchComparisonResults = async (fromDate: string, toDate: string) => {
@@ -34,7 +34,7 @@ const formattedDate = (dateStr: string) => {
 
 
 export {
-  fetchPeriodComparison,
+  //fetchPeriodComparison,
   //fetchComparisonResults,
   formattedDate,
   result,

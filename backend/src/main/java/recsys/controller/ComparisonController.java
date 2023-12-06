@@ -23,15 +23,14 @@ public class ComparisonController {
         this.service = service;
     }
 
-    @Get
-    public double getDiscrepancy() {
-        return service.getDiscrepancyAmount();
+    @Get("/total_discrepancy")
+    public double getDiscrepancy(@Format("yyyy-MM-dd") @QueryValue LocalDate startDate, @Format("yyyy-MM-dd") @QueryValue LocalDate endDate) {
+        return service.getDiscrepancyAmount(startDate, endDate);
     }
 
 
     @Get("/results")
     public List<ComparisonEntity> setComparingResults(@Format("yyyy-MM-dd") @QueryValue LocalDate startDate, @Format("yyyy-MM-dd") @QueryValue LocalDate endDate) {
-
         return service.compareTransactions(startDate, endDate);
     }
 

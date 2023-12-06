@@ -3,7 +3,7 @@
     <div class="mt-2 border m-5">
       You have a total discrepancy of:
       <div class="text-3xl">
-        {{ resultTotalAmount }}
+
 
       </div>
       <table class="bg-white">
@@ -37,11 +37,11 @@
       </table>
     </div>
   </div>
-  <div v-if="resultTotalAmount > 0">
-    <PopupComponent>
-      You have discrepancies :/
-    </PopupComponent>
-  </div>
+<!--  <div v-if="resultTotalAmount > 0">-->
+<!--    <PopupComponent>-->
+<!--      You have discrepancies :/-->
+<!--    </PopupComponent>-->
+<!--  </div>-->
 </template>
 
 <script setup lang="ts">
@@ -54,11 +54,19 @@ import { result, resultTotalAmount } from "@/services/FrontendService";
 defineProps(['resultFromComparison'])
 
 
+
+
+
 /*
  onMounted(async () => {
    await fetchComparisonResults("2023-01-01", "2023-12-31")
    //await fetchPeriodComparison()
  })*/
+
+/*onMounted(async () => {
+  await fetchPeriodComparison()
+})*/
+
 
 
 </script>

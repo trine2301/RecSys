@@ -62,19 +62,36 @@ public class TransactionService {
      * Gets the total discrepancy between total amount of bank transactions and accounting transactions.
      *
      * @return returns total discrepancy between bank transactions and accounting transactions.
+     * TODO this one gives wrong number. I think it adds instead of doing the right thing.
      */
-    public double getDiscrepancyAmount() {
+    public double getDiscrepancyAmount(LocalDate startDate, LocalDate endDate) {
 
-        double discrepancyAmount = 0;
+        List<AccountingTransactionEntity> accTransList = accountingTransactionRepository.findByDateBetween(startDate, endDate);
+        List<BankTransactionEntity> bankTransList = bankTransactionRepository.findByDateBetween(startDate, endDate);
+        int discrepancyAmount = 0;
 
-        setBankAndAccountingTotalAmount();
+        //setBankAndAccountingTotalAmount();
+        bankTotal = 0;
+        accountingTotal = 0;
 
-        if (checkIfDiscrepancyOnTotalAmountExists() == true) {
-            discrepancyAmount = bankTotal - accountingTotal;
+        //Setting the total amount for bank transactions.
+        for (BankTransactionEntity bankTransaction : bankTransList) {
+            bankTotal += bankTransaction.getAmount();
         }
-        if (discrepancyAmount < 0) {
-            discrepancyAmount = accountingTotal - bankTotal;
+        //Setting the total amount for bank transactions.
+        for (AccountingTransactionEntity accountingTransaction : accTransList) {
+            accountingTotal += accountingTransaction.getAmount();
         }
+
+        //If banktotal is larger than accountingtotal, amount will be bank minus accounting
+        if (bankTotal > accountingTotal) {
+            discrepancyAmount = (int) (bankTotal - accountingTotal);
+        }
+        //If accountingtotal is larger than bankTotal, amount will be accounting minus bank
+        if (bankTotal < accountingTotal) {
+            discrepancyAmount = (int) (accountingTotal - bankTotal);
+        }
+        System.out.println(discrepancyAmount);
         return discrepancyAmount;
     }
 
@@ -92,8 +109,6 @@ public class TransactionService {
      * Compares bank transactions with accounting transactions, and assigns a result.
      */
     public List<ComparisonEntity> compareTransactions(LocalDate startDate, LocalDate endDate) {
-        //List<AccountingTransactionEntity> accTransList = accountingTransactionRepository.findAll();
-        //List<BankTransactionEntity> bankTransList = bankTransactionRepository.findAll();
 
         List<AccountingTransactionEntity> accTransList = accountingTransactionRepository.findByDateBetween(startDate, endDate);
         List<BankTransactionEntity> bankTransList = bankTransactionRepository.findByDateBetween(startDate, endDate);
