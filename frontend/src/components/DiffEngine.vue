@@ -8,6 +8,15 @@
       {{ resultDiscrepancy }}
     </div>
 
+    <div>
+      Bank total:
+      {{ resultBankAmount }}
+    </div>
+    <div>
+      Acc total:
+      {{ resultAccAmount }}
+    </div>
+
 
     <MatchTransactionButton
         class="my-5" @click="toggleDiffEngineResults()"
@@ -58,6 +67,8 @@ const get = inject('get') as Function
 
 const resultPeriod = ref()
 const resultDiscrepancy = ref()
+const resultBankAmount = ref()
+const resultAccAmount = ref()
 
 
 const fetchComparisonResults = async (startDate: string, endDate: string) => {
@@ -71,10 +82,21 @@ const fetchTotalDiscrepancyForPeriod = async (startDate: string, endDate: string
   resultDiscrepancy.value = response.data
 }
 
+const fetchTotalBankAmountForPeriod = async (startDate: string, endDate: string) => {
+  const response = await get(`/period_comparison/total_amount_bank?startDate=${startDate}&endDate=${endDate}`)
+  resultBankAmount.value = response.data
+}
+
+const fetchTotalAccAmountForPeriod = async (startDate: string, endDate: string) => {
+  const response = await get(`/period_comparison/total_amount_accounting?startDate=${startDate}&endDate=${endDate}`)
+  resultAccAmount.value = response.data
+}
 
 const toggleDiffEngineResults = () => {
   fetchComparisonResults(formattedDate(date.value[0]), formattedDate(date.value[1]))
   fetchTotalDiscrepancyForPeriod(formattedDate(date.value[0]), formattedDate(date.value[1]))
+  fetchTotalBankAmountForPeriod(formattedDate(date.value[0]), formattedDate(date.value[1]))
+  fetchTotalAccAmountForPeriod(formattedDate(date.value[0]), formattedDate(date.value[1]))
   isMatchTransactionsButtonPressed.value = !isMatchTransactionsButtonPressed.value
 }
 

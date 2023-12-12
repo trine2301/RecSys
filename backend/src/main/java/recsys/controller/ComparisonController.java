@@ -28,6 +28,16 @@ public class ComparisonController {
         return service.getDiscrepancyAmount(startDate, endDate);
     }
 
+    @Get("/total_amount_bank")
+    public double getAmountBank(@Format("yyyy-MM-dd") @QueryValue LocalDate startDate, @Format("yyyy-MM-dd") @QueryValue LocalDate endDate) {
+        return service.getTotalBankSum(startDate, endDate);
+    }
+
+    @Get("/total_amount_accounting")
+    public double getAmountAccounting(@Format("yyyy-MM-dd") @QueryValue LocalDate startDate, @Format("yyyy-MM-dd") @QueryValue LocalDate endDate) {
+        return service.getTotalAccSum(startDate, endDate);
+    }
+
 
     @Get("/results")
     public List<ComparisonEntity> setComparingResults(@Format("yyyy-MM-dd") @QueryValue LocalDate startDate, @Format("yyyy-MM-dd") @QueryValue LocalDate endDate) {
