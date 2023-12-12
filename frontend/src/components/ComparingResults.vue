@@ -1,5 +1,5 @@
 <template>
-  <div class="flex">
+  <div class="flex" data-cy="compare-results">
     <div class="mt-2 border m-5">
       You have a total discrepancy of:
       <div class="text-3xl">

@@ -1,7 +1,7 @@
 <template>
   <div class="flex col">
     <div class="m-5">
-      <DiffEngine>
+      <DiffEngine data-cy="diff-engine">
       </DiffEngine>
     </div>
   </div>

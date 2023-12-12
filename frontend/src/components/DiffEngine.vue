@@ -2,10 +2,17 @@
   <div class=" p-10 h-screen rounded scroll-auto overflow-y-scroll">
     <period-picker
         v-model="date"
+        data-cy="period-picker"
     />
-    {{ resultDiscrepancy }}
+    <div data-cy="total-discrepancy">
+      {{ resultDiscrepancy }}
+    </div>
 
-    <MatchTransactionButton class="my-5" @click="toggleDiffEngineResults()">
+
+    <MatchTransactionButton
+        class="my-5" @click="toggleDiffEngineResults()"
+        data-cy="match-transactions-button"
+    >
       See results
     </MatchTransactionButton>
     <div>
@@ -18,7 +25,7 @@
         <div class="bg-blue-100" v-else>
           <div class="flex">
             <div>
-              <ComparingResults :result-from-comparison="resultPeriod"/>
+              <ComparingResults :result-from-comparison="resultPeriod" />
             </div>
           </div>
         </div>

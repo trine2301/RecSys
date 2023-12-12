@@ -4,6 +4,7 @@
           v-model="date"
           placeholder="Pick a date"
           format="yyyy-MM-dd"
+          data-cy="calendar-date"
           range multi-calendars
       />
     </div>
