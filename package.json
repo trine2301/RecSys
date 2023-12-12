@@ -21,7 +21,7 @@
     "fe-stage": "yarn build:dist"
   },
   "devDependencies": {
-    "tailwind-scrollbar": "^3.0.5",
-    "cypress": "^13.2.0"
+    "cypress": "^13.6.1",
+    "tailwind-scrollbar": "^3.0.5"
   }
 }
