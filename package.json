@@ -1,5 +1,27 @@
 {
+  "name": "recsys-frontend",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "build:dist": "vue-tsc --noEmit && vite build --outDir build/dist",
+    "check-all": "yarn ts && yarn test:run && yarn lint",
+    "dev": "vite",
+    "debug": "vite -d",
+    "e2e:all": "yarn e2e:run && yarn e2e:comp",
+    "e2e:comp": "cypress run --component",
+    "e2e:open": "cypress open",
+    "e2e:run": "cypress run",
+    "lint": "eslint --ext .js,.vue,.ts --ignore-path .gitignore src",
+    "lint:fix": "yarn lint --fix src",
+    "preview": "vite preview --host pracsys.tritt.test",
+    "test": "vitest",
+    "test:run": "vitest run",
+    "test:ui": "vitest --ui",
+    "ts": "vue-tsc --noEmit",
+    "fe-stage": "yarn build:dist"
+  },
   "devDependencies": {
-    "tailwind-scrollbar": "^3.0.5"
+    "tailwind-scrollbar": "^3.0.5",
+    "cypress": "^13.2.0"
   }
 }
