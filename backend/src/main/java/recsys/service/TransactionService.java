@@ -57,6 +57,39 @@ public class TransactionService {
         }
     }
 
+    /**
+     * Gets total amount for accounttransactions for a given time-period
+
+     * @return
+     */
+    public double getTotalAccSum(LocalDate startDate, LocalDate endDate) {
+        List<AccountingTransactionEntity> accTransList = accountingTransactionRepository.findByDateBetween(startDate, endDate);
+        double total = 0;
+
+        for (AccountingTransactionEntity accountingTransaction : accTransList) {
+            total += accountingTransaction.getAmount();
+        }
+
+        return total;
+    }
+
+    /**
+     * Gets total amount for accounttransactions for a given time-period
+
+     * @return
+     */
+    public double getTotalBankSum(LocalDate startDate, LocalDate endDate) {
+
+        List<BankTransactionEntity> bankTransList = bankTransactionRepository.findByDateBetween(startDate, endDate);
+
+
+        double total = 0;
+        for (BankTransactionEntity bankTransaction : bankTransList) {
+            total += bankTransaction.getAmount();
+        }
+        return total;
+    }
+
 
     /**
      * Gets the total discrepancy between total amount of bank transactions and accounting transactions.
@@ -66,32 +99,19 @@ public class TransactionService {
      */
     public double getDiscrepancyAmount(LocalDate startDate, LocalDate endDate) {
 
-        List<AccountingTransactionEntity> accTransList = accountingTransactionRepository.findByDateBetween(startDate, endDate);
-        List<BankTransactionEntity> bankTransList = bankTransactionRepository.findByDateBetween(startDate, endDate);
-        int discrepancyAmount = 0;
+        double discrepancyAmount = 0;
+        double bankTotal = getTotalBankSum(startDate, endDate);
+        double accountingTotal = getTotalAccSum(startDate, endDate);
 
-        //setBankAndAccountingTotalAmount();
-        bankTotal = 0;
-        accountingTotal = 0;
-
-        //Setting the total amount for bank transactions.
-        for (BankTransactionEntity bankTransaction : bankTransList) {
-            bankTotal += bankTransaction.getAmount();
-        }
-        //Setting the total amount for bank transactions.
-        for (AccountingTransactionEntity accountingTransaction : accTransList) {
-            accountingTotal += accountingTransaction.getAmount();
-        }
 
         //If banktotal is larger than accountingtotal, amount will be bank minus accounting
         if (bankTotal > accountingTotal) {
-            discrepancyAmount = (int) (bankTotal - accountingTotal);
+            discrepancyAmount = bankTotal - accountingTotal;
         }
         //If accountingtotal is larger than bankTotal, amount will be accounting minus bank
         if (bankTotal < accountingTotal) {
-            discrepancyAmount = (int) (accountingTotal - bankTotal);
+            discrepancyAmount = accountingTotal - bankTotal;
         }
-        System.out.println(discrepancyAmount);
         return discrepancyAmount;
     }
 

@@ -1,11 +1,8 @@
 package recsys;
 import io.micronaut.runtime.Micronaut;
-//import recsys.model.ComparisonEntity;
-import recsys.model.ComparisonEntity;
 import recsys.service.TransactionService;
 
 import java.time.LocalDate;
-import java.util.List;
 
 /**
  * This class will be the entry point of your application.
@@ -22,17 +19,15 @@ public class App {
 
 
 
-        boolean checking = transactionService.checkIfDiscrepancyOnTotalAmountExists();
-        double compareTotal = transactionService.getDiscrepancyAmount(LocalDate.of(2023, 6, 9), LocalDate.of(2023, 6, 26));
+        //boolean checking = transactionService.checkIfDiscrepancyOnTotalAmountExists();
+        //double compareTotal = transactionService.getDiscrepancyAmount(LocalDate.of(2023, 1, 1), LocalDate.of(2023, 12, 31));
         //transactionService.setBankAndAccountingTotalAmount();
-        //List<ComparisonEntity> trans = transactionService.findMatches();
+        //double accTotal = transactionService.getTotalAccSum(LocalDate.of(2023, 1, 1), LocalDate.of(2023, 12, 31));
+        //double bankTotal = transactionService.getTotalBankSum(LocalDate.of(2023, 1, 1), LocalDate.of(2023, 12, 31));
 
 
+        //System.out.println("Total bank: " + bankTotal + ", total acc: " + accTotal);
 
-        //System.out.println("Checking if there is discrepancies, and it is: " + checking);
-        //System.out.println("The difference is: " + compareTotal);
-        //System.out.println("DAMN: " + trans);
-        System.out.println("Total is: " + compareTotal);
 
     }
 }
