@@ -4,19 +4,6 @@
         v-model="date"
         data-cy="period-picker"
     />
-    <div data-cy="total-discrepancy">
-      {{ resultDiscrepancy }}
-    </div>
-
-    <div>
-      Bank total:
-      {{ resultBankAmount }}
-    </div>
-    <div>
-      Acc total:
-      {{ resultAccAmount }}
-    </div>
-
 
     <MatchTransactionButton
         class="my-5" @click="toggleDiffEngineResults()"
@@ -34,7 +21,21 @@
         <div class="bg-blue-100" v-else>
           <div class="flex">
             <div>
+              <div>
+                Bank total:
+                {{ resultBankAmount }}
+              </div>
+              <div>
+                Acc total:
+                {{ resultAccAmount }}
+              </div>
+              <div data-cy="total-discrepancy">
+                Total discrepancy:
+                {{ resultDiscrepancy }}
+              </div>
+
               <ComparingResults :result-from-comparison="resultPeriod" />
+
             </div>
           </div>
         </div>
@@ -72,24 +73,26 @@ const resultAccAmount = ref()
 
 
 const fetchComparisonResults = async (startDate: string, endDate: string) => {
-
   const response = await get(`/period_comparison/results?startDate=${startDate}&endDate=${endDate}`)
   resultPeriod.value = response.data
 }
 
 const fetchTotalDiscrepancyForPeriod = async (startDate: string, endDate: string) => {
   const response = await get(`/period_comparison/total_discrepancy?startDate=${startDate}&endDate=${endDate}`)
-  resultDiscrepancy.value = response.data
+  const result = Math.round(response.data * 100) / 100;
+  resultDiscrepancy.value = result;
 }
 
 const fetchTotalBankAmountForPeriod = async (startDate: string, endDate: string) => {
   const response = await get(`/period_comparison/total_amount_bank?startDate=${startDate}&endDate=${endDate}`)
-  resultBankAmount.value = response.data
+  const result = Math.round(response.data * 100) / 100;
+  resultBankAmount.value = result;
 }
 
 const fetchTotalAccAmountForPeriod = async (startDate: string, endDate: string) => {
   const response = await get(`/period_comparison/total_amount_accounting?startDate=${startDate}&endDate=${endDate}`)
-  resultAccAmount.value = response.data
+  const result = Math.round(response.data * 100) / 100;
+  resultAccAmount.value = result;
 }
 
 const toggleDiffEngineResults = () => {

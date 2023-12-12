@@ -1,7 +1,6 @@
 <template>
   <div class="flex" data-cy="compare-results">
     <div class="mt-2 border m-5">
-      You have a total discrepancy of:
       <div class="text-3xl">
 
 
@@ -12,7 +11,6 @@
           <th>ACCOUNTING TRANSACTIONS</th>
           <th>BANK TRANSACTIONS</th>
           <th>RESULT</th>
-          <th>STATUS</th>
         </tr>
         </thead>
         <tbody class="" v-if="resultFromComparison">
@@ -30,8 +28,9 @@
           <td v-else>
 
           </td>
-          <td>{{ transactionLine.result }}</td>
-          <td>{{ transactionLine.status }}</td>
+          <td v-if="">
+            {{ transactionLine.result }}
+          </td>
         </tr>
         </tbody>
       </table>
