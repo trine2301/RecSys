@@ -23,3 +23,13 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+
+
+// If a test fails, immediately fail the entire spec. Borrowed from pracsys.
+afterEach(function () {
+  if (this.currentTest.state === 'failed') {
+    // @ts-ignore
+    Cypress.runner.stop()
+  }
+})
