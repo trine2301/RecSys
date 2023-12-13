@@ -21,19 +21,25 @@
         <div class="bg-blue-100" v-else>
           <div class="flex">
             <div>
-              <div>
-                Bank total:
-                {{ resultBankAmount }}
-              </div>
-              <div>
-                Acc total:
-                {{ resultAccAmount }}
-              </div>
-              <div data-cy="total-discrepancy">
-                Total discrepancy:
-                {{ resultDiscrepancy }}
-              </div>
-
+              <AlertBox message="This is the overview:" class="ml-auto mr-auto">
+                <div>
+                  Bank total:
+                  {{ resultBankAmount }}
+                </div>
+                <div>
+                  Acc total:
+                  {{ resultAccAmount }}
+                </div>
+                <div data-cy="total-discrepancy">
+                  Total discrepancy:
+                  {{ resultDiscrepancy }}
+                </div>
+                <div v-if="resultAccAmount >= 0">
+                  <button>
+                    Accept reconcilliation?
+                  </button>
+                </div>
+              </AlertBox>
               <ComparingResults :result-from-comparison="resultPeriod" />
 
             </div>
@@ -48,18 +54,17 @@
 <script setup lang="ts">
 
 
-import { ref, reactive, inject, onMounted } from "vue"
+import { ref, inject, onMounted } from "vue"
 import ListOfTransactions from "@/components/ListOfTransactions.vue"
 import MatchTransactionButton from "@/components/PrimaryButton.vue"
 
 import '@vuepic/vue-datepicker/dist/main.css'
 import PeriodPicker from "@/components/PeriodPicker.vue";
 import ComparingResults from "@/components/ComparingResults.vue";
-import MyModal from './MyModal.vue';
-import PopupComponent from "@/components/PopupComponent.vue";
-import { result, formattedDate, resultTotalAmount } from "@/services/FrontendService";
-import axios from "axios/index";
-//import { fetchComparisonResults } from "@/services/FrontendService";
+import AlertBox from "@/components/AlertBox.vue";
+
+import { formattedDate } from "@/services/FrontendService";
+
 
 
 const isMatchTransactionsButtonPressed = ref(false)

@@ -3,7 +3,6 @@
     <div class="mt-2 border m-5">
       <div class="text-3xl">
 
-
       </div>
       <table class="bg-white">
         <thead>
@@ -28,7 +27,7 @@
           <td v-else>
 
           </td>
-          <td v-if="">
+          <td>
             {{ transactionLine.result }}
           </td>
         </tr>
@@ -36,19 +35,15 @@
       </table>
     </div>
   </div>
-<!--  <div v-if="resultTotalAmount > 0">-->
-<!--    <PopupComponent>-->
-<!--      You have discrepancies :/-->
-<!--    </PopupComponent>-->
-<!--  </div>-->
 </template>
 
 <script setup lang="ts">
 
 
 import { onMounted, ref, computed, reactive , inject} from "vue";
-import PopupComponent from "@/components/PopupComponent.vue";
+import PopupComponent from "@/components/AlertBox.vue";
 import { result, resultTotalAmount } from "@/services/FrontendService";
+import AlertBox from "@/components/AlertBox.vue";
 
 defineProps(['resultFromComparison'])
 

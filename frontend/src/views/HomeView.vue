@@ -6,7 +6,7 @@
 </template>
 
 <script setup lang="ts">
-import PopupComponent from "@/components/PopupComponent.vue";
+import PopupComponent from "@/components/AlertBox.vue";
 
 </script>
 
