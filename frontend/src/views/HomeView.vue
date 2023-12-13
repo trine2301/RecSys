@@ -1,18 +1,7 @@
 <template>
-  <AlertBox message="This is the overview:">
-    <div>
-      Bank total:
-      -93773.01
-    </div>
-    <div>
-      Acc total:
-      9393.04
-    </div>
-    <div data-cy="total-discrepancy">
-      Total discrepancy:
-      234.09
-    </div>
-  </AlertBox>
+  <div>
+    THIS IS HOME
+  </div>
 </template>
 
 <script setup lang="ts">

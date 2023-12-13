@@ -34,11 +34,6 @@
                   Total discrepancy:
                   {{ resultDiscrepancy }}
                 </div>
-                <div v-if="resultAccAmount >= 0">
-                  <button>
-                    Accept reconcilliation?
-                  </button>
-                </div>
               </AlertBox>
               <ComparingResults :result-from-comparison="resultPeriod" />
 
