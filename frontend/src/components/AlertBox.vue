@@ -12,14 +12,14 @@
             Accept reconcilliation?
           </div>
           <div class="flex flex items-end justify-center mt-5">
-            <button class="cursor-pointer px-2" @click="acceptReconcilliation">
+            <button class="cursor-pointer px-2" @click="closeBox">
               <router-link to="/transactions">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="green" class="w-6 h-6">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
                 </svg>
               </router-link>
             </button>
-            <button class="cursor-pointer px-2" @click="rejectReconcilliation">
+            <button class="cursor-pointer px-2" @click="closeBox">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="red" class="w-6 h-6">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
               </svg>
@@ -39,15 +39,10 @@ import { useRouter } from 'vue-router';
 
 const showAlertBox = ref(true)
 
-const acceptReconcilliation = () => {
-  //const router = useRouter();
-  //router.push({ name: '/home' });
+const closeBox = () => {
   showAlertBox.value = false;
 }
 
-const rejectReconcilliation = () => {
-  showAlertBox.value = false
-}
 
 
 defineProps({

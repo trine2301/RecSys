@@ -8,7 +8,7 @@ const router = createRouter({
     routes: [
         {path: '/home', component: () => import('./views/HomeView.vue')},
         {path: '/accountMatcher', component: () => import('./views/AccountMatcherView.vue')},
-        {path: '/transactions', component: () => import('./views/Transactions.vue')},
+        {path: '/transactions', component: () => import('./views/ComparedPeriods.vue')},
     ]
 })
 

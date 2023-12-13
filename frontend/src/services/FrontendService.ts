@@ -5,7 +5,7 @@ import {
 import axios
   from "axios";
 import transactions
-  from "@/views/Transactions.vue";
+  from "@/views/ComparedPeriods.vue";
 import format
   from "date-fns/format";
 
