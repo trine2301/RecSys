@@ -7,7 +7,7 @@ const router = createRouter({
     history: createWebHashHistory(),
     routes: [
         {path: '/home', component: () => import('./views/HomeView.vue')},
-        {path: '/accountMatcher', component: () => import('./views/AccountMatcherView.vue')},
+        {path: '/accountMatcher', component: () => import('./views/TransactionMatcherView.vue')},
         {path: '/transactions', component: () => import('./views/ComparedPeriods.vue')},
     ]
 })
