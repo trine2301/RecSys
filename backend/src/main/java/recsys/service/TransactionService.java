@@ -77,7 +77,6 @@ public class TransactionService {
         entity.setTotalDiscrepancyAmount(totalDiscrepancyAmount);
         entities.add(entity);
 
-        //System.out.println(entities);
         return (List<PeriodEntity>) periodRepository.saveAll(entities);
     }
 

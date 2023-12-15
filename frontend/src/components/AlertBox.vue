@@ -12,14 +12,14 @@
             Accept reconcilliation?
           </div>
           <div class="flex flex items-end justify-center mt-5">
-            <button class="cursor-pointer px-2" @click="closeBox">
-              <router-link to="/transactions">
+            <button class="cursor-pointer px-2" @click="acceptReco">
+              <div>
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="green" class="w-6 h-6">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
                 </svg>
-              </router-link>
+              </div>
             </button>
-            <button class="cursor-pointer px-2" @click="closeBox">
+            <button class="cursor-pointer px-2" @click="rejectReco">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="red" class="w-6 h-6">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
               </svg>
@@ -34,12 +34,21 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue'
-import { useRouter } from 'vue-router';
+import router from "@/router";
+import { useRouter } from "vue-router";
 
 
 const showAlertBox = ref(true)
+const navigation = useRouter()
 
-const closeBox = () => {
+const emit = defineEmits(['acceptReco'])
+const acceptReco = () => {
+  emit("acceptReco")
+  showAlertBox.value = false;
+  router.push("/transactions")
+}
+
+const rejectReco = () => {
   showAlertBox.value = false;
 }
 

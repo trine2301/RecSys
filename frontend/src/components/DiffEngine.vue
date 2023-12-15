@@ -21,7 +21,7 @@
         <div class="bg-blue-100" v-else>
           <div class="flex">
             <div>
-              <AlertBox message="This is the overview:" class="ml-auto mr-auto">
+              <AlertBox @accept-reco="resultForPeriod" message="This is the overview:" class="ml-auto mr-auto">
                 <div>
                   Bank total:
                   {{ resultBankAmount }}
@@ -58,18 +58,20 @@ import PeriodPicker from "@/components/PeriodPicker.vue";
 import ComparingResults from "@/components/ComparingResults.vue";
 import AlertBox from "@/components/AlertBox.vue";
 
-import { formattedDate } from "@/services/FrontendService";
+import { formattedDate, resultTotalAmount } from "@/services/FrontendService";
+
 
 
 
 const isMatchTransactionsButtonPressed = ref(false)
 const date = ref(new Date())
 const get = inject('get') as Function
+const post = inject('post') as Function
 
 const resultPeriod = ref()
-const resultDiscrepancy = ref()
-const resultBankAmount = ref()
-const resultAccAmount = ref()
+const resultDiscrepancy = ref(0)
+const resultBankAmount = ref(0)
+const resultAccAmount = ref(0)
 
 
 const fetchComparisonResults = async (startDate: string, endDate: string) => {
@@ -95,8 +97,18 @@ const fetchTotalAccAmountForPeriod = async (startDate: string, endDate: string) 
   resultAccAmount.value = result;
 }
 
-const fetchPeriodComparison = async (startDate: string, endDate: string) => {
-  const response = await get(`/period_comparison/results_for_period?startDate=${startDate}&endDate=${endDate}`)
+const fetchPeriodComparison = async (startDate: string, endDate: string, bankTotal: number, accTotal: number, totalDiscrepancyAmount: number) => {
+  const response = await post(`/period_comparison/results_for_period?startDate=${startDate}&endDate=${endDate}`, {
+    bankTotal: bankTotal,
+    accTotal: accTotal,
+    totalDiscrepancyAmount: totalDiscrepancyAmount,
+  })
+  console.log(response)
+}
+
+const resultForPeriod = async () => {
+  console.log('hei')
+  await fetchPeriodComparison(formattedDate(date.value[0]), formattedDate(date.value[1]), resultBankAmount.value, resultAccAmount.value, resultDiscrepancy.value)
 }
 
 
@@ -105,7 +117,7 @@ const toggleDiffEngineResults = () => {
   fetchTotalDiscrepancyForPeriod(formattedDate(date.value[0]), formattedDate(date.value[1]))
   fetchTotalBankAmountForPeriod(formattedDate(date.value[0]), formattedDate(date.value[1]))
   fetchTotalAccAmountForPeriod(formattedDate(date.value[0]), formattedDate(date.value[1]))
-  //fetchPeriodComparison()
+  //fetchPeriodComparison(formattedDate(date.value[0]), formattedDate(date.value[1]), resultBankAmount.value, resultAccAmount.value, resultDiscrepancy.value)
   isMatchTransactionsButtonPressed.value = !isMatchTransactionsButtonPressed.value
 }
 
