@@ -1,13 +1,7 @@
-import {
-  ref,
-  inject
-} from "vue";
-import axios
-  from "axios";
-import transactions
-  from "@/views/ComparedPeriods.vue";
-import format
-  from "date-fns/format";
+import { ref, inject } from "vue";
+import axios from "axios";
+import transactions from "@/views/ComparedPeriods.vue";
+import format from "date-fns/format";
 
 
 

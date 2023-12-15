@@ -27,11 +27,11 @@
 </template>
 
 <script setup lang="ts">
-import { ref, provide, inject, onMounted, computed } from "vue"
 import { BankTransaction, formattedDate } from "@/services/BankTransaction"
 import '@vuepic/vue-datepicker/dist/main.css'
-import { AccountingTransaction } from "@/services/AccountingTransaction";
-import { PeriodComparison } from "@/services/PeriodComparisons";
+import { AccountingTransaction } from "@/services/AccountingTransaction"
+import { PeriodComparison } from "@/services/PeriodComparisons"
+import { ref, onMounted, computed, provide, inject } from "vue"
 
 const date = ref(new Date())
 const get = inject('get') as Function
@@ -50,11 +50,9 @@ const fetchPeriodComparison = async () => {
 const fetchBankTransactions = async () => {
   const response = await get('/transactions/bank')
   bankTransactions.value = response.data
-  //console.log(formattedDate(bankTransactions.value[0].date))
 }
 
 const fetchAccountingTransactions = async () => {
-  //const response = await get('/accounting_transactions')
   const response = await get('/transactions/accounting')
   accountingTransactions.value = response.data
 }

@@ -13,15 +13,14 @@
 
 <script setup lang="ts">
 
+import ComparisonModal from "@/components/ComparisonModal.vue";
 </script>
 
 <style lang="scss">
 
 
 .hello {
-  @apply  p-4 text-blue-800/80;
-  //bg-primary border border-black-200 text-primary-content p-2 text-lg font-bold
-
+  @apply  p-4 text-blue-800/80
 }
 
 </style>

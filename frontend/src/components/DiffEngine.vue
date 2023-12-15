@@ -5,12 +5,12 @@
         data-cy="period-picker"
     />
 
-    <MatchTransactionButton
+    <PrimaryButton
         class="my-5" @click="toggleDiffEngineResults()"
         data-cy="match-transactions-button"
     >
-      See results
-    </MatchTransactionButton>
+      Reconcile period
+    </PrimaryButton>
     <div>
       <div>
         <div class="flex" v-if="!isMatchTransactionsButtonPressed">
@@ -51,14 +51,14 @@
 
 import { ref, inject, onMounted } from "vue"
 import ListOfTransactions from "@/components/ListOfTransactions.vue"
-import MatchTransactionButton from "@/components/PrimaryButton.vue"
 
 import '@vuepic/vue-datepicker/dist/main.css'
 import PeriodPicker from "@/components/PeriodPicker.vue";
 import ComparingResults from "@/components/ComparingResults.vue";
 import AlertBox from "@/components/AlertBox.vue";
 
-import { formattedDate, resultTotalAmount } from "@/services/FrontendService";
+import { formattedDate } from "@/services/FrontendService";
+import PrimaryButton from "@/components/PrimaryButton.vue";
 
 
 
@@ -107,7 +107,6 @@ const fetchPeriodComparison = async (startDate: string, endDate: string, bankTot
 }
 
 const resultForPeriod = async () => {
-  console.log('hei')
   await fetchPeriodComparison(formattedDate(date.value[0]), formattedDate(date.value[1]), resultBankAmount.value, resultAccAmount.value, resultDiscrepancy.value)
 }
 
@@ -117,7 +116,6 @@ const toggleDiffEngineResults = () => {
   fetchTotalDiscrepancyForPeriod(formattedDate(date.value[0]), formattedDate(date.value[1]))
   fetchTotalBankAmountForPeriod(formattedDate(date.value[0]), formattedDate(date.value[1]))
   fetchTotalAccAmountForPeriod(formattedDate(date.value[0]), formattedDate(date.value[1]))
-  //fetchPeriodComparison(formattedDate(date.value[0]), formattedDate(date.value[1]), resultBankAmount.value, resultAccAmount.value, resultDiscrepancy.value)
   isMatchTransactionsButtonPressed.value = !isMatchTransactionsButtonPressed.value
 }
 
@@ -129,6 +127,8 @@ onMounted(() => {
   const endDate = new Date(new Date().setDate(startDate.getDate() + 7))
   date.value = [startDate, endDate]
 })
+
+
 
 
 </script>

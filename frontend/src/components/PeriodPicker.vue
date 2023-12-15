@@ -11,7 +11,7 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted, computed } from 'vue'
+import { computed } from 'vue'
 import Datepicker from '@vuepic/vue-datepicker'
 import '@vuepic/vue-datepicker/dist/main.css'
 
@@ -22,15 +22,9 @@ const date = computed({
   }
 })
 
-//const date = ref(new Date())
+
 const emit = defineEmits(['update:modelValue'])
 const props = defineProps(['modelValue'])
-
-
-
-onMounted(() => {
-
-})
 
 </script>
 
