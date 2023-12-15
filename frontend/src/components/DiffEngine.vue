@@ -95,11 +95,17 @@ const fetchTotalAccAmountForPeriod = async (startDate: string, endDate: string) 
   resultAccAmount.value = result;
 }
 
+const fetchPeriodComparison = async (startDate: string, endDate: string) => {
+  const response = await get(`/period_comparison/results_for_period?startDate=${startDate}&endDate=${endDate}`)
+}
+
+
 const toggleDiffEngineResults = () => {
   fetchComparisonResults(formattedDate(date.value[0]), formattedDate(date.value[1]))
   fetchTotalDiscrepancyForPeriod(formattedDate(date.value[0]), formattedDate(date.value[1]))
   fetchTotalBankAmountForPeriod(formattedDate(date.value[0]), formattedDate(date.value[1]))
   fetchTotalAccAmountForPeriod(formattedDate(date.value[0]), formattedDate(date.value[1]))
+  //fetchPeriodComparison()
   isMatchTransactionsButtonPressed.value = !isMatchTransactionsButtonPressed.value
 }
 

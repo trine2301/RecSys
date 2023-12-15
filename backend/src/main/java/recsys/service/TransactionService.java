@@ -5,10 +5,12 @@ import recsys.exceptions.CouldNotCompareTransactionsException;
 import recsys.model.AccountingTransactionEntity;
 import recsys.model.BankTransactionEntity;
 import recsys.model.ComparisonEntity;
+import recsys.model.PeriodEntity;
 import recsys.model.Result;
 import recsys.model.Status;
 import recsys.repository.AccountingTransactionRepository;
 import recsys.repository.BankTransactionRepository;
+import recsys.repository.PeriodRepository;
 
 import jakarta.inject.Singleton;
 import java.time.LocalDate;
@@ -29,13 +31,17 @@ public class TransactionService {
     private double bankTotal;
     private double accountingTotal;
 
+    public final PeriodRepository periodRepository;
+
     List<ComparisonEntity> comparisonEntities = new ArrayList<>();
+    private List<PeriodEntity> periodEntities = new ArrayList<>();
 
     //List<ComparisonEntity> matchedEntities = new ArrayList<>();
 
-    public TransactionService(AccountingTransactionRepository accountingTransactionRepository, BankTransactionRepository bankTransactionRepository) {
+    public TransactionService(AccountingTransactionRepository accountingTransactionRepository, BankTransactionRepository bankTransactionRepository, PeriodRepository repository) {
         this.accountingTransactionRepository = accountingTransactionRepository;
         this.bankTransactionRepository = bankTransactionRepository;
+        this.periodRepository = repository;
     }
 
 
@@ -55,6 +61,24 @@ public class TransactionService {
         for (AccountingTransactionEntity accountingTransaction : accountingTransactions) {
             bankTotal += accountingTransaction.getAmount();
         }
+    }
+
+    /**
+     * Populate periodEntities
+     */
+    public List<PeriodEntity> populatePeriodEntity(LocalDate startDate, LocalDate endDate, double accTotal, double bankTotal, double totalDiscrepancyAmount) {
+        PeriodEntity entity = new PeriodEntity();
+        List<PeriodEntity> entities = new ArrayList<>();
+
+        entity.setStartDate(startDate);
+        entity.setEndDate(endDate);
+        entity.setAccTotal(accTotal);
+        entity.setBankTotal(bankTotal);
+        entity.setTotalDiscrepancyAmount(totalDiscrepancyAmount);
+        entities.add(entity);
+
+        //System.out.println(entities);
+        return (List<PeriodEntity>) periodRepository.saveAll(entities);
     }
 
     /**
@@ -147,7 +171,6 @@ public class TransactionService {
                     entity.setBankTransactionEntity(bankEntity);
                     entity.setResult(Result.MATCH);
                     comparedEntities.add(entity);
-                    foundMatch = true;
                     bankTransMatches.put(bankEntity, true);
                 } else if (accEntity.getDate().equals(bankEntity.getDate()) && accEntity.getAmount() != bankEntity.getAmount()) {
                     ComparisonEntity entity = new ComparisonEntity();
@@ -171,7 +194,6 @@ public class TransactionService {
                 ComparisonEntity entity = new ComparisonEntity();
                 entity.setBankTransactionEntity(bankent);
                 entity.setResult(Result.MISSING_ACC_TRANS);
-                //comparisonEntities.add(entity);
                 comparedEntities.add(entity);
             }
         }

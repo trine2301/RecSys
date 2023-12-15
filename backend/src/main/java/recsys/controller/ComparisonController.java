@@ -5,6 +5,7 @@ import io.micronaut.http.annotation.Controller;
 import io.micronaut.http.annotation.Get;
 import io.micronaut.http.annotation.QueryValue;
 import recsys.model.ComparisonEntity;
+import recsys.model.PeriodEntity;
 import recsys.service.TransactionService;
 
 import java.time.LocalDate;
@@ -43,5 +44,16 @@ public class ComparisonController {
     public List<ComparisonEntity> setComparingResults(@Format("yyyy-MM-dd") @QueryValue LocalDate startDate, @Format("yyyy-MM-dd") @QueryValue LocalDate endDate) {
         return service.compareTransactions(startDate, endDate);
     }
+
+/*    @Get("/results_for_period")
+    public List<PeriodEntity> populatedPeriodEntity(
+        @Format("yyyy-MM-dd") @QueryValue LocalDate startDate,
+        @Format("yyyy-MM-dd") @QueryValue LocalDate endDate,
+        double bankTotal,
+        double accTotal,
+        double totalDiscrepancyAmount) {
+        return service.populatePeriodEntity();
+    }*/
+
 
 }

@@ -1,37 +1,11 @@
 package recsys.model;
 
-
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.NonNull;
-
-import javax.persistence.EmbeddedId;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
 import javax.persistence.OneToOne;
-import javax.persistence.Table;
 
 /**
  * Entity of the results from transactionService. Runtime entity.
  */
-
-//@Entity
-//@Table(name = "comparisons")
 public class ComparisonEntity {
-
-
-    // Composite primary key of bankEnt, AccEnt and result.
-//    @EmbeddedId
-//    @NonNull
-//    private ComparisonId id;
-
-//    @Id
-//    @GeneratedValue(strategy = GenerationType.IDENTITY)
-//    private Long id;
-
 
     @OneToOne
     private BankTransactionEntity bankTransactionEntity;
