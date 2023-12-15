@@ -1,5 +1,4 @@
 <template>
-
   <div class="flex">
     <div class="mt-2 border">
       <div class="text-xl">
@@ -14,7 +13,7 @@
     </div>
     <ul class="mt-2 border">
       <div class="text-xl">
-        Banking Transactions:e
+        Banking Transactions:
       </div>
       <li class="p-2 bg-neutral even:bg-neutral-200" v-for="transaction in filteredBankTransactions">
         {{ transaction.id }}:
@@ -30,18 +29,23 @@
 <script setup lang="ts">
 import { ref, provide, inject, onMounted, computed } from "vue"
 import { BankTransaction, formattedDate } from "@/services/BankTransaction"
-import Datepicker from '@vuepic/vue-datepicker'
 import '@vuepic/vue-datepicker/dist/main.css'
 import { AccountingTransaction } from "@/services/AccountingTransaction";
+import { PeriodComparison } from "@/services/PeriodComparisons";
 
 const date = ref(new Date())
 const get = inject('get') as Function
 const bankTransactions = ref<Array<BankTransaction>>([])
 const accountingTransactions = ref<Array<AccountingTransaction>>([])
-//const filteredBankTransactions = ref<Array<BankTransaction>>([])
+const periodComparisons = ref<Array<PeriodComparison>>([])
+
 const startDate = ref(null)
 const endDate = ref(null)
 
+const fetchPeriodComparison = async () => {
+  const response = await get('/transactions/period_comparison')
+  periodComparisons.value = response.data
+}
 
 const fetchBankTransactions = async () => {
   const response = await get('/transactions/bank')
@@ -69,9 +73,11 @@ const filteredBankTransactions = computed(() => {
 
 provide('fetchBankTransactions', fetchBankTransactions)
 provide('fetchAccountingTransactions', fetchAccountingTransactions)
+provide('fetchPeriodComparison', fetchPeriodComparison)
 
 onMounted(fetchBankTransactions)
 onMounted(fetchAccountingTransactions)
+onMounted(fetchPeriodComparison)
 
 
 
