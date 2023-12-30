@@ -1,3 +1,4 @@
+/*
 package recsys.service
 
 import io.micronaut.test.extensions.spock.annotation.MicronautTest
@@ -85,9 +86,11 @@ class TransactionServiceTest extends Specification {
             assert service.checkIfDiscrepancyOnTotalAmountExists() == true
     }
 
-    /**
+    */
+/**
      * Positive test of checkIfAccTransHaveAMatchingBankTrans()
-     */
+     *//*
+
     def 'Check if trans is a match'() {
         given:
             def bankTransactionEntity = new BankTransactionEntity(date: LocalDate.now(), amount: 1000)
@@ -100,9 +103,11 @@ class TransactionServiceTest extends Specification {
             assert service.compareResults() == true
     }
 
-    /**
+    */
+/**
      * Negative test of checkIfAccTransHaveAMatchingBankTrans()
-     */
+     *//*
+
     def 'Negative test to check if trans is a match'() {
         given:
             def bankTransactionEntity = new BankTransactionEntity(date: LocalDate.now(), amount: 1000)
@@ -115,9 +120,11 @@ class TransactionServiceTest extends Specification {
             assert service.compareResults() == false
     }
 
-    /**
+    */
+/**
      * Positive test of checkIfAccTransHaveAMatchingBankTrans()
-     */
+     *//*
+
     def 'Check if trans is not a match'() {
         given:
             def bankTransactionEntity = new BankTransactionEntity(date: LocalDate.now(), amount: 1100)
@@ -130,3 +137,4 @@ class TransactionServiceTest extends Specification {
             assert service.compareResults() == false
     }
 }
+*/

@@ -70,6 +70,18 @@
   dependencies:
     "@types/node" "*"
 
+ag-grid-community@~31.0.1:
+  version "31.0.1"
+  resolved "https://registry.yarnpkg.com/ag-grid-community/-/ag-grid-community-31.0.1.tgz#26022b29a7b90a0515076837d630ac9cd24cf28d"
+  integrity sha512-RZQlW1DTOJHsUR/tnbnTJQKgAnDlHi05YYyTe5AgNor/1TlX1hoYdcqrGsJjvcHQgTjeEgzWOL0yf+KcqXZzxg==
+
+ag-grid-vue3@^31.0.1:
+  version "31.0.1"
+  resolved "https://registry.yarnpkg.com/ag-grid-vue3/-/ag-grid-vue3-31.0.1.tgz#cc093995fdd96512834ef25191b727c47feb2b2c"
+  integrity sha512-+eSvIl5SEk30dZwVbOBwilsUW8rvA+CRxl2aptklvi+IyOstT9AGAaHGHmkBFmgYk6t0KHcna/j9JjLnea8s5Q==
+  dependencies:
+    ag-grid-community "~31.0.1"
+
 aggregate-error@^3.0.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/aggregate-error/-/aggregate-error-3.1.0.tgz#92670ff50f5359bdb7a3e0d40d0ec30c5737687a"

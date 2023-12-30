@@ -16,7 +16,7 @@ public class App {
                 .start();
 
         TransactionService transactionService = app.getBean(TransactionService.class);
-        transactionService.checkIfDiscrepancyOnTotalAmountExists();
+        //transactionService.checkIfDiscrepancyOnTotalAmountExists();
         //transactionService.populatePeriodEntity(LocalDate.of(2020, 02, 01), LocalDate.of(2020, 03, 01), 1234.00, 1234.00, 0.00);
         //List<PeriodEntity> fknPrint2 = transactionService.populatePeriodEntity(LocalDate.of(2023, 01, 01), LocalDate.of(2023, 02, 01), 1234, 123, 1);
 
