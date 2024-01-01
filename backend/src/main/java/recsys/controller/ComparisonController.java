@@ -21,32 +21,65 @@ public class ComparisonController {
 
     private final TransactionService service;
 
-
     public ComparisonController(TransactionService service) {
         this.service = service;
     }
 
+    /**
+     * Send calculation of the total discrepancy and sends
+     * @param startDate
+     * @param endDate
+     * @return
+     */
     @Get("/total_discrepancy")
     public double getDiscrepancy(@Format("yyyy-MM-dd") @QueryValue LocalDate startDate, @Format("yyyy-MM-dd") @QueryValue LocalDate endDate) {
         return service.getDiscrepancyAmount(startDate, endDate);
     }
 
+    /**
+     *
+     * @param startDate
+     * @param endDate
+     * @return
+     */
     @Get("/total_amount_bank")
     public double getAmountBank(@Format("yyyy-MM-dd") @QueryValue LocalDate startDate, @Format("yyyy-MM-dd") @QueryValue LocalDate endDate) {
         return service.getTotalBankSum(startDate, endDate);
     }
 
+
+    /**
+     *
+     * @param startDate
+     * @param endDate
+     * @return
+     */
     @Get("/total_amount_accounting")
     public double getAmountAccounting(@Format("yyyy-MM-dd") @QueryValue LocalDate startDate, @Format("yyyy-MM-dd") @QueryValue LocalDate endDate) {
         return service.getTotalAccSum(startDate, endDate);
     }
 
 
+    /**
+     *
+     * @param startDate
+     * @param endDate
+     * @return
+     */
     @Get("/results")
     public List<ComparisonEntity> setComparingResults(@Format("yyyy-MM-dd") @QueryValue LocalDate startDate, @Format("yyyy-MM-dd") @QueryValue LocalDate endDate) {
         return service.compareTransactions(startDate, endDate);
     }
 
+    /**
+     *
+     * @param startDate
+     * @param endDate
+     * @param bankTotal
+     * @param accTotal
+     * @param totalDiscrepancyAmount
+     * @return
+     */
     @Post("/results_for_period")
     public List<PeriodEntity> populatedPeriodEntity(
         @Format("yyyy-MM-dd") @QueryValue LocalDate startDate,

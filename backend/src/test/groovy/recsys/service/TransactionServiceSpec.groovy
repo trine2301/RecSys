@@ -24,6 +24,7 @@ class TransactionServiceSpec extends Specification {
     @Shared
     AccountingTransactionEntity trans2
 
+
     def setupSpec() {
         trans1 = Mock(AccountingTransactionEntity)
         trans1.getAmount() >> 100.0
@@ -31,6 +32,7 @@ class TransactionServiceSpec extends Specification {
         trans2 = Mock(AccountingTransactionEntity)
         trans2.getAmount() >> 100.0
         trans2.getDate() >> LocalDate.parse("2020-01-31")
+
     }
 
     //TODO This test fails if i write 200 on results, probably because its not mocking properly, and using values from db.
@@ -45,8 +47,30 @@ class TransactionServiceSpec extends Specification {
         when:
             double result = transactionService.getTotalAccSum(startDate, endDate)
         then:
-            result == 0
+            result == trans1.getAmount() + trans2.getAmount()
     }
+
+    def "test getDiscrepancyAmount method"() {
+        given: "Some accounting transactions"
+            LocalDate startDate = LocalDate.parse("2023-01-01")
+            LocalDate endDate = LocalDate.parse("2023-01-31")
+
+        and: "Mock the getTotalBankSum and getTotalAccSum methods"
+            transactionService.metaClass.getTotalBankSum = { LocalDate s, LocalDate e -> 200.0 }
+            transactionService.metaClass.getTotalAccSum = { LocalDate s, LocalDate e -> 100.0 }
+
+        when: "We call the getDiscrepancyAmount method"
+            double bankTotal = transactionService.getTotalBankSum(startDate, endDate)
+            double accountingTotal = transactionService.getTotalAccSum(startDate, endDate)
+            double result = transactionService.getDiscrepancyAmount(startDate, endDate)
+
+        then: "We expect the difference between the sums of the transactions"
+            println "Bank Total: $bankTotal"
+            println "Accounting Total: $accountingTotal"
+            result == 100
+    }
+
+
 
 
 }
