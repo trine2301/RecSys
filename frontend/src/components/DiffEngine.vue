@@ -14,11 +14,11 @@
     <div>
       <div>
         <div class="flex" v-if="!isMatchTransactionsButtonPressed">
-          <div class="rounded mx-1">
-            <ListOfTransactions/>
+          <div>
+              <ListOfTransactions/>
           </div>
         </div>
-        <div class="bg-blue-100" v-else>
+        <div  v-else>
           <div class="flex">
             <div>
               <AlertBox @accept-reco="resultForPeriod" message="This is the overview:" class="ml-auto mr-auto">
@@ -36,7 +36,6 @@
                 </div>
               </AlertBox>
               <ComparingResults :result-from-comparison="resultPeriod" />
-
             </div>
           </div>
         </div>

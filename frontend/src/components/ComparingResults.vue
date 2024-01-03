@@ -1,19 +1,34 @@
 <template>
-  <PhHeart :size="32" />
-  <div class="flex" data-cy="compare-results">
-    <div class="mt-2 border m-5">
-      <div class="text-3xl">
-      </div>
-      <table class="bg-white">
-        <thead>
-        <tr class="text-left border-b border-gray-300">
-          <th>
+  <div class="flex min-w-[400px] border" data-cy="compare-results">
+        <div class="text-3xl">
+        </div>
+        <table>
+          <thead class="bg-blue-200">
+          <tr class="text-left">
+            <th>
+              <div>
+                ACCOUNTING TRANSACTIONS
+              </div>
+              <div class="flex justify-between">
+                <div class="flex mx-5">
+                  <div class="title">
+                    date
+                  </div>
+                  <div>
+                    Description
+                  </div>
+                </div>
+                <div>
+                  Amount
+                </div>
+              </div>
+            </th>
             <div>
-              ACCOUNTING TRANSACTIONS
+              BANK TRANSACTIONS
             </div>
             <div class="flex justify-between">
-              <div class="flex">
-                <div class="w-32">
+              <div class="flex mx-5">
+                <div class="title">
                   date
                 </div>
                 <div>
@@ -24,58 +39,58 @@
                 Amount
               </div>
             </div>
-
-          </th>
-          <th>BANK TRANSACTIONS</th>
-          <th>RESULT</th>
-        </tr>
-        </thead>
-        <tbody v-if="resultFromComparison">
-        <tr class="p-2 bg-neutral even:bg-neutral-200/50 " v-for="transactionLine in resultFromComparison">
-          <td v-if="transactionLine.accountingTransactionEntity" class="flex justify-between">
-            <div class="flex">
-              <div class="w-32">
-                {{ formattedDate(transactionLine.accountingTransactionEntity.date) }}
+            <th class="mx-5">RESULT</th>
+          </tr>
+          </thead>
+          <tbody v-if="resultFromComparison">
+          <tr class="p-2 bg-neutral odd:bg-blue-200/20 border" v-for="transactionLine in resultFromComparison">
+            <td v-if="transactionLine.accountingTransactionEntity" class="flex justify-between">
+              <div class="flex mx-5">
+                <div class="title">
+                  {{ formattedDate(transactionLine.accountingTransactionEntity.date) }}
+                </div>
+                <div>
+                  {{ transactionLine.accountingTransactionEntity.description }}
+                </div>
               </div>
               <div>
-                {{ transactionLine.accountingTransactionEntity.description }}
+                {{ transactionLine.accountingTransactionEntity.amount }}
               </div>
-            </div>
-            <div>
-              {{ transactionLine.accountingTransactionEntity.amount }}
-            </div>
+            </td>
 
-
-          </td>
-          <td v-if="transactionLine.bankTransactionEntity">
-            {{ transactionLine.bankTransactionEntity.date }},
-            {{ transactionLine.bankTransactionEntity.amount }},
-            {{ transactionLine.bankTransactionEntity.description }}
-          </td>
-          <td v-else>
-
-          </td>
-          <td >
-            <div v-if="transactionLine.result === 'MATCH'" class="flex justify-between p-2" >
-              match
-              <ph-check-fat :size="20" color="green" weight="fill"/>
-            </div>
-            <div v-if="transactionLine.result === 'PARTIAL_MATCH'" class="flex justify-between p-2" >
-              partial match
-              <ph-warning :size="20" color="orange" weight="fill"/>
-            </div>
-            <div v-if="transactionLine.result.includes('MISSING')" class="flex justify-between p-2">
-              not match
-              <ph-warning :size="20" color="red" weight="fill"/>
-            </div>
-
-
-          </td>
-        </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
+            <td v-if="transactionLine.bankTransactionEntity">
+              <div class="flex">
+                <div class="title">
+                  {{ formattedDate(transactionLine.bankTransactionEntity.date) }}
+                </div>
+                <div>
+                  {{ transactionLine.bankTransactionEntity.description }}
+                </div>
+              </div>
+              <div>
+                {{ transactionLine.bankTransactionEntity.amount }}
+              </div>
+            </td>
+            <td v-else>
+            </td>
+            <td >
+              <div v-if="transactionLine.result === 'MATCH'" class="flex justify-between my-2" >
+                match
+                <ph-check-fat :size="20" color="green" weight="fill" class="mx-2"/>
+              </div>
+              <div v-if="transactionLine.result === 'PARTIAL_MATCH'" class="flex justify-between my-2">
+                possible match
+                <ph-warning :size="20" color="orange" weight="fill" class="mx-2"/>
+              </div>
+              <div v-if="transactionLine.result.includes('MISSING')" class="flex justify-between my-2">
+                no match
+                <ph-warning :size="20" color="red" weight="fill" class="mx-2"/>
+              </div>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
 </template>
 
 <script setup lang="ts">
@@ -87,9 +102,12 @@ defineProps(['resultFromComparison'])
 
 
 
-
 </script>
 
 <style lang="scss">
+
+.title {
+  @apply w-32
+}
 
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <div class="sidebar h-screen min-w-[300px]">
+  <div class="bg-gradient-to-br from-neutral-200 to-neutral-300 shadow-xl h-screen min-w-[300px]">
     <router-link class="title text-4xl text-center m-6 whitespace-nowrap text-blue-900" to="/home">
       Home </router-link>
     <div class="border-b border-b-amber-100/20 shadow-lg"/>
@@ -9,9 +9,6 @@
     </div>
   </div>
 </template>
-
-
-
 <script setup lang="ts">
 
 </script>
@@ -20,10 +17,6 @@
 
 <style lang="scss">
 
-
-.sidebar {
-  @apply bg-gradient-to-br from-neutral-200 to-neutral-300 shadow-xl;
-}
 
 .menu-entry {
   @apply block p-4 rounded text-xl text-blue-800/60;
