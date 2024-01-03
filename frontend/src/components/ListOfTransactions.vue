@@ -1,14 +1,34 @@
 <template>
   <div class="flex">
-    <div class="mt-2 border">
-      <div class="text-xl">
-        Accounting Transactions:
+    <div class="mt-2 border min-w-[500px]">
+      <div class="text-xl p-2">
+        Accounting Transactions
       </div>
-      <div class="p-2 bg-neutral even:bg-neutral-200" v-for="transaction in accountingTransactions">
-        {{ transaction.id }}:
-        {{ formattedDate(transaction.date) }}
-        {{ transaction.amount }}:
-        {{ transaction.description }}
+      <div class="p-2 flex justify-between">
+        <div class="flex">
+          <div class="w-32">
+            Date
+          </div>
+          <div>
+            Description
+          </div>
+        </div>
+        <div>
+          Amount
+        </div>
+      </div>
+      <div class="p-2 bg-neutral even:bg-neutral-200/50 flex justify-between" v-for="transaction in accountingTransactions">
+        <div class="flex">
+          <div class="w-32">
+            {{ formattedDate(transaction.date) }}
+          </div>
+          <div>
+            {{ transaction.description }}
+          </div>
+        </div>
+        <div>
+          {{ transaction.amount }}
+        </div>
       </div>
     </div>
     <ul class="mt-2 border">
@@ -16,7 +36,6 @@
         Banking Transactions:
       </div>
       <li class="p-2 bg-neutral even:bg-neutral-200" v-for="transaction in filteredBankTransactions">
-        {{ transaction.id }}:
         {{ formattedDate(transaction.date) }}
         {{ transaction.amount }}:
         {{ transaction.description }}

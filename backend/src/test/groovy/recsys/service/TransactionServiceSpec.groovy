@@ -51,20 +51,16 @@ class TransactionServiceSpec extends Specification {
     }
 
     def "test getDiscrepancyAmount method"() {
-        given: "Some accounting transactions"
+        given:
             LocalDate startDate = LocalDate.parse("2023-01-01")
             LocalDate endDate = LocalDate.parse("2023-01-31")
 
-        and: "Mock the getTotalBankSum and getTotalAccSum methods"
-            transactionService.metaClass.getTotalBankSum = { LocalDate s, LocalDate e -> 200.0 }
-            transactionService.metaClass.getTotalAccSum = { LocalDate s, LocalDate e -> 100.0 }
-
-        when: "We call the getDiscrepancyAmount method"
+        when:
             double bankTotal = transactionService.getTotalBankSum(startDate, endDate)
             double accountingTotal = transactionService.getTotalAccSum(startDate, endDate)
             double result = transactionService.getDiscrepancyAmount(startDate, endDate)
 
-        then: "We expect the difference between the sums of the transactions"
+        then:
             println "Bank Total: $bankTotal"
             println "Accounting Total: $accountingTotal"
             result == 100

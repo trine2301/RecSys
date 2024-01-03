@@ -1,6 +1,3 @@
-//TODO documentation. And a before-each?
-
-
 
 describe('Compare transactions', () => {
 
