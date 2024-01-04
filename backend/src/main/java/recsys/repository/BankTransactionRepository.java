@@ -24,5 +24,6 @@ public abstract class BankTransactionRepository implements CrudRepository<BankTr
 
     //public abstract Optional<BankTransactionEntity> findById(@NotNull @NonNull Long id);
 
+    @NotNull
     public abstract List<BankTransactionEntity> findByDateBetween(LocalDate startDate, LocalDate endDate);
 }

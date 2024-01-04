@@ -105,7 +105,6 @@ public class TransactionService {
 
         List<BankTransactionEntity> bankTransList = bankTransactionRepository.findByDateBetween(startDate, endDate);
 
-
         double total = 0;
         for (BankTransactionEntity bankTransaction : bankTransList) {
             total += bankTransaction.getAmount();
@@ -118,7 +117,6 @@ public class TransactionService {
      * Gets the total discrepancy between total amount of bank transactions and accounting transactions.
      *
      * @return returns total discrepancy between bank transactions and accounting transactions.
-     * TODO this one gives wrong number. I think it adds instead of doing the right thing.
      */
     public double getDiscrepancyAmount(LocalDate startDate, LocalDate endDate) {
 

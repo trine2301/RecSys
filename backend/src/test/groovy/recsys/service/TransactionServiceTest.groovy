@@ -1,6 +1,6 @@
-/*
 package recsys.service
 
+import io.micronaut.test.annotation.MockBean
 import io.micronaut.test.extensions.spock.annotation.MicronautTest
 import recsys.model.AccountingTransactionEntity
 import recsys.model.BankTransactionEntity
@@ -15,126 +15,109 @@ import java.time.LocalDate
 @MicronautTest
 class TransactionServiceTest extends Specification {
 
-    //Defined the mock-object.
-    def accountingRepository = Mock(AccountingTransactionRepository)
-    def bankRepository = Mock(BankTransactionRepository)
+    @Inject
+    TransactionService transactionService
 
+    @Inject
+    AccountingTransactionRepository accountingTransactionRepository
+
+    @Inject
+    BankTransactionRepository bankTransactionRepository
 
     @Shared
-    @Inject
-    AccountingTransactionRepository accountingTransactionRepository;
+    AccountingTransactionEntity accTrans1
+
     @Shared
-    @Inject
-    BankTransactionRepository bankTransactionRepository;
+    AccountingTransactionEntity accTrans2
+
     @Shared
-    @Inject
-    TransactionService service;
+    BankTransactionEntity bankTrans1
 
-    def setup() {
-        bankRepository.findAll() >> [
-            new BankTransactionEntity(date: LocalDate.now(), amount: 1234),
-            new BankTransactionEntity(date: LocalDate.now().minusDays(1), amount: 2345)
-        ]
-        accountingRepository.findAll() >> [
-            new AccountingTransactionEntity(date: LocalDate.now(), amount: 1234),
-            new AccountingTransactionEntity(date: LocalDate.now().minusDays(1), amount: 2345)
-        ]
+    @Shared
+    BankTransactionEntity bankTrans2
+
+    @MockBean(AccountingTransactionRepository)
+    AccountingTransactionRepository accountingTransactionRepository() {
+        Mock(AccountingTransactionRepository)
     }
 
-    def "findAll in BankRepo should return all bank transactions"() {
-        when: "We call findAll"
-            def transactions = bankRepository.findAll()
-
-        then: "We get all bank transactions"
-            println(bankRepository.findAll())
-
-        and: "The bankRepository was called"
-            1 * bankRepository.findAll()
+    @MockBean(BankTransactionRepository)
+    BankTransactionRepository bankTransactionRepository() {
+        Mock(BankTransactionRepository)
     }
 
 
-//    @Subject
-//    TransactionService service = new TransactionService(
-//        accountingTransactionRepository, bankTransactionRepository
-//    )
+    def setupSpec() {
+        accTrans1 = Mock(AccountingTransactionEntity)
+        accTrans1.getAmount() >> 100.0
+        accTrans1.getDate() >> LocalDate.parse("2020-01-01")
+        accTrans2 = Mock(AccountingTransactionEntity)
+        accTrans2.getAmount() >> 100.0
+        accTrans2.getDate() >> LocalDate.parse("2020-01-31")
+
+
+        bankTrans2.getDate() >> LocalDate.parse("2020-01-01")
+        bankTrans2.getDate() >> LocalDate.parse("2020-01-31")
+        bankTrans1 = Mock(BankTransactionEntity)
+        bankTrans1.getAmount() >> 100.0
+        bankTrans2 = Mock(BankTransactionEntity)
+        bankTrans2.getAmount() >> 100.0
+
+    }
 
 
 
-    //TODO this test only checks if one line is added tp accounting transactionEntity.
-    def 'Check for discrepancy'() {
+
+    /**
+     * Test to test the getTotalAccSum method
+     */
+    def "test getTotalAccSum method"() {
         given:
-            def bankTransactionEntity = new BankTransactionEntity(id: 1, date: LocalDate.now(), amount: 1234, description: 'hei')
-            def accountingTransactionEntity = new AccountingTransactionEntity(date: LocalDate.now(), amount: 1235)
-            accountingTransactionRepository.save(accountingTransactionEntity)
+            LocalDate startDate = LocalDate.parse("2019-12-31")
+            LocalDate endDate = LocalDate.parse("2020-12-31")
+            accountingTransactionRepository.findByDateBetween(startDate, endDate) >> [accTrans1, accTrans2]
+
         when:
-            def accounting = accountingTransactionRepository.findAll()
+            double result = transactionService.getTotalAccSum(startDate, endDate)
         then:
-            accounting.size() == 1
-        println()
+            result == accTrans2.getAmount() + accTrans1.getAmount()
+
     }
 
-
-    def 'Check for discrepancy'() {
+    /**
+     * Test to test the getTotalAccSum method
+     */
+    def "test getTotalBankSum method"() {
         given:
-            def bankTransactionEntity = new BankTransactionEntity(date: LocalDate.now(), amount: 1234)
-            def accountingTransaction = new AccountingTransactionEntity(date: LocalDate.now(), amount: 1000)
-            accountingTransactionRepository.save(accountingTransaction)
-            bankTransactionRepository.save(bankTransactionEntity)
+            LocalDate startDate = LocalDate.parse("2019-12-31")
+            LocalDate endDate = LocalDate.parse("2020-12-31")
+            bankTransactionRepository.findByDateBetween(startDate, endDate) >> [bankTrans1, bankTrans2]
         when:
-            service.checkIfDiscrepancyOnTotalAmountExists()
+            double result = transactionService.getTotalBankSum(startDate, endDate)
         then:
-            assert service.checkIfDiscrepancyOnTotalAmountExists() == true
+            result == bankTrans2.getAmount() + bankTrans1.getAmount()
+
     }
 
-    */
-/**
-     * Positive test of checkIfAccTransHaveAMatchingBankTrans()
-     *//*
 
-    def 'Check if trans is a match'() {
+    def "test getDiscrepancyAmount method"() {
         given:
-            def bankTransactionEntity = new BankTransactionEntity(date: LocalDate.now(), amount: 1000)
-            def accountingTransactionEntity = new AccountingTransactionEntity(date: LocalDate.now(), amount: 1000)
-            accountingTransactionRepository.save(accountingTransactionEntity)
-            bankTransactionRepository.save(bankTransactionEntity)
+            LocalDate startDate = LocalDate.parse("2019-01-01")
+            LocalDate endDate = LocalDate.parse("2023-01-31")
+            bankTransactionRepository.findByDateBetween(startDate, endDate) >> [bankTrans1, bankTrans2]
+            accountingTransactionRepository.findByDateBetween(startDate, endDate) >> [accTrans1, accTrans2]
+
         when:
-            service.compareResults()
+            double bankTotal = transactionService.getTotalBankSum(startDate, endDate)
+            double accountingTotal = transactionService.getTotalAccSum(startDate, endDate)
+            double result = transactionService.getDiscrepancyAmount(startDate, endDate)
+
         then:
-            assert service.compareResults() == true
+            println "Bank Total: $bankTotal"
+            println "Accounting Total: $accountingTotal"
+            println transactionService.getDiscrepancyAmount(startDate, endDate)
+            result == 0
+
     }
 
-    */
-/**
-     * Negative test of checkIfAccTransHaveAMatchingBankTrans()
-     *//*
-
-    def 'Negative test to check if trans is a match'() {
-        given:
-            def bankTransactionEntity = new BankTransactionEntity(date: LocalDate.now(), amount: 1000)
-            def accountingTransactionEntity = new AccountingTransactionEntity(date: LocalDate.now(), amount: 1000)
-            accountingTransactionRepository.save(accountingTransactionEntity)
-            bankTransactionRepository.save(bankTransactionEntity)
-        when:
-            service.compareResults()
-        then:
-            assert service.compareResults() == false
-    }
-
-    */
-/**
-     * Positive test of checkIfAccTransHaveAMatchingBankTrans()
-     *//*
-
-    def 'Check if trans is not a match'() {
-        given:
-            def bankTransactionEntity = new BankTransactionEntity(date: LocalDate.now(), amount: 1100)
-            def accountingTransactionEntity = new AccountingTransactionEntity(date: LocalDate.now(), amount: 1000)
-            accountingTransactionRepository.save(accountingTransactionEntity)
-            bankTransactionRepository.save(bankTransactionEntity)
-        when:
-            service.compareResults()
-        then:
-            assert service.compareResults() == false
-    }
 }
-*/
