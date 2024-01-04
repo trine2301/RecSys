@@ -61,10 +61,8 @@ class TransactionServiceTest extends Specification {
         bankTrans1 = Mock(BankTransactionEntity)
         bankTrans1.getAmount() >> 100.0
         bankTrans2 = Mock(BankTransactionEntity)
-        bankTrans2.getAmount() >> 100.0
-
+        bankTrans2.getAmount() >> 150.0
     }
-
 
 
 
@@ -108,15 +106,25 @@ class TransactionServiceTest extends Specification {
             accountingTransactionRepository.findByDateBetween(startDate, endDate) >> [accTrans1, accTrans2]
 
         when:
-            double bankTotal = transactionService.getTotalBankSum(startDate, endDate)
-            double accountingTotal = transactionService.getTotalAccSum(startDate, endDate)
             double result = transactionService.getDiscrepancyAmount(startDate, endDate)
 
         then:
-            println "Bank Total: $bankTotal"
-            println "Accounting Total: $accountingTotal"
-            println transactionService.getDiscrepancyAmount(startDate, endDate)
-            result == 0
+            result == 50
+
+    }
+
+    def "test getDiscrepancyAmount method"() {
+        given:
+            LocalDate startDate = LocalDate.parse("2019-01-01")
+            LocalDate endDate = LocalDate.parse("2023-01-31")
+            bankTransactionRepository.findByDateBetween(startDate, endDate) >> [bankTrans1, bankTrans2]
+            accountingTransactionRepository.findByDateBetween(startDate, endDate) >> [accTrans1, accTrans2]
+
+        when:
+            double result = transactionService.getDiscrepancyAmount(startDate, endDate)
+
+        then:
+            result == 50
 
     }
 
