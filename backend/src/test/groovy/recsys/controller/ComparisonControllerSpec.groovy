@@ -21,18 +21,18 @@ class ComparisonControllerSpec extends Specification {
     TransactionService transactionService
 
     def "test getDiscrepancy endpoint"() {
-        given: "A start and end date"
+        given:
             LocalDate startDate = LocalDate.parse("2023-01-01")
             LocalDate endDate = LocalDate.parse("2023-01-31")
 
-        and: "A discrepancy amount returned by the service"
+        and:
             transactionService.getDiscrepancyAmount(startDate, endDate) >> 100.0
 
-        when: "We call the getDiscrepancy endpoint"
+        when:
             HttpRequest request = HttpRequest.GET("/total_discrepancy?startDate=${startDate}&endDate=${endDate}")
             double result = client.toBlocking().retrieve(request, Double.class)
 
-        then: "We expect the discrepancy amount returned by the service"
+        then:
             result == 100.0
     }
 

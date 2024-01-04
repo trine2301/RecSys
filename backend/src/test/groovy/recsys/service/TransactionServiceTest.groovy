@@ -1,3 +1,14 @@
+/**
+ * Unit-tests of the TransactionService class.
+ * The following tests are performed:
+ * <ul>
+ *   <li> hello </li>
+ *   <li> aaaahahahah </li>
+ *   <li> </li>
+ *   Not testing helper-methods in transactionService
+ * </ul>
+ */
+
 package recsys.service
 
 import io.micronaut.test.annotation.MockBean
@@ -55,7 +66,6 @@ class TransactionServiceTest extends Specification {
         accTrans2.getAmount() >> 100.0
         accTrans2.getDate() >> LocalDate.parse("2020-01-31")
 
-
         bankTrans2.getDate() >> LocalDate.parse("2020-01-01")
         bankTrans2.getDate() >> LocalDate.parse("2020-01-31")
         bankTrans1 = Mock(BankTransactionEntity)
@@ -67,14 +77,13 @@ class TransactionServiceTest extends Specification {
 
 
     /**
-     * Test to test the getTotalAccSum method
+     * Checks that the getTotalAccSum provides correct output.
      */
     def "test getTotalAccSum method"() {
         given:
             LocalDate startDate = LocalDate.parse("2019-12-31")
             LocalDate endDate = LocalDate.parse("2020-12-31")
             accountingTransactionRepository.findByDateBetween(startDate, endDate) >> [accTrans1, accTrans2]
-
         when:
             double result = transactionService.getTotalAccSum(startDate, endDate)
         then:
@@ -83,7 +92,7 @@ class TransactionServiceTest extends Specification {
     }
 
     /**
-     * Test to test the getTotalAccSum method
+     * Checks that the getTotalBankSum provides correct output.
      */
     def "test getTotalBankSum method"() {
         given:
