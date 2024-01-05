@@ -13,7 +13,6 @@
 
 <script setup lang="ts">
 
-import ComparisonModal from "@/components/ComparisonModal.vue";
 </script>
 
 <style lang="scss">

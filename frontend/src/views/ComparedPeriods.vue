@@ -1,17 +1,14 @@
 <template>
   <div class="flex flex-col">
       <saved-period-card v-for="periodComparison in periodComparisons" :key="periodComparison.id" @click="isButtonPressed">
-        <template #title> {{ periodComparison.startDate}} - {{ periodComparison.endDate}} </template>
+        <template #title> {{ formattedDate(periodComparison.startDate)}} - {{ formattedDate(periodComparison.endDate)}} </template>
         <template #description>
-          <div>
-            id: {{ periodComparison.id}}
-          </div>
           <div>
             Bank total:
             {{ periodComparison.bankTotal}}
           </div>
-          <div >∫
-            Acc total:
+          <div>
+            Accounting total:
             {{ periodComparison.accTotal}}
           </div>
           <div data-cy="total-discrepancy">
@@ -35,6 +32,7 @@ import '@vuepic/vue-datepicker/dist/main.css'
 import { PeriodComparison } from "@/services/PeriodComparisons";
 import SavedPeriodCard from "@/components/Card.vue";
 import ComparisonModal from "@/components/ComparisonModal.vue";
+import { formattedDate } from "../services/BankTransaction";
 
 
 
