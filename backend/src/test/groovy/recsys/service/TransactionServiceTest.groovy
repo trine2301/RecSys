@@ -2,10 +2,16 @@
  * Unit-tests of the TransactionService class.
  * The following tests are performed:
  * <ul>
- *   <li> hello </li>
- *   <li> aaaahahahah </li>
- *   <li> </li>
- *   Not testing helper-methods in transactionService
+ *   <li> Test getTotalAccSum method </li>
+ *   <li> Test getTotalBankSum method </li>
+ *   <li> Test getDiscrepancyAmount method </li>
+ *   <li> Test getDiscrepancyAmount method</li>
+ *   <li> Test compareTransactions method</li> //TODO it fails.
+ *
+ *   Omitted methods:
+ *   <li> ResultMissingBank and resultMissingAcc, these are helper methods giving results to comparison. </li>
+ *   <li> removeDuplicatesNotMatches, this is a helper-method. </li>
+ *   <li> isMatching, isSameDate, isSameAmount, isSameDescription Helper methods that automatically are tested if used. </li>
  * </ul>
  */
 
@@ -15,6 +21,7 @@ import io.micronaut.test.annotation.MockBean
 import io.micronaut.test.extensions.spock.annotation.MicronautTest
 import recsys.model.AccountingTransactionEntity
 import recsys.model.BankTransactionEntity
+import recsys.model.ComparisonEntity
 import recsys.repository.AccountingTransactionRepository
 import recsys.repository.BankTransactionRepository
 import spock.lang.Shared
@@ -67,7 +74,7 @@ class TransactionServiceTest extends Specification {
         accTrans2.getDate() >> LocalDate.parse("2020-01-31")
 
         bankTrans2.getDate() >> LocalDate.parse("2020-01-01")
-        bankTrans2.getDate() >> LocalDate.parse("2020-01-31")
+        bankTrans2.getDate() >> LocalDate.parse("2020-01-01")
         bankTrans1 = Mock(BankTransactionEntity)
         bankTrans1.getAmount() >> 100.0
         bankTrans2 = Mock(BankTransactionEntity)
@@ -135,6 +142,26 @@ class TransactionServiceTest extends Specification {
         then:
             result == 50
 
+    }
+
+    //TODO this fails, because bankTransactionEntity is null. Either compareTransactions cant find any matches, which it should. Or there was an exception thrown somewhere in the compareTransactions method.
+    //TODO add logging statements to identify root cause of fail, and then adjust the method.
+    //
+    def "test compareTransactions method"() {
+        given:
+            LocalDate startDate = LocalDate.parse("2019-01-01")
+            LocalDate endDate = LocalDate.parse("2023-01-31")
+            accountingTransactionRepository.findByDateBetween(startDate, endDate) >> [accTrans1, accTrans2]
+            bankTransactionRepository.findByDateBetween(startDate, endDate) >> [bankTrans1, bankTrans2]
+            //println bankTransactionRepository.findAll()
+
+        when:
+            List<ComparisonEntity> result = transactionService.compareTransactions(startDate, endDate)
+
+        then:
+            result.size() == 4
+            result[0].bankTransactionEntity.amount == 100.0
+            result[1].accountingTransactionEntity.amount == 150.0
     }
 
 }

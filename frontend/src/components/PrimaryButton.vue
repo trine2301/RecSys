@@ -6,6 +6,10 @@
 
 <script setup lang="ts">
 
+
+/**
+ * Defines the events that this component can emit.
+ */
 const emit = defineEmits(['click'])
 
 </script>

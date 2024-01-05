@@ -32,7 +32,7 @@ import '@vuepic/vue-datepicker/dist/main.css'
 import { PeriodComparison } from "@/services/PeriodComparisons";
 import SavedPeriodCard from "@/components/Card.vue";
 import ComparisonModal from "@/components/ComparisonModal.vue";
-import { formattedDate } from "../services/BankTransaction";
+import { formattedDate } from "@/services/FrontendService"
 
 
 
@@ -42,17 +42,14 @@ const get = inject('get') as Function
 const periodComparisons = ref<Array<PeriodComparison>>([])
 
 
-
-
+/**
+ * Fetch period comparisons.
+ */
 const fetchPeriodComparison = async () => {
   const response = await get('/transactions/period_comparison')
   periodComparisons.value = response.data
 }
 
-const cardPressed = () => {
-  console.log("its pressed")
-  isButtonPressed.value = true
-}
 
 
 

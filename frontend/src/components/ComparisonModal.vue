@@ -36,7 +36,11 @@ const closeModal = () => {
   showModal.value = false
 }
 
-
+/**
+ * Defines property 'message' for a component.
+ *
+ * @param message - The message is the title of the modal.
+ */
 defineProps({
   message: {
     type: String,

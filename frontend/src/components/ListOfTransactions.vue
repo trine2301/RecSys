@@ -70,8 +70,9 @@
 </template>
 
 <script setup lang="ts">
-import { BankTransaction, formattedDate } from "@/services/BankTransaction"
+import { BankTransaction } from "@/services/BankTransaction"
 import '@vuepic/vue-datepicker/dist/main.css'
+import {formattedDate} from "@/services/FrontendService";
 import { AccountingTransaction } from "@/services/AccountingTransaction"
 import { PeriodComparison } from "@/services/PeriodComparisons"
 import { ref, onMounted, computed, provide, inject } from "vue"
@@ -85,21 +86,34 @@ const periodComparisons = ref<Array<PeriodComparison>>([])
 const startDate = ref(null)
 const endDate = ref(null)
 
+/**
+ * Fetch the comparison results for a given period.
+ */
 const fetchPeriodComparison = async () => {
   const response = await get('/transactions/period_comparison')
   periodComparisons.value = response.data
 }
 
+/**
+ * Fetch all bank transctions.
+ */
 const fetchBankTransactions = async () => {
   const response = await get('/transactions/bank')
   bankTransactions.value = response.data
 }
 
+/**
+ * Fetch all accounting transactions.
+ */
 const fetchAccountingTransactions = async () => {
   const response = await get('/transactions/accounting')
   accountingTransactions.value = response.data
 }
 
+/**
+ * Filter bank transactions based on a date range.
+ * If start- and end dates are not provided, all bank transactions are returned.
+ */
 const filteredBankTransactions = computed(() => {
   if (!startDate.value || !endDate.value) {
     return bankTransactions.value
@@ -111,11 +125,19 @@ const filteredBankTransactions = computed(() => {
 })
 
 
-
+/**
+ * Provide the 'fetchBankTransactions', 'fetchAccountingTransactions', and 'fetchPeriodComparison' functions
+ * to child components. These functions fetch different types of transactions.
+ */
 provide('fetchBankTransactions', fetchBankTransactions)
 provide('fetchAccountingTransactions', fetchAccountingTransactions)
 provide('fetchPeriodComparison', fetchPeriodComparison)
 
+
+/**
+ * Call the 'fetchBankTransactions', 'fetchAccountingTransactions', and 'fetchPeriodComparison' functions
+ * when the component is mounted, so that the necessary data is fetched as soon as the component is rendered.
+ */
 onMounted(fetchBankTransactions)
 onMounted(fetchAccountingTransactions)
 onMounted(fetchPeriodComparison)

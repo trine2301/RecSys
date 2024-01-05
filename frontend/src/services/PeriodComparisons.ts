@@ -1,8 +1,9 @@
 
 
-import format
-  from "date-fns/format";
-
+/**
+ * Type representing a comparison for a given period.
+ * Each comparison includes a start date, an end date, a total discrepancy amount, a bank total and an accounting total.
+ */
 export type PeriodComparison = {
   id: string,
   startDate: string,
@@ -10,16 +11,5 @@ export type PeriodComparison = {
   totalDiscrepancyAmount: number,
   bankTotal: number,
   accTotal: number,
-
 }
 
-
-const formattedDate = (dateStr: string) => {
-  return format(new Date(dateStr), 'yyyy-MM-dd')
-}
-
-
-
-export {
-  formattedDate,
-}

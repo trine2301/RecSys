@@ -3,6 +3,10 @@ import {
     createWebHashHistory
 } from 'vue-router'
 
+/**
+ * Create a router instance with a hash-based history mode.
+ * Define routes, each associating a path with a dynamically imported component.
+ */
 const router = createRouter({
     history: createWebHashHistory(),
     routes: [

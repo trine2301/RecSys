@@ -1,8 +1,13 @@
 package recsys.exceptions;
 
-import java.io.Serializable;
-
-public class CouldNotCompareTransactionsException extends Exception implements Serializable {
+/**
+ * Exception to be thrown when comparison  between transactions could not be made
+ *
+ * @author Trine Staverløkk
+ * @version 0.1
+ */
+///Extends Throwable?
+public class CouldNotCompareTransactionsException extends Exception {
 
     /**
      * Makes an instance of the CouldNotCompareTransactionsException class.
@@ -11,4 +16,5 @@ public class CouldNotCompareTransactionsException extends Exception implements S
     public CouldNotCompareTransactionsException(String message) {
         super(message);
     }
+
 }

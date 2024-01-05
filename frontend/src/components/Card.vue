@@ -11,12 +11,9 @@
   </div>
 </template>
 
-<script setup lang="ts">
 
-</script>
 
 <style lang="scss">
-
 
 .hello {
   @apply  p-4 text-blue-800/80

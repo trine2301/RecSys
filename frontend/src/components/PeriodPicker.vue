@@ -15,6 +15,11 @@ import { computed } from 'vue'
 import Datepicker from '@vuepic/vue-datepicker'
 import '@vuepic/vue-datepicker/dist/main.css'
 
+
+/**
+ * Define a computed property 'date' that gets and sets a 'modelValue' prop.
+ * When the 'date' property is set, it emits an 'update:modelValue' event with the new value.
+ */
 const date = computed({
   get: () => props.modelValue,
   set: val => {
@@ -22,8 +27,14 @@ const date = computed({
   }
 })
 
-
+/**
+ * Defines the events that this component can emit.
+ */
 const emit = defineEmits(['update:modelValue'])
+
+/**
+ * Define the props that this component accepts.
+ */
 const props = defineProps(['modelValue'])
 
 </script>

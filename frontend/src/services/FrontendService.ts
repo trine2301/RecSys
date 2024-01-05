@@ -21,6 +21,12 @@ const resultTotalAmount = ref()
   result.value = response.data
 }*/
 
+
+/**
+ * Function to format a date string into a 'yyyy-MM-dd'-format.
+ * @param dateStr - The date string to be formatted.
+ * @returns The formatted date string.
+ */
 const formattedDate = (dateStr: string) => {
   return format(new Date(dateStr), 'yyyy-MM-dd')
 }

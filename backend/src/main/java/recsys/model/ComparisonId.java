@@ -7,7 +7,12 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 import java.io.Serializable;
 
-
+/**
+ * The ID of a comparison.
+ *
+ * @author Trine Staverløkk
+ * @version 0.1
+ */
 @Embeddable
 @NoArgsConstructor
 @AllArgsConstructor

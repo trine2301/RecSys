@@ -45,16 +45,33 @@ import PrimaryButton from "@/components/PrimaryButton.vue";
 const showAlertBox = ref(true)
 
 const emit = defineEmits(['acceptReco'])
+
+
+/**
+ * Method to close alert box and reroute user to /transactions.
+ * Called if user accepts reconciliation.
+ */
 const acceptReco = () => {
   emit("acceptReco")
   showAlertBox.value = false;
   router.push("/transactions")
 }
 
+
+/**
+ * Method to close alert box.
+ * Called if user rejects reconciliation.
+ */
 const rejectReco = () => {
   showAlertBox.value = false;
 }
 
+
+/**
+ * Defines properties for a component.
+ *
+ * @param message - The title of the alert-box.
+ */
 defineProps({
   message: {
     type: String,

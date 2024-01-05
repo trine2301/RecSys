@@ -100,7 +100,10 @@
 import { PhCheckFat, PhWarning } from "@phosphor-icons/vue"
 import { formattedDate } from "../services/FrontendService";
 
-
+/**
+ * Defines properties 'resultFromComparison' for the component.
+ * This prop should contain the result of a comparison.
+ */
 defineProps(['resultFromComparison'])
 
 

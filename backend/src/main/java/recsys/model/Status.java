@@ -2,9 +2,12 @@ package recsys.model;
 
 /**
  * Represents the status of a comparison, if its compared or not.
- * TODO Should it be flags instead of enums?
+ *
+ * @author Trine Staverløkk
+ * @version 0.1
  */
 public enum Status {
+
 
     MATCH_COMPLETE,
 
